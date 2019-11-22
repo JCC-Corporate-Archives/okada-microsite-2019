@@ -13,5 +13,6 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - gem install compass
           - npm install -g yarn
+          - npm install -g gulp
           - yarn install
           - gulp compile
