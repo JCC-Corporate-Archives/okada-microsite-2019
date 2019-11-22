@@ -4,7 +4,7 @@
   "description": "New Year's Eve microsite for Okada Manila (2019)",
   "main": "index.html",
   "scripts": {
-    "postinstall": "cp gulpconfig.json.sample gulpconfig.json && gulp copy-assets"
+    "postinstall": "cp gulpconfig.json.sample gulpconfig.json && gulp copy-assets && note.sh"
   },
   "repository": {
     "type": "git",
