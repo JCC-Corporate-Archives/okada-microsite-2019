@@ -3084,6 +3084,11 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+eslint-config-jquery@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-jquery/-/eslint-config-jquery-2.0.0.tgz#dd0368bed48700c293ee917081b1a0693181f0a0"
+  integrity sha512-HrUTma5Ty6A91M3dTWz3Ot7YnpbsDQGIQDI8JyLKiuUltVXuKCs3yC7uHugp5/0RfYAPLisxHv7giNGvaqM4CA==
+
 eslint-scope@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.0.0.tgz#e87c8887c73e8d1ec84f1ca591645c358bfc8fb9"
