@@ -123,6 +123,7 @@ gulpconfig.json
 
 # Ignore specific
 !**/**/.gitinclude
+dist/
 scripts/
 stylesheets/
 fonts/

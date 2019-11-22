@@ -301,7 +301,7 @@ gulp.task('dist', gulp.series(function copyToDistFolder() {
 gulp.task('lint', gulp.parallel('eslint', 'sass-lint'));
 
 // Deleting any file inside the /dist-product folder
-gulp.task('compile', gulp.series('lint', 'styles', 'scripts', 'dist', 'clean-dist'));
+gulp.task('compile', gulp.series('lint', 'styles', 'scripts', 'dist'));
 
 // Setup styles & scripts to test it
 gulp.task('setup', gulp.series('lint', 'styles', 'scripts'));

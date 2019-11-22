@@ -14,3 +14,4 @@ pipelines:
           - gem install compass
           - npm install -g yarn
           - yarn install
+          - gulp compile
