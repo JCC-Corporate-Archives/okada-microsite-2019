@@ -1,0 +1,19 @@
+.navbar {
+  &.justify-content-center {
+    .navbar-brand {
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .navbar-toggler {
+      position: absolute;
+      right: 0;
+    }
+
+    .navbar-collapse {
+      margin-top: 40px;
+    }
+  }
+}
