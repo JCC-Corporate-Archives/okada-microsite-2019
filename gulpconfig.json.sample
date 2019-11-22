@@ -1,0 +1,33 @@
+{
+  "browserSyncOptions": {
+    "proxy": "https://okada-microsite-2019.test",
+    "host": "okada-microsite-2019",
+    "open": "external",
+    "notify": false
+  },
+  "browserSyncOptionsDarwin": {
+    "proxy": "https://okada-microsite-2019",
+    "host": "okada-microsite-2019",
+    "open": "external",
+    "notify": false
+  },
+  "browserSyncWatchFiles": [
+    "./stylesheets/*.css",
+    "./scripts/*.js",
+    "./*.html"
+  ],
+  "paths": {
+    "src": "./src",
+    "js": "./scripts",
+    "css": "./stylesheets",
+    "img": "./images",
+    "imgsrc": "./images",
+    "sass": "./src/sass",
+    "node": "./node_modules/",
+    "bower": "./bower_components/",
+    "dev": "./",
+    "dist": "./dist",
+    "distprod": "./dist-product",
+    "vendor": ""
+  }
+}
