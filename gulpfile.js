@@ -185,7 +185,7 @@ gulp.task('sass-lint', function () {
 gulp.task('scripts', function () {
   var scripts = [
     // Start - All BS4 stuff
-    `${paths.src}/js/bootstrap4/bootstrap.bundle.js`,
+    `${paths.src}/js/vendors/bootstrap4/bootstrap.bundle.js`,
     // End - All BS4 stuff
 
     `${paths.src}/js/skip-link-focus-fix.js`,
@@ -225,11 +225,11 @@ gulp.task('copy-assets', function () {
   ////////////////// All Bootstrap 4 Assets /////////////////////////
   // Copy all JS files
   var stream = gulp.src(`${paths.node}bootstrap/dist/js/**/*.js`)
-    .pipe(gulp.dest(`${paths.src}/js/bootstrap4`));
+    .pipe(gulp.dest(`${paths.src}/js/vendors/bootstrap4`));
 
   // Copy all Bootstrap SCSS files
   gulp.src(`${paths.node}bootstrap/scss/**/*.scss`)
-    .pipe(gulp.dest(`${paths.src}/sass/bootstrap4`));
+    .pipe(gulp.dest(`${paths.src}/sass/vendors/bootstrap4`));
 
   ////////////////// End Bootstrap 4 Assets /////////////////////////
 
