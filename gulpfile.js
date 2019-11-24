@@ -4,7 +4,6 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
-var compass = require('gulp-compass');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
@@ -27,12 +26,12 @@ var sassLint = require('gulp-sass-lint');
 var cfg = require('./gulpconfig.json');
 var paths = cfg.paths;
 
-var editJsonFile = require("edit-json-file");
+// var editJsonFile = require("edit-json-file");
 
 // Run:
-// gulp sass
+// gulp compass
 // Compiles SCSS files in CSS
-gulp.task('sass', function () {
+gulp.task('compass', function () {
   var stream = gulp.src(`${paths.sass}/style.scss`)
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(compass({
@@ -50,7 +49,7 @@ gulp.task('sass', function () {
 // Run:
 // gulp sass-node
 // Compiles SCSS files (if you don't have compass)
-gulp.task('sass-node', function () {
+gulp.task('sass', function () {
   var stream = gulp.src(`${paths.sass}/*.scss`)
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(plumber({
@@ -63,7 +62,7 @@ gulp.task('sass-node', function () {
     .pipe(autoprefixer('last 2 versions'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.css))
-    .pipe(rename('custom-editor-style.css'));
+    .pipe(rename('style.css'));
   return stream;
 });
 

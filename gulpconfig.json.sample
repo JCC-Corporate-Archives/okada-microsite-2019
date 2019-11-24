@@ -1,13 +1,13 @@
 {
   "browserSyncOptions": {
-    "proxy": "https://okada-microsite-2019.test",
-    "host": "okada-microsite-2019",
+    "proxy": "http://okada-microsite-2019.test",
+    "host": "okada-microsite-2019.test",
     "open": "external",
     "notify": false
   },
   "browserSyncOptionsDarwin": {
-    "proxy": "https://okada-microsite-2019",
-    "host": "okada-microsite-2019",
+    "proxy": "http://okada-microsite-2019.test",
+    "host": "okada-microsite-2019.test",
     "open": "external",
     "notify": false
   },
