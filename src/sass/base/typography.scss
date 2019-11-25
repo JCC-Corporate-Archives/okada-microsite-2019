@@ -1,4 +1,6 @@
-h1.test-heading {
-  // color: #333;
-  // font-style: italic;
-}
+// Gotham Light
+@include font-face('Gotham Light', '../fonts/GothamLight', normal, normal, 'recent');
+
+// Gotham Bold
+@include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal, 'recent');
+@include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic, 'recent');

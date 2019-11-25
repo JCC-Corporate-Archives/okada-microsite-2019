@@ -4,6 +4,7 @@
 
 // 7-1 pattern
 @import 'variables';
+@import 'utils/mixins';
 @import 'base/colors';
 @import 'base/typography';
 @import 'components/navbar';
@@ -11,3 +12,4 @@
 
 // Theming
 @import 'themes/hero-section';
+@import 'themes/countdown-section';

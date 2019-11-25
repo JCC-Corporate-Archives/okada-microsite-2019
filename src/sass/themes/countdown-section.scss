@@ -1,0 +1,17 @@
+.countdown-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  .number-of {
+    color: $countdown-color;
+    font-family: 'Gotham Light', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    width: 40%;
+
+    .days-label {
+      font-size: 8px;
+    }
+  }
+}
