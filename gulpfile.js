@@ -170,13 +170,15 @@ gulp.task('scripts', function () {
 
     // Start - Moment
     `${paths.src}/js/vendors/moment/moment.js`,
-    // Countdown API
-    `${paths.src}/js/vendors/moment-countdown/dist/moment-countdown.js`,
     // End - Moment
+
+    // Start - Countdown
+    `${paths.src}/js/vendors/countdown/countdown.js`,
+    // End - Countdown
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
-    `${paths.src}/js/custom.js`,
+    `${paths.src}/js/custom.js`
   ];
   gulp.src(scripts, { allowEmpty: true })
     .pipe(concat('custom.min.js'))
@@ -248,9 +250,9 @@ gulp.task('copy-assets', function () {
   gulp.src(`${paths.node}moment/**/*.js`)
     .pipe(gulp.dest(`${paths.src}/js/vendors/moment`));
 
-  // Moment with Countdown API
-  gulp.src(`${paths.node}moment-countdown/**/*.js`)
-    .pipe(gulp.dest(`${paths.src}/js/vendors/moment-countdown`));
+  // Countdown.js
+  gulp.src(`${paths.node}countdown/**/*.js`)
+    .pipe(gulp.dest(`${paths.src}/js/vendors/countdown`));
 
   return stream;
 });
