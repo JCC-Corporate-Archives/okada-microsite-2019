@@ -12,5 +12,9 @@
     "commonjs": true,
     "jquery": true
   },
-  "extends": "jquery"
+  "globals": {
+    "jquery": true,
+    "moment": true
+  },
+  "extends": ["jquery"]
 }

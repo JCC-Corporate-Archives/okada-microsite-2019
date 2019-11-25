@@ -168,6 +168,12 @@ gulp.task('scripts', function () {
     `${paths.src}/js/skip-link-focus-fix.js`,
     // End - Underscores
 
+    // Start - Moment
+    `${paths.src}/js/vendors/moment/moment.js`,
+    // Countdown API
+    `${paths.src}/js/vendors/moment-countdown/dist/moment-countdown.js`,
+    // End - Moment
+
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
     `${paths.src}/js/custom.js`,
@@ -237,6 +243,14 @@ gulp.task('copy-assets', function () {
     .pipe(gulp.dest(`${paths.js}`));
   gulp.src(`${paths.node}wowjs/dist/wow.js`)
     .pipe(gulp.dest(`${paths.js}`));
+
+  // Moment.js
+  gulp.src(`${paths.node}moment/**/*.js`)
+    .pipe(gulp.dest(`${paths.src}/js/vendors/moment`));
+
+  // Moment with Countdown API
+  gulp.src(`${paths.node}moment-countdown/**/*.js`)
+    .pipe(gulp.dest(`${paths.src}/js/vendors/moment-countdown`));
 
   return stream;
 });
