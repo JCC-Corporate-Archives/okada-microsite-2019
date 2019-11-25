@@ -5,7 +5,7 @@
     "ecmaFeatures": {}
   },
   "rules": {
-    "space-in-parens": [2, "never", { "exceptions": ["empty", "()"] }]
+    "space-in-parens": [0, "never", { "exceptions": ["empty", "()"] }]
   },
   "env": {
     "browser": true,
