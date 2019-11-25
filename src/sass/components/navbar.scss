@@ -1,5 +1,19 @@
 .navbar {
-  min-height: 56px;
+  min-height: $navbar-default-height;
+  z-index: 999;
+
+  &.okada * {
+    color: $navbar-primary-color !important;
+  }
+
+  &.okada .navbar-toggler-icon {
+    border-color: $navbar-primary-color !important;
+  }
+
+  &.navbar-trans {
+    background: transparent;
+    transition: 0.1s ease;
+  }
 
   &.justify-content-center {
     .navbar-brand {
@@ -20,6 +34,17 @@
   }
 
   .navbar-toggler {
+    display: flex;
+    flex-direction: column;
+
+    .line {
+      width: 25px !important;
+      // float: left;
+      height: 2px;
+      background-color: $navbar-primary-color;
+      margin-bottom: 5px;
+    }
+
     &,
     &:active,
     &:focus,
@@ -34,6 +59,6 @@
     top: 10px;
   }
 
-  .navbar-brand {
-  }
+  // .navbar-brand {
+  // }
 }

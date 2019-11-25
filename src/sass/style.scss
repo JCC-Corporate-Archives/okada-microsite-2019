@@ -1,9 +1,13 @@
 // Import bootstrap
 @import 'vendors/bootstrap4/bootstrap';
+@import 'vendors/fontawesome/font-awesome';
 
 // 7-1 pattern
+@import 'variables';
 @import 'base/colors';
 @import 'base/typography';
-@import 'base/variables';
 @import 'components/navbar';
 @import 'layout/grid';
+
+// Theming
+@import 'themes/hero-section';
