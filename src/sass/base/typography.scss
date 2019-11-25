@@ -1,6 +1,29 @@
 // Gotham Light
 @include font-face('Gotham Light', '../fonts/GothamLight', normal, normal, 'recent');
 
+// Gotham Medium
+@include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal, 'recent');
+
 // Gotham Bold
 @include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal, 'recent');
 @include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic, 'recent');
+
+// Gotham Black
+@include font-face('Gotham Black', '../fonts/GothamBlack', bolder, normal, 'oldie-otf');
+
+.okada-hero {
+  margin-top: 34px;
+  text-align: center;
+
+  .okada-hero-heading {
+    color: $hero-heading-color;
+    font-family: 'Gotham Bold', sans-serif;
+    font-size: 22px;
+  }
+
+  .okada-hero-caption {
+    color: $hero-caption-color;
+    font-family: 'Gotham Medium', sans-serif;
+    font-size: 14px;
+  }
+}
