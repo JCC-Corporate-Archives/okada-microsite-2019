@@ -1,11 +1,11 @@
-$("#collapsibleNavbar").on("show.bs.collapse", function () {
+$("#collapsibleNavbar").on("show.bs.collapse", function( ) {
   $("#navBar").css({
-    "background": "#000"
+    background: "#000"
   });
 });
 
-$("#collapsibleNavbar").on("hide.bs.collapse", function () {
+$("#collapsibleNavbar").on("hide.bs.collapse", function( ) {
   $("#navBar").css({
-    "background": "transparent"
+    background: "transparent"
   });
 });
