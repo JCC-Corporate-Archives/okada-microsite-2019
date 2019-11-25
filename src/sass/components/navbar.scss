@@ -1,4 +1,6 @@
 .navbar {
+  min-height: 56px;
+
   &.justify-content-center {
     .navbar-brand {
       left: 50%;
@@ -7,7 +9,7 @@
       transform: translateX(-50%);
     }
 
-    .navbar-toggler {
+    .navbar-toggle {
       position: absolute;
       right: 0;
     }
@@ -15,5 +17,23 @@
     .navbar-collapse {
       margin-top: 40px;
     }
+  }
+
+  .navbar-toggler {
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none !important;
+    }
+  }
+
+  .navbar-toggler-right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .navbar-brand {
   }
 }

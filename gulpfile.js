@@ -26,28 +26,8 @@ var sassLint = require('gulp-sass-lint');
 var cfg = require('./gulpconfig.json');
 var paths = cfg.paths;
 
-// var editJsonFile = require("edit-json-file");
-
 // Run:
-// gulp compass
-// Compiles SCSS files in CSS
-gulp.task('compass', function () {
-  var stream = gulp.src(`${paths.sass}/style.scss`)
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(compass({
-      config_file: './config.rb',
-      css: paths.css,
-      sass: paths.sass
-    }))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(cssnano({ discardComments: { removeAll: true } }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.css));
-  return stream;
-});
-
-// Run:
-// gulp sass-node
+// gulp sass
 // Compiles SCSS files (if you don't have compass)
 gulp.task('sass', function () {
   var stream = gulp.src(`${paths.sass}/*.scss`)
@@ -184,12 +164,13 @@ gulp.task('scripts', function () {
     `${paths.src}/js/vendors/bootstrap4/bootstrap.bundle.js`,
     // End - All BS4 stuff
 
+    // Start - Underscores
     `${paths.src}/js/skip-link-focus-fix.js`,
-    `${paths.src}/js/wow.js`,
+    // End - Underscores
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
-    `${paths.src}/js/custom-javascript.js`,
+    `${paths.src}/js/custom.js`,
   ];
   gulp.src(scripts, { allowEmpty: true })
     .pipe(concat('custom.min.js'))
@@ -221,7 +202,7 @@ gulp.task('copy-assets', function () {
   ////////////////// All Bootstrap 4 Assets /////////////////////////
   // Copy all JS files
   var stream = gulp.src(`${paths.node}bootstrap/dist/js/**/*.js`)
-    .pipe(gulp.dest(`${paths.src}/js/vendors/bootstrap4`));
+    .pipe(gulp.dest(`${paths.src}/js/vendors`));
 
   // Copy all Bootstrap SCSS files
   gulp.src(`${paths.node}bootstrap/scss/**/*.scss`)

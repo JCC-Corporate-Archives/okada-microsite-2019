@@ -1,0 +1,15 @@
+// Tablets below
+@include media-breakpoint-down(md) {
+  // Main container
+  .container {
+    .hero-row {
+      background-color: $hero-section-right-color;
+      height: $hero-row-height;
+      min-height: $hero-row-height-default;
+    }
+
+    .countdown-row {
+      padding: $row-default-padding;
+    }
+  }
+}

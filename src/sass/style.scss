@@ -2,7 +2,8 @@
 @import 'vendors/bootstrap4/bootstrap';
 
 // 7-1 pattern
+@import 'base/colors';
 @import 'base/typography';
+@import 'base/variables';
 @import 'components/navbar';
-// Version 1
-@import 'themes/v1';
+@import 'layout/grid';
