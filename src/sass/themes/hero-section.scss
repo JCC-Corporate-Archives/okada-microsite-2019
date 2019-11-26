@@ -1,7 +1,8 @@
 .container {
-  margin-top: -#{$navbar-default-height};
-
   .hero-row {
+    // background-color: $hero-section-right-color;
+    background: $hero-section-bg;
+
     .grid {
       display: grid;
       grid-column-gap: 0;
@@ -31,6 +32,15 @@
       background-position: 41vw bottom;
       grid-area: 1 / 2 / 2 / 3;
       grid-column: 1 / span 2;
+    }
+
+    @include media-breakpoint-up(md) {
+      .image-2020 {
+        background-size: auto;
+        height: 50%;
+        margin-bottom: 50%;
+        margin-top: 50%;
+      }
     }
 
     @include media-breakpoint-up(sm) {
