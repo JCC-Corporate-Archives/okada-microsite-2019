@@ -58,7 +58,13 @@ window.onload = function() {
   new WOW().init();
 
   // The Restaurant slider
-  var theRestaurantsSlider = new Swiper("#theRestaurantsSlider", {
+  new Swiper("#theRestaurantsSlider", {
+    loop: 1,
+    spaceBetween: 0,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination"
     }

@@ -10,4 +10,19 @@
     justify-content: center;
     text-align: center;
   }
+
+  .swiper-image {
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background: $white;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $color-okada-dark-1;
+    }
+  }
 }
