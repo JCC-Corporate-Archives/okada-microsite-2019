@@ -140,14 +140,25 @@
       font-size: 14px;
     }
 
-    .btn-dazzling {
-      font-family: 'Gotham Black';
-      font-size: 11px;
-      background-color: transparent;
-      border-color: $color-okada-light-1;
-      border-radius: 0.6625rem;
-      padding-left: 2em;
-      padding-right: 2em;
+    // .btn-dazzling {
+    //   font-family: 'Gotham Black';
+    //   font-size: 11px;
+    //   background-color: transparent;
+    //   border-color: $color-okada-light-1;
+    //   border-radius: 0.6625rem;
+    //   padding-left: 2em;
+    //   padding-right: 2em;
+    // }
+  }
+
+  // THE RESTAURANTS
+  .the-restaurants-col {
+    padding: 40px 19px;
+
+    .the-restaurants-heading {
+      color: $hero-caption-color-darker;
+      font-family: 'Playfair Display';
+      font-size: 37px;
     }
   }
 }

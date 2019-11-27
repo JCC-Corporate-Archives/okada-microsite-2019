@@ -1,21 +1,16 @@
-// Gothan Book
+// Gothan Family
 @include font-face('Gotham Book', '../fonts/GothamBook');
-
-// Gotham Light
 @include font-face('Gotham Light', '../fonts/GothamLight', normal, normal, 'recent');
-
-// Gotham Medium
 @include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal, 'recent');
-
-// Gotham Bold
 @include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal, 'recent');
 @include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic, 'recent');
-
-// Gotham Black
 @include font-face('Gotham Black', '../fonts/GothamBlack', bolder, normal, 'recent');
 
-// Playfair Display
+// Playfair Display Family
 @include font-face('Playfair Display', '../fonts/PlayfairDisplayRegular');
+
+// Roboto Family
+@include font-face('Roboto Bold Italic', '../fonts/RobotoBoldItalic', bold, italic, 'recent');
 
 .okada-hero {
   margin-top: 34px;
@@ -28,9 +23,10 @@
   font-size: 22px;
 }
 
+.container-caption,
 .okada-hero-caption {
   color: $hero-caption-color;
   font-family: 'Gotham Medium', sans-serif;
   font-size: 14px;
-  text-align: center;
+  // text-align: center;
 }

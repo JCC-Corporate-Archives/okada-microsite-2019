@@ -1,0 +1,20 @@
+.btn-dazzling {
+  font-family: 'Gotham Black';
+  font-size: 11px;
+  background-color: transparent;
+  border-color: $color-okada-light-1;
+  border-radius: 0.6625rem;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  &.dazzling-text {
+    color: $color-okada-light-1;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    border-color: unset;
+  }
+}

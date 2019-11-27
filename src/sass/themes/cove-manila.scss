@@ -3,8 +3,15 @@
 .container-fluid,
 .main-container {
   // COVE MANILA
+  .cove-manila-row,
+  .cove-manila-row-1,
+  .cove-manila-row-2 {
+    background-color: $black;
+  }
+
   .cove-manila-row {
     @include display-bg-image('MeEGDK');
+    background-color: $black;
     min-height: 250px;
 
     .cove-manila-logo {
@@ -29,5 +36,88 @@
   .cove-manila-row-2 {
     @include display-bg-image('5EsOJA');
     min-height: 517px;
+  }
+
+  .cove-manila-row-1-sub-1,
+  .cove-manila-row-1-sub-2 {
+    padding: 0 $default-padding-px;
+  }
+
+  .featured-dj-1 {
+    border: $color-okada-normal-4 1px solid;
+  }
+
+  .featured-dj-2 {
+    margin-top: 30px;
+
+    .grid-container {
+      display: grid;
+      grid-template-areas: 'dj-kaka-head-wrapper dj-kaka-details-wrapper';
+      grid-template-columns: 1.3fr 0.7fr;
+      grid-template-rows: 1fr;
+      min-height: 330.73px;
+    }
+
+    .dj-kaka-head-wrapper {
+      grid-area: dj-kaka-head-wrapper;
+
+      .dj-kaka-head {
+        border: $color-okada-normal-4 1px solid;
+        min-height: 220px;
+      }
+    }
+
+    .dj-kaka-details-wrapper {
+      align-self: end;
+      display: flex;
+      flex-direction: column;
+      grid-area: dj-kaka-details-wrapper;
+
+      .dj-kaka-details-container {
+        border: $color-okada-normal-4 1px solid;
+        max-height: 133.15px;
+        padding: 0 15px 0 40px;
+
+        .dj-kaka-details {
+          transform: translateY(-1.9em);
+        }
+      }
+
+      .dj-kaka-name {
+        color: $color-okada-dark-1;
+        font-family: 'Gotham Black';
+        font-size: 42px;
+        line-height: 0.65em;
+        // margin-bottom: 20px;
+      }
+
+      .dj-kaka-desc {
+        color: $white;
+        font-family: 'Gotham Medium';
+        font-size: 9px;
+        margin-bottom: 0;
+      }
+
+      .dj-kaka-button-container {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      // COMPONENTS =====================
+
+      .visit-channel-button {
+        border: $color-okada-normal-4 1px solid;
+        border-radius: 0;
+        border-top: 0 !important;
+        width: 80%;
+      }
+
+      .visit-channel-text {
+        color: $color-okada-dark-1;
+        font-family: 'Roboto Bold Italic';
+        font-size: 12px;
+        margin: 0;
+      }
+    }
   }
 }
