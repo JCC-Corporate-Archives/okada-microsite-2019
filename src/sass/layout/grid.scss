@@ -1,5 +1,7 @@
-// begin
-.container {
+// NOTE:
+// This should be grid related.
+// Other cosmetic styling should be on /themes/others
+.main-container {
   margin-top: -#{$navbar-default-height};
 
   .hero-row {
@@ -10,72 +12,6 @@
   .guests-row {
     flex-wrap: wrap;
     padding: 1.1875rem;
-
-    .guest-entry {
-      margin-top: 19px;
-      max-width: 181.35px;
-      padding: 0;
-
-      .guest-info-container {
-        min-height: $guest-container-min-height;
-      }
-    }
-
-    .guest-info-container {
-      .guest-image {
-        min-height: 172px;
-
-        &.bugoy-drilon {
-          @include display-bg-image('bugoy-drilon');
-        }
-
-        &.daryl-ong {
-          @include display-bg-image('daryl-ong');
-        }
-
-        &.michael-pangilinan {
-          @include display-bg-image('michael-pangilinan');
-        }
-
-        &.liezel-garcia {
-          @include display-bg-image('liezel-garcia');
-        }
-
-        &.erik-santos {
-          @include display-bg-image('erik-santos');
-        }
-
-        &.mayonnaise {
-          @include display-bg-image('mayonnaise', center bottom, 340px);
-        }
-
-        &.udd {
-          @include display-bg-image('udd', center right);
-        }
-
-        &.the-ransom-collective {
-          @include display-bg-image('trc');
-        }
-      }
-
-      .guest-info {
-        background: $guest-name-info-bg;
-        padding: 12px;
-      }
-
-      .guest-info .guest-name {
-        color: $color-okada-dark-1;
-        font-family: 'Gotham Black';
-        font-size: 11px;
-      }
-
-      .guest-info .guest-name-info {
-        color: $caption-color;
-        font-family: 'Gotham Medium';
-        font-size: 10px;
-        margin-bottom: 0;
-      }
-    }
   }
 
   // Tablets below
@@ -90,7 +26,6 @@
     }
 
     .the-company-row {
-      // flex-direction: column-reverse;
       padding-bottom: 0;
 
       .image-col {
@@ -101,85 +36,6 @@
     .image {
       width: 100%;
     }
-
-    // GUEST LIST
-    .guests-row {
-      flex-wrap: wrap;
-      padding: 0 1.1875rem 1.1875rem !important;
-    }
-
-    // THE FOUNTAIN
-    .night-show-row {
-      max-height: $the-fountain-md-height;
-
-      .night-show-col {
-        // calculation of second argument: (19px x 2 = 28px + 12 = 40px)
-        max-height: calc(#{$the-fountain-md-height} - 40px);
-      }
-    }
-
-    // THE FOUNTAIN
-    .night-show-col {
-      padding: 19px !important;
-
-      .night-show-logo {
-        @include display-bg-image('the-fountain', right, auto);
-        height: 53.48px;
-      }
-
-      .dazzling {
-        -webkit-text-fill-color: transparent;
-        background: $dazzling-mask-color;
-        background-clip: text;
-        font-family: 'Playfair Display';
-        font-size: 23px;
-      }
-
-      .dazzling-details {
-        color: $white;
-        font-family: 'Gotham Book';
-        font-size: 14px;
-      }
-
-      .btn-dazzling {
-        font-family: 'Gotham Black';
-        font-size: 11px;
-        background-color: transparent;
-        border-color: $color-okada-light-1;
-        border-radius: 0.6625rem;
-        padding-left: 2em;
-        padding-right: 2em;
-      }
-    }
-
-    // COVE MANILA
-    .cove-manila-row {
-      @include display-bg-image('MeEGDK');
-      min-height: 250px;
-
-      .cove-manila-logo {
-        @include display-bg-image('cove-manila', center, auto);
-        height: 52px;
-        margin: 28px 0;
-      }
-
-      .cove-manila-logo-caption {
-        color: $white;
-        font-family: 'Gotham Medium';
-        font-size: 10px;
-        letter-spacing: 3px;
-      }
-    }
-
-    .cove-manila-row-1 {
-      @include display-bg-image('XTTRbX-1');
-      min-height: 437px;
-    }
-
-    .cove-manila-row-2 {
-      @include display-bg-image('5EsOJA');
-      min-height: 517px;
-    }
   }
 
   // Currently testing md
@@ -189,17 +45,6 @@
   //     max-height: $the-fountain-md-height;
   //   }
   // }
-
-  .night-show-row {
-    @include display-bg-image('X5X8Aj', 18% center);
-    min-height: $the-fountain-md-height;
-
-    .night-show-col {
-      @include night-show-container('night-show-logo', 'night-show-details');
-      border: 1px $color-okada-light-1 solid;
-      margin: 19px;
-    }
-  }
 }
 
 // Tablets below
