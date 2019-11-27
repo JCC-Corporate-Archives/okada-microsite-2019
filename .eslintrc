@@ -15,7 +15,8 @@
   "globals": {
     "jquery": true,
     "moment": true,
-    "countdown": true
+    "countdown": true,
+    "WOW": true
   },
   "extends": ["jquery"]
 }

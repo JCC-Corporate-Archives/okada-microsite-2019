@@ -14,10 +14,10 @@ window.onload = function() {
   var $clock = $("#countdown");
   var interval = 1000;
 
-  var $d = $("<div class=\"number-of days\" ></div>").appendTo($clock),
-    $h = $("<div class=\"number-of hours\" ></div>").appendTo($clock),
-    $m = $("<div class=\"number-of minutes\" ></div>").appendTo($clock),
-    $s = $("<div class=\"number-of seconds\" ></div>").appendTo($clock);
+  var $d = $($clock).find(".number-of.days"),
+    $h = $($clock).find(".number-of.hours"),
+    $m = $($clock).find(".number-of.minutes"),
+    $s = $($clock).find(".number-of.seconds");
 
   /**
    * Timer by setting interval
@@ -52,4 +52,8 @@ window.onload = function() {
     $m.text(m).append("<div class=\"days-label\">MINUTES</div>");
     $s.text(s).append("<div class=\"days-label\">SECONDS</div>");
   }, interval);
+
+  // init WOW.js
+  // Anti Flickering
+  new WOW().init();
 };
