@@ -56,4 +56,11 @@ window.onload = function() {
   // init WOW.js
   // Anti Flickering
   new WOW().init();
+
+  // The Restaurant slider
+  var theRestaurantsSlider = new Swiper("#theRestaurantsSlider", {
+    pagination: {
+      el: ".swiper-pagination"
+    }
+  });
 };

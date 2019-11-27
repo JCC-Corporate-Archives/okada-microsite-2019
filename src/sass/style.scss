@@ -1,6 +1,9 @@
 // Import bootstrap
 @import 'vendors/bootstrap4/bootstrap';
+// Import font-awesome
 @import 'vendors/fontawesome/font-awesome';
+// Import swiper (sass)
+@import 'vendors/swiper/swiper';
 
 // 7-1 pattern
 @import 'variables';
@@ -8,6 +11,7 @@
 @import 'base/colors';
 @import 'base/typography';
 @import 'components/navbar';
+@import 'components/swiper';
 @import 'layout/grid';
 
 // Theming
