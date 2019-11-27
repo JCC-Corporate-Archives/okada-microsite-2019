@@ -58,12 +58,19 @@
       min-height: 330.73px;
     }
 
+    // TODO: Not yet tested for larger devices
     .dj-kaka-head-wrapper {
+      border: $color-okada-normal-4 1px solid;
       grid-area: dj-kaka-head-wrapper;
+      min-height: 220px;
+      position: absolute;
+      top: 30%;
+      width: 59%;
 
       .dj-kaka-head {
-        border: $color-okada-normal-4 1px solid;
-        min-height: 220px;
+        position: inherit;
+        top: -96px;
+        width: 100%;
       }
     }
 
@@ -77,6 +84,7 @@
         border: $color-okada-normal-4 1px solid;
         max-height: 133.15px;
         padding: 0 15px 0 40px;
+        position: relative;
 
         .dj-kaka-details {
           transform: translateY(-1.9em);
@@ -110,6 +118,17 @@
         border-radius: 0;
         border-top: 0 !important;
         width: 80%;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: $color-okada-normal-4;
+          box-shadow: unset;
+
+          .visit-channel-text {
+            color: $black;
+          }
+        }
       }
 
       .visit-channel-text {
