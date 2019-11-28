@@ -61,4 +61,23 @@
 
   // .navbar-brand {
   // }
+
+  @include media-breakpoint-up(md) {
+    .navbar-toggler-right {
+      right: 3em;
+      top: 2em;
+    }
+
+    .navbar-brand {
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+
+      img {
+        transform: translateY(24px);
+        width: 100px;
+      }
+    }
+  }
 }

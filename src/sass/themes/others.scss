@@ -30,11 +30,34 @@
 
     .guest-entry {
       margin-top: 19px;
-      max-width: 181.35px;
+      min-width: 181.35px;
       padding: 0;
 
       .guest-info-container {
         min-height: $guest-container-min-height;
+      }
+    }
+
+    // GUEST LIST FOR TABLETS & UP
+    @include media-breakpoint-up(md) {
+      .guest-entry {
+        // margin-top: 19px;
+        // min-width: 181.35px;
+        // padding: 0;
+
+        .guest-info-container {
+          width: max-content;
+
+          .guest-image {
+            min-height: 320px;
+            width: 100%;
+          }
+
+          .guest-image.mayonnaise {
+            // The image was not on portrait
+            @include display-bg-image('mayonnaise', center bottom, 215%);
+          }
+        }
       }
     }
 
@@ -111,6 +134,31 @@
       border: 1px $color-okada-light-1 solid;
       // calculation of second argument: (19px x 2 = 28px + 12 = 40px)
       // max-height: calc(#{$the-fountain-md-height} - 40px);
+    }
+
+    // GUEST LIST FOR TABLETS & UP
+    @include media-breakpoint-up(md) {
+      height: 75vh;
+      max-height: unset;
+
+      .night-show-col .night-show-logo {
+        background-size: contain;
+        height: 30%;
+      }
+
+      .night-show-col .night-show-details {
+        align-content: flex-end;
+        align-items: flex-end;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        position: absolute;
+
+        .btn {
+          width: max-content;
+        }
+      }
     }
   }
 

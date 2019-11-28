@@ -34,12 +34,28 @@
       grid-column: 1 / span 2;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-down(md) {
       .image-2020 {
         background-size: auto;
         height: 50%;
         margin-bottom: 50%;
         margin-top: 50%;
+      }
+    }
+
+    // TABLETS AND UP
+    @include media-breakpoint-up(md) {
+      height: 70vh;
+
+      .image-2020 {
+        background-image: url('../images/2020@3x.png');
+        background-position: center 68px !important; // this is based on header/navbar height.
+        background-size: 60%;
+      }
+
+      .image-hero-model {
+        background-image: url('../images/2020-model@2x.png');
+        background-size: contain;
       }
     }
 
@@ -61,6 +77,7 @@
   }
 }
 
+// Mandated patch for smaller (so-so) screens
 @media screen and (max-width: 480px) {
   .main-container {
     .hero-row {
