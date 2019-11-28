@@ -16,7 +16,8 @@
     "jquery": true,
     "moment": true,
     "countdown": true,
-    "WOW": true
+    "WOW": true,
+    "Swiper": true
   },
   "extends": ["jquery"]
 }
