@@ -63,7 +63,7 @@ window.onload = function() {
     spaceBetween: 0,
     autoplay: {
       delay: 2500,
-      disableOnInteraction: false,
+      disableOnInteraction: false
     },
     pagination: {
       el: ".swiper-pagination"
