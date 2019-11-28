@@ -1,4 +1,68 @@
 .page-footer,
 .footer-wrapper {
   background: $black;
+
+  .footer-text {
+    color: $footer-text-color;
+    font-family: 'Gotham Book';
+    font-size: 12px;
+  }
+}
+
+.pre-footer-wrapper {
+  display: flex;
+
+  .nye-gold-rush,
+  .nye-gold-rush-sub {
+    -webkit-text-fill-color: transparent;
+    background: $common-shining-mask-bg; // tentative variable
+    background-clip: text;
+  }
+
+  .nye-gold-rush {
+    font-family: 'Gotham Black';
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+  }
+
+  .nye-gold-rush-sub {
+    font-family: 'Gotham Medium';
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 2.5em;
+  }
+
+  .pre-footer-row {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .social-icons-wrapper {
+    border-top: $white 1px solid;
+
+    .social-icons {
+      list-style: none;
+      margin-left: 0;
+      margin-top: 50px;
+      padding-left: 0;
+
+      .social-icon {
+        display: inline-block;
+      }
+
+      .social-icon + .social-icon {
+        margin-left: 2em;
+      }
+
+      .social-icon .fa {
+        -webkit-text-fill-color: transparent;
+        background: $common-shining-mask-bg; // tentative variable
+        background-clip: text;
+      }
+    }
+  }
 }

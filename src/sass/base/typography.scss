@@ -1,5 +1,5 @@
 // Gothan Family
-@include font-face('Gotham Book', '../fonts/GothamBook');
+@include font-face('Gotham Book', '../fonts/GothamBook', normal, normal, 'recent');
 @include font-face('Gotham Light', '../fonts/GothamLight', normal, normal, 'recent');
 @include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal, 'recent');
 @include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal, 'recent');
