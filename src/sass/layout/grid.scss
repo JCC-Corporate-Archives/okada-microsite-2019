@@ -38,6 +38,11 @@
     }
   }
 
+  // https://stackoverflow.com/a/42980961
+  .row [class*='col-'] {
+    transition: 0.5s ease;
+  }
+
   // Currently testing md
   // If something happenned weird on mobile, will use sm
   // @include media-breakpoint-down(sm) {

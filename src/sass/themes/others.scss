@@ -58,6 +58,10 @@
           @include display-bg-image('liezel-garcia');
         }
 
+        &.jason-dy {
+          @include display-bg-image('jason-dy');
+        }
+
         &.erik-santos {
           @include display-bg-image('erik-santos');
         }
@@ -98,28 +102,21 @@
   // THE FOUNTAIN
   .night-show-row {
     @include display-bg-image('X5X8Aj', 18% center);
-    max-height: $the-fountain-md-height;
-    min-height: $the-fountain-md-height;
+    max-height: calc(#{$the-fountain-md-height} + 2em);
+    min-height: calc(#{$the-fountain-md-height} + 2em);
+    padding: 19px;
 
     .night-show-col {
       @include night-show-container('night-show-logo', 'night-show-details');
       border: 1px $color-okada-light-1 solid;
-      margin: 19px;
       // calculation of second argument: (19px x 2 = 28px + 12 = 40px)
-      max-height: calc(#{$the-fountain-md-height} - 40px);
+      // max-height: calc(#{$the-fountain-md-height} - 40px);
     }
   }
 
-  // .night-show-row {
-
-  //   .night-show-col {
-
-  //   }
-  // }
-
   // THE FOUNTAIN
   .night-show-col {
-    padding: 19px !important;
+    padding: 1em !important;
 
     .night-show-logo {
       @include display-bg-image('the-fountain', right, auto);
@@ -154,6 +151,12 @@
   // THE RESTAURANTS
   .the-restaurants-col {
     padding: 40px 19px;
+
+    .the-restaurants-logo {
+      @include display-bg-image('the-restaurants-logo', left, auto);
+      margin-bottom: 15px;
+      min-height: 56px;
+    }
 
     .the-restaurants-heading {
       color: $hero-caption-color-darker;

@@ -33,9 +33,64 @@
     min-height: 437px;
   }
 
+  // OTHER DJs
   .cove-manila-row-2 {
     @include display-bg-image('5EsOJA');
     min-height: 517px;
+    // TODO: Tentative
+    // padding-top: 191.5px;
+
+    .featured-dj-below {
+      align-items: flex-end;
+      display: flex;
+      justify-content: center;
+      padding: 0 0.3em;
+
+      .featured-dj-below-profile-details {
+        min-width: 167.9px;
+        position: relative;
+        top: 12px;
+
+        .featured-dj-name {
+          color: $color-okada-dark-1;
+          font-family: 'Gotham Black';
+          font-size: 8px;
+          margin-bottom: 0.4em;
+        }
+
+        .featured-dj-name-desc {
+          color: $white;
+          font-family: 'Gotham Medium';
+          font-size: 9px;
+        }
+      }
+    }
+
+    // images
+    .featured-dj-below-profile {
+      align-items: end;
+      border: $color-okada-dark-1 1px solid;
+      display: flex;
+      justify-content: center;
+      max-height: 68.9px;
+      min-width: 186.72px;
+
+      .featured-dj-below-profile-image {
+        // changing .featured-dj-name-desc sizes would affect this
+        bottom: 36px;
+        min-height: 174.63px;
+        min-width: 167.9px;
+        position: absolute;
+      }
+
+      &.carlo-atendido .featured-dj-below-profile-image {
+        @include display-bg-image('lw0KTy');
+      }
+
+      &.everyday-people .featured-dj-below-profile-image {
+        @include display-bg-image('t076tc');
+      }
+    }
   }
 
   .cove-manila-row-1-sub-1,
@@ -43,10 +98,73 @@
     padding: 0 $default-padding-px;
   }
 
-  .featured-dj-1 {
-    border: $color-okada-normal-4 1px solid;
+  .cove-manila-row-1-sub-2 {
+    margin-top: 1em;
   }
 
+  // DJ SOLAII
+  .featured-dj-1 {
+    border: $color-okada-normal-4 1px solid;
+
+    .dj-solaii-head {
+      @include display-bg-image('dj-solaii-head', center bottom, auto);
+      bottom: 0;
+      min-height: 183.84px;
+      min-width: 196.93;
+      padding: 0;
+      position: absolute;
+    }
+
+    .dj-solaii-wrapper {
+      min-height: 138.89px;
+    }
+
+    .dj-solaii-details {
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 15.26px;
+
+      .dj-solaii-logo {
+        @include display-bg-image('dj-solaii-logo', center, auto);
+        margin: 0 auto;
+        min-height: 37.94px;
+        min-width: 133.93;
+      }
+
+      .dj-solaii-desc-wrapper,
+      .dj-solaii-button-container {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      .dj-solaii-desc-wrapper {
+        border: $color-okada-normal-4 1px solid;
+        margin-top: 0.55em;
+        max-height: 133.15px;
+        padding: 0 15px 0 40px;
+        position: relative;
+
+        // TODO: DRY these paragraph styles
+        .dj-solaii-desc {
+          color: $white;
+          font-family: 'Gotham Medium';
+          font-size: 9px;
+          margin-bottom: 0;
+        }
+      }
+
+      // BUTTON ADJUSTMENTS
+      // For DJ SOLAII
+      .dj-solaii-button-container {
+        .visit-channel-button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // DJ KAKA
   .featured-dj-2 {
     margin-top: 30px;
 
@@ -99,6 +217,7 @@
         // margin-bottom: 20px;
       }
 
+      // TODO: DRY these paragraph styles
       .dj-kaka-desc {
         color: $white;
         font-family: 'Gotham Medium';
@@ -110,33 +229,33 @@
         display: flex;
         flex-direction: row-reverse;
       }
+    }
+  }
 
-      // COMPONENTS =====================
+  // COMPONENTS =====================
 
-      .visit-channel-button {
-        border: $color-okada-normal-4 1px solid;
-        border-radius: 0;
-        border-top: 0 !important;
-        width: 80%;
+  .visit-channel-button {
+    border: $color-okada-normal-4 1px solid;
+    border-radius: 0;
+    border-top: 0 !important;
+    width: 80%;
 
-        &:hover,
-        &:active,
-        &:focus {
-          background: $color-okada-normal-4;
-          box-shadow: unset;
-
-          .visit-channel-text {
-            color: $black;
-          }
-        }
-      }
+    &:hover,
+    &:active,
+    &:focus {
+      background: $color-okada-normal-4;
+      box-shadow: unset;
 
       .visit-channel-text {
-        color: $color-okada-dark-1;
-        font-family: 'Roboto Bold Italic';
-        font-size: 12px;
-        margin: 0;
+        color: $black;
       }
     }
+  }
+
+  .visit-channel-text {
+    color: $color-okada-dark-1;
+    font-family: 'Roboto Bold Italic';
+    font-size: 12px;
+    margin: 0;
   }
 }
