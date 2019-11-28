@@ -65,8 +65,8 @@
           <div class="number-of seconds wow fadeInDown animated" data-wow-delay="0.8s">00</div>
         </div>
 
-        <div class="okada-hero">
-          <h1 class="okada-hero-heading">
+        <div class="okada-hero wow animated fadeIn" data-wow-delay="1s">
+          <h1 class=" okada-hero-heading">
             Okada Manila is taking its New Year’s Eve celebrations to bigger, more extravagant levels.
           </h1>
           <p class="okada-hero-caption">
@@ -102,7 +102,7 @@
     </div>
     <div class="row guests-row justify-content-between align-content-around">
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image bugoy-drilon"></div>
           <div class="guest-info">
             <h6 class="guest-name">Bugoy Drilon</h6>
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image daryl-ong"></div>
           <div class="guest-info">
             <h6 class="guest-name">Daryl Ong</h6>
@@ -120,7 +120,7 @@
         </div>
       </div>
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image michael-pangilinan"></div>
           <div class="guest-info">
             <h6 class="guest-name">Michael Pangilinan</h6>
@@ -129,7 +129,7 @@
         </div>
       </div>
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image liezel-garcia"></div>
           <div class="guest-info">
             <h6 class="guest-name">Liezel Garcia</h6>
@@ -138,7 +138,16 @@
         </div>
       </div>
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
+          <div class="guest-image jason-dy"></div>
+          <div class="guest-info">
+            <h6 class="guest-name">Jason Dy</h6>
+            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image erik-santos"></div>
           <div class="guest-info">
             <h6 class="guest-name">Erik Santos</h6>
@@ -147,7 +156,7 @@
         </div>
       </div>
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image mayonnaise"></div>
           <div class="guest-info">
             <h6 class="guest-name">Mayonnaise</h6>
@@ -156,7 +165,7 @@
         </div>
       </div>
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image udd"></div>
           <div class="guest-info">
             <h6 class="guest-name">UDD</h6>
@@ -165,19 +174,10 @@
         </div>
       </div>
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
+        <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image the-ransom-collective"></div>
           <div class="guest-info">
             <h6 class="guest-name">The Ransom Collective</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image bugoy-drilon"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Jason Dy</h6>
             <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
           </div>
         </div>
@@ -222,9 +222,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-6 col-lg-7 col-xl-7 the-restaurants-col">
-        <div class="the-restaurants-logo">
-          THE RESTAURANTS LOGO PLACEHOLDER
-        </div>
+        <div class="the-restaurants-logo"></div>
         <h1 class="the-restaurants-heading">
           A feast of the finest holiday flavors
         </h1>
@@ -244,23 +242,40 @@
         <p class="cove-manila-logo-caption">
           LITERALLY THE LAST PARTY OF THE YEAR
         </p>
-        <!-- <div class="row p-0"><div class="col-12"></div></div> -->
       </div>
     </div>
     <div class="row cove-manila-row-1">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="row cove-manila-row-1-sub-1">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured-dj-1">
-            DJ SOLAII
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured-dj-1 wow animated fadeInUp"
+            data-wow-delay="0.5s">
+            <div class="row dj-solaii-wrapper">
+              <div class="col-7 dj-solaii-head"></div>
+              <div class="col-5 dj-solaii-details">
+                <div class="dj-solaii-logo"></div>
+                <div class="dj-solaii-desc-wrapper p-1">
+                  <p class="dj-solaii-desc">
+                    The genre of DJ Solaii is Techno-Electronic music, focused more on beats and rhythms than vocals or
+                    melody.
+                  </p>
+                </div>
+                <div class="dj-solaii-button-container">
+                  <a href="#" class="btn visit-channel-button wow animated fadeIn fast" data-wow-delay="0.3"
+                    target="_blank">
+                    <h2 class="visit-channel-text">VISIT CHANNEL</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row cove-manila-row-1-sub-2">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 featured-dj-2 p-0">
             <div class="dj-kaka grid-container">
-              <div class="dj-kaka-head-wrapper">
+              <div class="dj-kaka-head-wrapper wow animated fadeInLeft" data-wow-delay="0.9s">
                 <img class="dj-kaka-head" src="images/dj-kaka.png" />
               </div>
-              <div class="dj-kaka-details-wrapper">
+              <div class="dj-kaka-details-wrapper wow animated fadeInRight" data-wow-delay="1.1s">
                 <div class="dj-kaka-details-container">
                   <div class="dj-kaka-details">
                     <h1 class="dj-kaka-name">

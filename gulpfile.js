@@ -280,6 +280,9 @@ gulp.task("copy-assets", function() {
   gulp.src(`${paths.node}swiper/**/*.scss`).pipe(gulp.dest(`${paths.src}/sass/vendors/swiper`));
   gulp.src(`${paths.node}swiper/css/*.css`).pipe(gulp.dest(paths.css));
 
+  // Hover.css
+  gulp.src(`${paths.node}hover.css/**/*.scss`).pipe(gulp.dest(`${paths.src}/sass/vendors/hover.css`));
+
   return stream;
 });
 

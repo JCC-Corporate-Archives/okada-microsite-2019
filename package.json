@@ -58,6 +58,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
+    "hover.css": "^2.3.2",
     "htmlhint": "^0.11.0",
     "merge-stream": "^2.0.0",
     "merge2": "^1.2.3",
