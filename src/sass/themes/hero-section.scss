@@ -55,11 +55,17 @@
 
     @include media-breakpoint-down(sm) {
       .image-2020 {
-        background-position: left center;
+        background-position: 9px center;
       }
+    }
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .main-container {
+    .hero-row {
       .image-hero-model {
-        background-position: 9.5em bottom;
+        background-position: 150% bottom !important;
       }
     }
   }

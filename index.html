@@ -36,18 +36,18 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Guests</a>
+          <a class="nav-link" href="#guests">Guests</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">The Fountain</a>
+          <a class="nav-link" href="#nightShow">The Fountain</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cove Manila</a>
+          <a class="nav-link" href="#coveManila">Cove Manila</a>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="container-fluid main-container">
+  <div id="top" class="container-fluid main-container">
     <div class="row hero-row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-0">
         <div class="grid">
@@ -79,7 +79,7 @@
     </div>
     <div class="row world-class-row">
       <div class="col-12 col-md-4 col-lg-5 col-xl-6 heading-col">
-        <h1 class="okada-hero-heading">
+        <h1 class="okada-hero-heading text-center">
           WORLD CLASS ENTERTAINMENT
         </h1>
         <p class="okada-hero-caption text-center">
@@ -100,7 +100,7 @@
         <img class="image the-company-group" src="images/the-company-group@2x.png" />
       </div>
     </div>
-    <div class="row guests-row justify-content-between align-content-around">
+    <div id="guests" class="row guests-row justify-content-between align-content-around">
       <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="guest-info-container hvr-float-shadow">
           <div class="guest-image bugoy-drilon"></div>
@@ -183,7 +183,7 @@
         </div>
       </div>
     </div>
-    <div class="row night-show-row">
+    <div id="nightShow" class="row night-show-row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 night-show-col">
         <div class="night-show-logo"></div>
         <div class="night-show-details">
@@ -199,7 +199,7 @@
         </div>
       </div>
     </div>
-    <div class="row the-restaurants-row">
+    <div id="theRestaurants" class="row the-restaurants-row">
       <div class="col-12 col-md-4 col-lg-5 col-xl-5 p-0">
         <!-- Swiper -->
         <div id="theRestaurantsSlider" class="swiper-container">
@@ -236,7 +236,7 @@
         </button>
       </div>
     </div>
-    <div class="row cove-manila-row text-center">
+    <div id="coveManila" class="row cove-manila-row text-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         <div class="cove-manila-logo mx-auto"></div>
         <p class="cove-manila-logo-caption">
@@ -301,7 +301,7 @@
       </div>
     </div>
     <div class="row cove-manila-row-2">
-      <div class="col-6 col-12 col-sm-6 col-md-6 col-lg-6 featured-dj-below">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 featured-dj-below">
         <div class="featured-dj-below-profile carlo-atendido wow animated fadeInDown" data-wow-delay="0.1s">
           <div class="featured-dj-below-profile-image"></div>
           <div class="featured-dj-below-profile-details">
@@ -310,7 +310,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-12 col-sm-6 col-md-6 col-lg-6 featured-dj-below">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 featured-dj-below">
         <div class="featured-dj-below-profile everyday-people wow animated fadeInDown" data-wow-delay="0.2s">
           <div class="featured-dj-below-profile-image"></div>
           <div class="featured-dj-below-profile-details">
@@ -327,10 +327,23 @@
         </div>
       </div>
     </div>
-    <div class="row footer-row">
-
-    </div>
+    <!-- Don't put social media links to this  -->
   </div>
+  <footer class="footer-wrapper">
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="col-12 text-center text-white">
+          <p class="footer-address">
+            New Seaside Drive, Entertainment City, Parañaque City, 1701,<br />
+            Metro Manila, Philippines
+          </p>
+          <p class="footer-okada">
+            Copyright © 2019 Okada Manila. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

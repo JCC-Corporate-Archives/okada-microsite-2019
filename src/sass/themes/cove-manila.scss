@@ -259,3 +259,19 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .container,
+  .container-fluid,
+  .main-container {
+    // OTHER DJs
+    .cove-manila-row-2 {
+      .featured-dj-below {
+        max-width: 100% !important;
+      }
+
+      // images
+      // .featured-dj-below-profile {}
+    }
+  }
+}
