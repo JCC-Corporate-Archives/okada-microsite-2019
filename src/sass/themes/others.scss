@@ -14,11 +14,11 @@
 
   .the-company-row {
     .image-col {
-      background-image: url('../images/the-company.png');
+      background-image: url('../images/the-company-group.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      min-height: 73px;
+      // min-height: 73px;
     }
   }
 
@@ -41,10 +41,6 @@
     // GUEST LIST FOR TABLETS & UP
     @include media-breakpoint-up(md) {
       .guest-entry {
-        // margin-top: 19px;
-        // min-width: 181.35px;
-        // padding: 0;
-
         .guest-info-container {
           width: max-content;
 
@@ -56,6 +52,15 @@
           .guest-image.mayonnaise {
             // The image was not on portrait
             @include display-bg-image('mayonnaise', center bottom, 215%);
+          }
+
+          .guest-name {
+            font-size: 18px !important;
+          }
+
+          .guest-name-info {
+            font-size: 13px !important;
+            width: 67%;
           }
         }
       }
@@ -210,6 +215,39 @@
       color: $hero-caption-color-darker;
       font-family: 'Playfair Display';
       font-size: 37px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .main-container {
+    .the-company-row {
+      .image-col {
+        background-image: url('../images/the-company-group@2x.png');
+        background-position: right;
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        min-height: 636px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .main-container {
+    .the-company-row {
+      .the-company-logo {
+        width: 100%;
+      }
+
+      .image-col {
+        // background-image: url('../images/the-company-group.png');
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        background-position: center bottom;
+        min-height: 46vh;
+      }
     }
   }
 }

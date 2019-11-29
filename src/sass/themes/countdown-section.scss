@@ -18,4 +18,15 @@
 
 // FOR TABLETS & UP
 @include media-breakpoint-up(md) {
+  .countdown-container {
+    .number-of {
+      font-size: 4vw;
+
+      .days-label {
+        font-size: 18px;
+        position: relative;
+        top: -1em;
+      }
+    }
+  }
 }

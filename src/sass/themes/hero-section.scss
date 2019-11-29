@@ -49,12 +49,13 @@
 
       .image-2020 {
         background-image: url('../images/2020@3x.png');
-        background-position: center 68px !important; // this is based on header/navbar height.
-        background-size: 60%;
+        background-position: 72% !important;
+        background-size: 45vh;
       }
 
       .image-hero-model {
         background-image: url('../images/2020-model@2x.png');
+        background-position: 70% bottom !important;
         background-size: contain;
       }
     }

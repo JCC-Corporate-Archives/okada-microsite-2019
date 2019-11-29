@@ -63,6 +63,8 @@
   // }
 
   @include media-breakpoint-up(md) {
+    min-height: $navbar-md-height;
+
     .navbar-toggler-right {
       right: 3em;
       top: 2em;
