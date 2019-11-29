@@ -39,7 +39,7 @@
     }
 
     // GUEST LIST FOR TABLETS & UP
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-down(xl) {
       .guest-entry {
         .guest-info-container {
           width: max-content;
@@ -62,6 +62,17 @@
             font-size: 13px !important;
             width: 67%;
           }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .guest-entry {
+        display: flex;
+        justify-content: center;
+
+        .guest-info-container {
+          width: unset;
         }
       }
     }
@@ -141,10 +152,18 @@
       // max-height: calc(#{$the-fountain-md-height} - 40px);
     }
 
+    @include media-breakpoint-down(xl) {
+      max-height: 100vh;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-height: unset;
+    }
+
     // GUEST LIST FOR TABLETS & UP
     @include media-breakpoint-up(md) {
-      height: 75vh;
-      max-height: unset;
+      height: 54vw;
+      padding: 2em;
 
       .night-show-col .night-show-logo {
         background-size: contain;
@@ -219,6 +238,39 @@
   }
 }
 
+@include media-breakpoint-up(xl) {
+  .main-container {
+    .the-company-row {
+      .image-col {
+        background-image: url('../images/the-company-group@3x.png') !important;
+        // background-position: right;
+        // min-height: 636px;
+      }
+    }
+
+    // THE FOUNTAIN
+    .night-show-col {
+      // padding: 4em !important;
+
+      .night-show-logo {
+        @include display-bg-image('the-fountain', right, auto);
+        height: 53.48px;
+      }
+
+      .dazzling {
+        font-size: 60px !important;
+        max-width: 750px !important;
+      }
+
+      .dazzling-details {
+        // color: $white;
+        // font-family: 'Gotham Book';
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .main-container {
     .the-company-row {
@@ -230,16 +282,37 @@
         min-height: 636px;
       }
     }
+
+    // THE FOUNTAIN
+    .night-show-col {
+      padding: 2em !important;
+
+      .night-show-logo {
+        @include display-bg-image('the-fountain', right, auto);
+        height: 53.48px;
+      }
+
+      .dazzling {
+        // -webkit-text-fill-color: transparent;
+        // background: $dazzling-mask-color;
+        // background-clip: text;
+        // font-family: 'Playfair Display';
+        font-size: 40px;
+        max-width: 540px;
+      }
+
+      .dazzling-details {
+        // color: $white;
+        // font-family: 'Gotham Book';
+        font-size: 14px;
+      }
+    }
   }
 }
 
 @include media-breakpoint-down(sm) {
   .main-container {
     .the-company-row {
-      .the-company-logo {
-        width: 100%;
-      }
-
       .image-col {
         // background-image: url('../images/the-company-group.png');
         // background-position: center;
@@ -247,6 +320,16 @@
         // background-size: contain;
         background-position: center bottom;
         min-height: 46vh;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .main-container {
+    .the-company-row {
+      .the-company-logo {
+        width: 100%;
       }
     }
   }

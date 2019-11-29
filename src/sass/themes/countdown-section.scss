@@ -16,6 +16,14 @@
   }
 }
 
+@include media-breakpoint-up(lg) {
+  .countdown-container {
+    .number-of {
+      font-size: 80px !important;
+    }
+  }
+}
+
 // FOR TABLETS & UP
 @include media-breakpoint-up(md) {
   .countdown-container {

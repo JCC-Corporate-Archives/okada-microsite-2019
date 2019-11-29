@@ -37,6 +37,9 @@
 
 // Responsive way of displaying image (using div background)
 @mixin display-bg-image($image-name, $background-position: center top, $background-size: cover) {
+  @include media-breakpoint-up(lg) {
+    background-image: url('../images/#{$image-name}@3x.png') !important;
+  }
   @include media-breakpoint-up(md) {
     background-image: url('../images/#{$image-name}@2x.png');
   }
