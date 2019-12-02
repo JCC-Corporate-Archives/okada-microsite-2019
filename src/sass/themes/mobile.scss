@@ -9,6 +9,8 @@ body {
 
 .main-container {
   @include media-breakpoint-down(sm) {
+    margin-bottom: 7vw;
+
     .the-company-row {
       .image-col {
         background-position: center bottom;
@@ -201,6 +203,13 @@ body {
     .cove-manila-row-2-sub-2 {
       position: relative;
       top: -10em;
+    }
+
+    // pre footer
+    .featured-dj-below {
+      & + .featured-dj-below {
+        margin-top: 185px;
+      }
     }
   }
 
