@@ -2,10 +2,20 @@
 .footer-wrapper {
   background: $black;
 
+  .footer-row {
+    padding-bottom: 3em;
+  }
+
   .footer-text {
     color: $footer-text-color;
     font-family: 'Gotham Book';
     font-size: 12px;
+  }
+
+  @include media-breakpoint-up(md) {
+    .footer-text {
+      font-size: 18px;
+    }
   }
 }
 
@@ -42,7 +52,7 @@
   }
 
   .social-icons-wrapper {
-    border-top: $white 1px solid;
+    border-top: $gray-600 1px solid;
 
     .social-icons {
       list-style: none;
@@ -62,6 +72,28 @@
         -webkit-text-fill-color: transparent;
         background: $common-shining-mask-bg; // tentative variable
         background-clip: text;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .nye-gold-rush {
+      font-size: 20px;
+    }
+
+    .nye-gold-rush-sub {
+      font-size: 15px;
+    }
+
+    .social-icons-wrapper {
+      .social-icons {
+        list-style: none;
+        margin: 50px 0;
+        padding-left: 0;
+
+        .social-icon .fa {
+          font-size: 33px;
+        }
       }
     }
   }

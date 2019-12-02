@@ -66,3 +66,15 @@
     grid-column: 1 / span 2;
   }
 }
+
+@mixin dazzling-text {
+  -webkit-text-fill-color: transparent;
+  background: $dazzling-mask-color;
+  background-clip: text;
+}
+
+@mixin dazzling-text-disable {
+  -webkit-text-fill-color: unset;
+  background: unset;
+  background-clip: unset;
+}

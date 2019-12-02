@@ -1,5 +1,14 @@
+body {
+  background: $black;
+}
+
 // Other cosmetic changes here
 .main-container {
+  & > .countdown-row,
+  & > .the-restaurants-row {
+    background: $white;
+  }
+
   .world-class-row,
   .the-company-row {
     background: $hero-gray-bg-color-1;

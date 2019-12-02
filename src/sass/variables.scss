@@ -18,3 +18,21 @@ $guest-container-min-height-md: 427px;
 
 // the fountain
 $the-fountain-md-height: 363px;
+
+// cove manila
+// DJ SOLAII
+$cove-dj-solaii-width: 134px;
+$cove-dj-solaii-width-x2: 268px;
+$cove-dj-solaii-width-x3: 402px;
+
+// DJ KAKA
+$cove-dj-kaka-height: 331px;
+$cove-dj-kaka-height-x2: 662px;
+$cove-dj-kaka-height-x3: 993px;
+$cove-dj-kaka-width: 232px;
+$cove-dj-kaka-width-x2: 464px;
+$cove-dj-kaka-width-x3: 695px;
+
+$cove-dj-kaka-wrapper-height: calc(#{$cove-dj-kaka-height} - 4em);
+$cove-dj-kaka-wrapper-height-x2: calc(#{$cove-dj-kaka-height-x2} - 4em);
+$cove-dj-kaka-wrapper-height-x3: calc(#{$cove-dj-kaka-height-x3} - 20em);
