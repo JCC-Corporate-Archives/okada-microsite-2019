@@ -1,9 +1,10 @@
 // Proper mobile patches
 // TODO: Move other mobile properties
 
-body,
-.main-container {
-  overflow-x: hidden;
+body {
+  @include media-breakpoint-down(sm) {
+    overflow-x: hidden;
+  }
 }
 
 .main-container {

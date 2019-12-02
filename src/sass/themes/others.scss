@@ -296,6 +296,19 @@ body {
       }
     }
 
+    .guests-row {
+      .guest-info-container .guest-image {
+        background-size: cover !important;
+        height: calc(172px + 8vw);
+      }
+
+      .guest-info-container .guest-image.mayonnaise {
+        // The image was not on portrait
+        @include display-bg-image('mayonnaise', center bottom);
+        background-size: 215% !important;
+      }
+    }
+
     // THE FOUNTAIN
     .night-show-col {
       padding: 2em !important;
