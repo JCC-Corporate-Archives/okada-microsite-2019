@@ -1,0 +1,8 @@
+@import 'vendors/bootstrap4/bootstrap';
+
+.wow {
+  @include media-breakpoint-down(sm) {
+    animation: none !important;
+    visibility: visible !important;
+  }
+}

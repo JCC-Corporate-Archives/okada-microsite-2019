@@ -31,7 +31,7 @@ var paths = cfg.paths;
 // Compiles SCSS files (if you don't have compass)
 gulp.task("sass", function() {
   var stream = gulp
-    .src(`${paths.sass}/*.scss`)
+    .src([`!${paths.sass}/animations.scss`, `${paths.sass}/*.scss`])
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       plumber({
@@ -281,7 +281,9 @@ gulp.task("copy-assets", function() {
   gulp.src(`${paths.node}swiper/css/*.css`).pipe(gulp.dest(paths.css));
 
   // Hover.css
-  gulp.src(`${paths.node}hover.css/**/*.scss`).pipe(gulp.dest(`${paths.src}/sass/vendors/hover.css`));
+  gulp
+    .src(`${paths.node}hover.css/**/*.scss`)
+    .pipe(gulp.dest(`${paths.src}/sass/vendors/hover.css`));
 
   return stream;
 });
