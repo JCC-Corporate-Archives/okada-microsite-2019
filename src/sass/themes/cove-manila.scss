@@ -128,7 +128,7 @@
         @include display-bg-image('dj-solaii-logo', center, auto);
         margin: 0 auto;
         min-height: 37.94px;
-        min-width: 133.93;
+        min-width: 133.93px;
       }
 
       .dj-solaii-desc-wrapper,
@@ -260,17 +260,9 @@
   }
 }
 
-// TABLETS BELOW
-@include media-breakpoint-down(md) {
-  .container,
-  .container-fluid,
+// TABLETS ABOVE
+@include media-breakpoint-up(md) {
   .main-container {
-    // .cove-manila-row,
-    // .cove-manila-row-1,
-    // .cove-manila-row-2 {
-    //   background-color: $black;
-    // }
-
     .cove-manila-row {
       height: 60vw;
 
@@ -426,7 +418,7 @@
 // DESKTOP UP
 @include media-breakpoint-up(lg) {
   .main-container {
-    margin-bottom: 30em;
+    margin-bottom: 10em;
 
     .cove-manila-row {
       height: 60vw;
@@ -644,7 +636,7 @@
       // border-top: 0 !important;
       border-width: 2px;
       padding: 2.75rem 0.75rem;
-      width: calc(100% - 7.8em);
+      width: calc(100% - 8.1em);
 
       &:hover,
       &:active,

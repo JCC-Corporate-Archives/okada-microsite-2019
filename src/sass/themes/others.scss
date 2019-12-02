@@ -29,6 +29,10 @@ body {
       background-size: contain;
       // min-height: 73px;
     }
+
+    .the-company-logo {
+      width: 100%;
+    }
   }
 
   // GUEST LIST
@@ -48,7 +52,7 @@ body {
     }
 
     // GUEST LIST FOR TABLETS & UP
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-down(md) {
       .guest-entry {
         .guest-info-container {
           width: max-content;
@@ -64,11 +68,11 @@ body {
           }
 
           .guest-name {
-            font-size: 18px !important;
+            font-size: 12px !important;
           }
 
           .guest-name-info {
-            font-size: 13px !important;
+            font-size: 8px;
             width: 67%;
           }
         }
@@ -135,7 +139,7 @@ body {
       .guest-info .guest-name {
         color: $color-okada-dark-1;
         font-family: 'Gotham Black';
-        font-size: 11px;
+        font-size: 18px; // Moved to mobile
       }
 
       .guest-info .guest-name-info {
@@ -285,7 +289,7 @@ body {
     .the-company-row {
       .image-col {
         background-image: url('../images/the-company-group@2x.png');
-        background-position: right;
+        background-position: right bottom;
         // background-repeat: no-repeat;
         // background-size: contain;
         min-height: 636px;
@@ -349,31 +353,6 @@ body {
       .okada-hero-caption {
         font-family: 'Gotham Book';
         font-size: 24px;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .main-container {
-    .the-company-row {
-      .image-col {
-        // background-image: url('../images/the-company-group.png');
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        background-position: center bottom;
-        min-height: 46vh;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .main-container {
-    .the-company-row {
-      .the-company-logo {
-        width: 100%;
       }
     }
   }

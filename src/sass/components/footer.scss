@@ -79,10 +79,12 @@
   @include media-breakpoint-up(md) {
     .nye-gold-rush {
       font-size: 20px;
+      letter-spacing: 10px;
     }
 
     .nye-gold-rush-sub {
       font-size: 15px;
+      letter-spacing: 7px;
     }
 
     .social-icons-wrapper {
@@ -93,6 +95,10 @@
 
         .social-icon .fa {
           font-size: 33px;
+        }
+
+        .social-icon + .social-icon {
+          margin-left: 3em;
         }
       }
     }
