@@ -27,7 +27,7 @@ body {
         }
 
         .guest-info-container .guest-image {
-          min-height: 172px !important;
+          min-height: 172px; // TODO: Not working yet
         }
       }
     }

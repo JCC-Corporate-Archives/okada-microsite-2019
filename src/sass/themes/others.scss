@@ -79,6 +79,16 @@ body {
       }
     }
 
+    @include media-breakpoint-down(sm) {
+      .guest-entry {
+        .guest-info-container {
+          .guest-image {
+            min-height: calc(172px + 15vw);
+          }
+        }
+      }
+    }
+
     @include media-breakpoint-up(md) {
       .guest-entry {
         display: flex;

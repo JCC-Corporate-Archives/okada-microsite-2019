@@ -2,6 +2,7 @@
 // This should be grid related.
 // Other cosmetic styling should be on /themes/others
 .main-container {
+  margin-bottom: 30em;
   margin-top: -#{$navbar-default-height};
 
   .hero-row {
@@ -60,7 +61,7 @@
     margin-top: -#{$navbar-md-height};
 
     .hero-row {
-      padding-top: calc(#{$navbar-md-height} + 15px);
+      padding-top: calc(#{$navbar-md-height} + 25px);
     }
 
     .countdown-row {
