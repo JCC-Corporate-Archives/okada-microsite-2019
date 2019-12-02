@@ -1,4 +1,13 @@
 window.onload = function() {
+
+  // NAVBAR
+  $(".navbar-nav>li>a").on("click", function() {
+    $(".navbar-collapse").collapse("hide");
+  });
+
+  // Add scrollspy to <body>
+  $("body").scrollspy({ target: ".navbar", offset: 70 });
+
   $("#collapsibleNavbar").on("show.bs.collapse", function() {
     $("#navBar").css({
       background: "#000"
@@ -55,7 +64,8 @@ window.onload = function() {
 
   // init WOW.js
   // Anti Flickering
-  new WOW().init();
+  // Disable on mobile. Cause: https://github.com/matthieua/WOW/issues/34
+  new WOW({ offset: 0, mobile: false }).init();
 
   // The Restaurant slider
   new Swiper("#theRestaurantsSlider", {
