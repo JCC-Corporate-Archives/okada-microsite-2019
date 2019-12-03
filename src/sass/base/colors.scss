@@ -50,6 +50,29 @@ $guest-name-info-bg: linear-gradient(
   rgba(60, 60, 59, 1) 100%
 );
 
+// base gradient pallette
+$okada-base-gradient-color-1: rgba(182, 124, 48, 1);
+$okada-base-gradient-color-2: rgba(205, 134, 52, 1);
+$okada-base-gradient-color-3: rgba(205, 135, 52, 1);
+$okada-base-gradient-color-4: rgba(208, 142, 56, 1);
+$okada-base-gradient-color-5: rgba(213, 154, 62, 1);
+$okada-base-gradient-color-6: rgba(215, 158, 64, 1);
+$okada-base-gradient-color-7: rgba(255, 212, 134, 1);
+$okada-base-gradient-color-8: rgba(226, 176, 88, 1);
+
+// base gradient
+$okada-base-gradient: linear-gradient(
+  39deg,
+  #{$okada-base-gradient-color-1} 0%,
+  #{$okada-base-gradient-color-2} 17%,
+  #{$okada-base-gradient-color-3} 38%,
+  #{$okada-base-gradient-color-4} 45%,
+  #{$okada-base-gradient-color-5} 52%,
+  #{$okada-base-gradient-color-6} 53%,
+  #{$okada-base-gradient-color-7} 71%,
+  #{$okada-base-gradient-color-8} 100%
+);
+
 // others
 $navbar-primary-color: #f8d76d;
 $hero-section-right-color: #ce8735;
