@@ -28,17 +28,17 @@ $hero-section-bg: linear-gradient(
 
 // with gradient
 // for: the fountain
-$dazzling-mask-color: linear-gradient(
-  39deg,
-  rgba(182, 124, 48, 1) 0%,
-  rgba(205, 134, 52, 1) 30%,
-  rgba(205, 135, 52, 1) 41%,
-  rgba(208, 142, 56, 1) 52%,
-  rgba(213, 154, 62, 1) 61%,
-  rgba(215, 158, 64, 1) 70%,
-  rgba(255, 212, 134, 1) 80%,
-  rgba(226, 176, 88, 1) 90%
-);
+// $dazzling-mask-color: linear-gradient(
+//   39deg,
+//   rgba(182, 124, 48, 1) 0%,
+//   rgba(205, 134, 52, 1) 30%,
+//   rgba(205, 135, 52, 1) 41%,
+//   rgba(208, 142, 56, 1) 52%,
+//   rgba(213, 154, 62, 1) 61%,
+//   rgba(215, 158, 64, 1) 70%,
+//   rgba(255, 212, 134, 1) 80%,
+//   rgba(226, 176, 88, 1) 90%
+// );
 
 // guest name
 $guest-name-info-bg: linear-gradient(
@@ -72,6 +72,8 @@ $okada-base-gradient: linear-gradient(
   #{$okada-base-gradient-color-7} 71%,
   #{$okada-base-gradient-color-8} 100%
 );
+
+$dazzling-mask-color: $okada-base-gradient;
 
 // others
 $navbar-primary-color: #f8d76d;

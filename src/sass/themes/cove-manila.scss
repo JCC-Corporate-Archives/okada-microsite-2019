@@ -671,7 +671,18 @@
 //   .main-container {}
 // }
 
-@media screen and (max-width: 1400px) {
+@include media-breakpoint-down(md) {
+  .main-container {
+    // DJ KAKA
+    .featured-dj-2 {
+      .dj-kaka-details-wrapper .dj-kaka-button-container {
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1400px) {
   .main-container {
     // DJ SOLAII
     .dj-solaii-details {
