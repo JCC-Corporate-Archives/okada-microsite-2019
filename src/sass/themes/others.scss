@@ -245,7 +245,9 @@ body {
 
   // THE RESTAURANTS
   .the-restaurants-col {
-    padding: 40px 19px;
+    @include media-breakpoint-up(lg) {
+      padding: 40px 19px;
+    }
 
     .the-restaurants-logo {
       @include display-bg-image('the-restaurants-logo', left, auto);
@@ -289,6 +291,16 @@ body {
         // color: $white;
         // font-family: 'Gotham Book';
         font-size: 14px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .main-container {
+    .the-restaurants-col {
+      .the-restaurants-content {
+        padding: 0 5em;
       }
     }
   }
@@ -356,7 +368,7 @@ body {
       justify-content: center;
 
       .the-restaurants-content {
-        padding: 0 5em;
+        padding: 0 10px;
       }
 
       .the-restaurants-logo {
