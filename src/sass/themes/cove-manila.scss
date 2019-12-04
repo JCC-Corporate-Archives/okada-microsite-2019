@@ -22,7 +22,7 @@
 
     .cove-manila-logo-caption {
       color: $white;
-      font-family: 'Gotham Medium';
+      font-family: $font-family-gotham-medium;
       font-size: 10px;
       letter-spacing: 3px;
     }
@@ -52,14 +52,14 @@
 
         .featured-dj-name {
           color: $color-okada-dark-1;
-          font-family: 'Gotham Black';
+          font-family: $font-family-gotham-black;
           font-size: 8px;
           margin-bottom: 0.4em;
         }
 
         .featured-dj-name-desc {
           color: $white;
-          font-family: 'Gotham Medium';
+          font-family: $font-family-gotham-medium;
           font-size: 9px;
         }
       }
@@ -147,7 +147,7 @@
         // TODO: DRY these paragraph styles
         .dj-solaii-desc {
           color: $white;
-          font-family: 'Gotham Medium';
+          font-family: $font-family-gotham-medium;
           font-size: 9px;
           margin-bottom: 0;
         }
@@ -211,7 +211,7 @@
 
       .dj-kaka-name {
         color: $color-okada-dark-1;
-        font-family: 'Gotham Black';
+        font-family: $font-family-gotham-black;
         font-size: 42px;
         line-height: 0.65em;
         // margin-bottom: 20px;
@@ -220,7 +220,7 @@
       // TODO: DRY these paragraph styles
       .dj-kaka-desc {
         color: $white;
-        font-family: 'Gotham Medium';
+        font-family: $font-family-gotham-medium;
         font-size: 9px;
         margin-bottom: 0;
       }
@@ -254,8 +254,10 @@
 
   .visit-channel-text {
     color: $color-okada-dark-1;
-    font-family: 'Roboto Bold Italic';
+    font-family: $font-family-roboto-bold-italic;
     font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
     margin: 0;
   }
 }
@@ -328,7 +330,7 @@
           // TODO: DRY these paragraph styles
           .dj-solaii-desc {
             color: $white;
-            font-family: 'Gotham Medium';
+            font-family: $font-family-gotham-medium;
             font-size: 9px;
             margin-bottom: 0;
           }
@@ -392,7 +394,7 @@
 
         .dj-kaka-name {
           color: $color-okada-dark-1;
-          font-family: 'Gotham Black';
+          font-family: $font-family-gotham-black;
           font-size: 42px;
           line-height: 0.65em;
           // margin-bottom: 20px;
@@ -401,7 +403,7 @@
         // TODO: DRY these paragraph styles
         .dj-kaka-desc {
           color: $white;
-          font-family: 'Gotham Medium';
+          font-family: $font-family-gotham-medium;
           font-size: 9px;
           margin-bottom: 0;
         }
@@ -503,7 +505,7 @@
           // TODO: DRY these paragraph styles
           .dj-solaii-desc {
             color: $white;
-            font-family: 'Gotham Medium';
+            font-family: $font-family-gotham-medium;
             font-size: 23px;
             margin-bottom: 0;
           }
@@ -572,7 +574,7 @@
 
         .dj-kaka-name {
           color: $color-okada-dark-1;
-          font-family: 'Gotham Black';
+          font-family: $font-family-gotham-black;
           font-size: 6em;
           line-height: 0.7em;
           margin-bottom: 25px;
@@ -581,7 +583,7 @@
         // TODO: DRY these paragraph styles
         .dj-kaka-desc {
           color: $white;
-          font-family: 'Gotham Medium';
+          font-family: $font-family-gotham-medium;
           font-size: 28px;
           margin-bottom: 0;
         }
@@ -740,7 +742,7 @@
 
         .dj-kaka-name {
           // color: $color-okada-dark-1;
-          // font-family: 'Gotham Black';
+          // font-family: $font-family-gotham-black;
           font-size: 6em;
           line-height: 0.7em;
           margin-bottom: 25px;
@@ -749,7 +751,7 @@
         // TODO: DRY these paragraph styles
         .dj-kaka-desc {
           // color: $white;
-          // font-family: 'Gotham Medium';
+          // font-family: $font-family-gotham-medium;
           font-size: 24px;
           margin-bottom: 0;
         }

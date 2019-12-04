@@ -148,13 +148,13 @@ body {
 
       .guest-info .guest-name {
         color: $color-okada-dark-1;
-        font-family: 'Gotham Black';
+        font-family: $font-family-gotham-black;
         font-size: 18px; // Moved to mobile
       }
 
       .guest-info .guest-name-info {
         color: $caption-color;
-        font-family: 'Gotham Medium';
+        font-family: $font-family-gotham-medium;
         font-size: 10px;
         margin-bottom: 0;
       }
@@ -222,18 +222,18 @@ body {
       -webkit-text-fill-color: transparent;
       background: $dazzling-mask-color;
       background-clip: text;
-      font-family: 'Playfair Display';
+      font-family: $font-family-playfair-display-regular;
       font-size: 23px;
     }
 
     .dazzling-details {
       color: $white;
-      font-family: 'Gotham Book';
+      font-family: $font-family-gotham-book;
       font-size: 14px;
     }
 
     // .btn-dazzling {
-    //   font-family: 'Gotham Black';
+    //   font-family: $font-family-gotham-black;
     //   font-size: 11px;
     //   background-color: transparent;
     //   border-color: $color-okada-light-1;
@@ -257,7 +257,7 @@ body {
 
     .the-restaurants-heading {
       color: $hero-caption-color-darker;
-      font-family: 'Playfair Display';
+      font-family: $font-family-playfair-display-regular;
       font-size: 37px;
     }
   }
@@ -386,7 +386,7 @@ body {
       }
 
       .okada-hero-caption {
-        font-family: 'Gotham Book';
+        font-family: $font-family-gotham-book;
         font-size: 24px;
       }
     }

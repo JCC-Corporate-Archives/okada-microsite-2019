@@ -8,7 +8,7 @@
 
   .footer-text {
     color: $footer-text-color;
-    font-family: 'Gotham Book';
+    font-family: $font-family-gotham-book;
     font-size: 12px;
   }
 
@@ -30,14 +30,14 @@
   }
 
   .nye-gold-rush {
-    font-family: 'Gotham Black';
+    font-family: $font-family-gotham-black;
     font-size: 11px;
     letter-spacing: 4px;
     margin-bottom: 0;
   }
 
   .nye-gold-rush-sub {
-    font-family: 'Gotham Medium';
+    font-family: $font-family-gotham-medium;
     font-size: 9px;
     letter-spacing: 3px;
     margin-bottom: 2.5em;
