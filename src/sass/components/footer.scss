@@ -43,6 +43,12 @@
     margin-bottom: 2.5em;
   }
 
+  @include browser(Safari) {
+    .nye-gold-rush-sub {
+      font-family: $font-family-gotham-medium-fall-back;
+    }
+  }
+
   .pre-footer-row {
     align-items: center;
     display: flex;
