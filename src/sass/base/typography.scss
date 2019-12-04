@@ -3,18 +3,18 @@ $FontPathOpenSans: '/fonts/open-sans';
 @import '../vendors/open-sans-fonts/open-sans';
 
 // Gothan Family
-@include font-face('Gotham Book', '../fonts/GothamBook', normal, normal, 'recent');
-@include font-face('Gotham Light', '../fonts/GothamLight', normal, normal, 'recent');
-@include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal, 'recent');
-@include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal, 'recent');
-@include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic, 'recent');
-@include font-face('Gotham Black', '../fonts/GothamBlack', bolder, normal, 'recent');
+@include font-face-dynamic('Gotham Book', '../fonts/GothamBook', normal, normal);
+@include font-face-dynamic('Gotham Light', '../fonts/GothamLight', normal, normal);
+@include font-face-dynamic('Gotham Medium', '../fonts/GothamMedium', inherit, normal);
+@include font-face-dynamic('Gotham Bold', '../fonts/GothamBold', bold, normal);
+@include font-face-dynamic('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic);
+@include font-face-dynamic('Gotham Black', '../fonts/GothamBlack', bolder, normal);
 
 // Playfair Display Family
-@include font-face('Playfair Display', '../fonts/PlayfairDisplayRegular');
+@include font-face-dynamic('Playfair Display', '../fonts/PlayfairDisplayRegular');
 
 // Roboto Family
-@include font-face('Roboto Bold Italic', '../fonts/RobotoBoldItalic', bold, italic, 'recent');
+@include font-face-dynamic('Roboto Bold Italic', '../fonts/RobotoBoldItalic', bold, italic);
 
 html,
 body {

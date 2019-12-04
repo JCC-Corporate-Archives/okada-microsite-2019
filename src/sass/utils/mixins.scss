@@ -35,6 +35,18 @@
   }
 }
 
+// Custom version & dynamic
+@mixin font-face-dynamic($font-name, $font-path, $font-weight: 400, $font-style: normal) {
+  @font-face {
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('#{$font-path}.eot') format('embedded-opentype'), url('#{$font-path}.woff') format('woff'),
+      url('#{$font-path}.woff2') format('woff2'), url('#{$font-path}.ttf') format('truetype'),
+      url('#{$font-path}.svg') format('svg');
+  }
+}
+
 // Responsive way of displaying image (using div background)
 @mixin display-bg-image($image-name, $background-position: center top, $background-size: cover) {
   @include media-breakpoint-up(lg) {

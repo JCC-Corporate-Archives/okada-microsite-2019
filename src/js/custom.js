@@ -20,6 +20,19 @@ window.onload = function() {
     });
   });
 
+  // NAVBAR OVERLAY
+  $("#openNav").on("click", function() {
+    $("#myNav").css("height", "100%");
+    setTimeout(function() {
+      $("#myNav").addClass("collapsed");
+    }, 100);
+  });
+  $("#closeNav").on("click", function() {
+    $("#myNav")
+      .css("height", "0%")
+      .removeClass("collapsed");
+  });
+
   var $clock = $("#countdown");
   var interval = 1000;
 

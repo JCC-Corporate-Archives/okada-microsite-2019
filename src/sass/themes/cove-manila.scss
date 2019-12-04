@@ -123,6 +123,7 @@
       position: absolute;
       right: 0;
       top: 15.26px;
+      z-index: 2;
 
       .dj-solaii-logo {
         @include display-bg-image('dj-solaii-logo', center, auto);
@@ -640,7 +641,7 @@
       // border-top: 0 !important;
       border-width: 2px;
       padding: 2.75rem 0.75rem;
-      width: calc(100% - 7.8em);
+      width: calc(100% - 7.8rem);
 
       &:hover,
       &:active,
@@ -727,7 +728,7 @@
         // flex-direction: column;
         grid-area: dj-kaka-details-wrapper;
         // position: absolute;
-        right: 0.6vw;
+        right: 1em;
         top: 155%;
         width: 50%;
 

@@ -27,6 +27,7 @@ $hero-gray-bg-color-1: #e8e8e8;
 $hero-gray-bg-color-2: #c2c2c1;
 $caption-color: $hero-caption-color;
 $footer-text-color: $hero-gray-bg-color-2;
+$nav-overlay-bg-color: rgba($black, 0.94);
 
 // navbars
 $navbar-okada-icon-bg-color: rgba($navbar-primary-color, 0.5) !default;
@@ -56,6 +57,7 @@ $guest-name-info-bg: linear-gradient(
   rgba(56, 56, 55, 1) 75%,
   rgba(60, 60, 59, 1) 100%
 );
+$nav-overlay-hover-gradient: $guest-name-info-bg;
 
 // base gradient pallette
 $okada-base-gradient-color-1: rgba(182, 124, 48, 1);
