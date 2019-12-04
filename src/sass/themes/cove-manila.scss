@@ -597,7 +597,7 @@
 
     // FEATURED DJ BELOW
     .cove-manila-row-2-sub-2 {
-      margin-top: 65em;
+      margin-top: 72%;
       position: relative;
 
       .featured-dj-below {
@@ -613,8 +613,10 @@
         }
 
         .featured-dj-below-profile-details {
+          align-self: center;
+          margin-top: 40px;
           padding: 0 1em;
-          top: 5em;
+          // top: 20px;
           width: 30vw;
 
           .featured-dj-name {
