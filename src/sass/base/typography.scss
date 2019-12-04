@@ -1,3 +1,7 @@
+// Import Open Sans
+$FontPathOpenSans: '/fonts/open-sans';
+@import '../vendors/open-sans-fonts/open-sans';
+
 // Gothan Family
 @include font-face('Gotham Book', '../fonts/GothamBook', normal, normal, 'recent');
 @include font-face('Gotham Light', '../fonts/GothamLight', normal, normal, 'recent');
@@ -11,6 +15,18 @@
 
 // Roboto Family
 @include font-face('Roboto Bold Italic', '../fonts/RobotoBoldItalic', bold, italic, 'recent');
+
+html,
+body {
+  font-family: $font-family-open-sans;
+  font-weight: normal;
+}
+
+// OPEN SANS TEST
+.johnny-sans {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
 
 .okada-hero {
   margin-top: 34px;
