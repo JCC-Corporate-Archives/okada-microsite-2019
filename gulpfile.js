@@ -249,7 +249,8 @@ gulp.task("copy-assets", function() {
   // Copy all Open Sans Fonts
   gulp
     .src(`${paths.node}open-sans-fonts/open-sans/**/*.{ttf,woff,woff2,eot,svg}`)
-    .pipe(gulp.dest(`${paths.sass}/vendors/open-sans-fonts/open-sans`));
+    .pipe(gulp.dest(`${paths.sass}/vendors/open-sans-fonts/open-sans`))
+    .pipe(gulp.dest("./fonts/open-sans"));
 
   // Copy all Open Sans SCSS
   gulp
