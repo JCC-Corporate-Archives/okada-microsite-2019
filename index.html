@@ -23,47 +23,58 @@
   <![endif]-->
 </head>
 
-<body>
-  <nav id="navBar" class="navbar navbar-dark navbar-trans okada">
+<body id="top">
+  <nav id="navBar" class="navbar navbar-expand-md sticky-top navbar-dark okada">
     <a class="navbar-brand mx-auto" href="#">
       <img src="images/okada-logo-small.png" width="41" />
     </a>
-    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-      data-target="#collapsibleNavbar">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#guests">Guests</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#nightShow">The Fountain</a>
+          <a class="nav-link" href="#">World Class Entertainment</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#coveManila">Cove Manila</a>
+          <a class="nav-link" href="#">Guests</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">The Fountain</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">The Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cove Manila</a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item waves-effect waves-light" href="#">Dropdown 1</a>
+          </div>
+        </li> -->
       </ul>
     </div>
-  </nav>
-  <!-- <div class="modal fade modal-fullscreen-menu" id="modalNavigation" role='dialog' tabindex='-1'>
-    <button aria-label='Close' class='close' data-dismiss='modal' type='button'>
-      <span class='sr-only'>Close navigation</span>
-      <span class='glyphicon glyphicon-remove'></span>
-    </button>
-    <div class='modal-dialog'>
-      <nav class='list-group'>
-        <a class='list-group-item' href='#'>Home</a>
-        <a class='list-group-item' href='#'>Services</a>
-        <a class='list-group-item' href='#'>Meet the Team</a>
-        <a class='list-group-item' href='#'>Careers</a>
-        <a class='list-group-item' href='#'>Contact Us</a>
+    <div class="modal-dialog" hidden>
+      <nav class="list-group">
+        <a class="list-group-item" href="#top">Home</a>
+        <a class="list-group-item" href="#">World Class Entertainment</a>
+        <a class="list-group-item" href="#">Guests</a>
+        <a class="list-group-item" href="#">The Fountain</a>
+        <a class="list-group-item" href="#">The Restaurants</a>
+        <a class="list-group-item" href="#">Cove Manila</a>
       </nav>
     </div>
-  </div> -->
-  <div id="top" class="container-fluid main-container">
+  </nav>
+  <div class="container-fluid main-container">
     <div class="row hero-row justify-content-lg-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-10 p-0">
         <div class="grid">
