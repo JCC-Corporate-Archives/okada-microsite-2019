@@ -1,0 +1,61 @@
+// palette
+$color-okada-light-1: #fdd283;
+$color-okada-light-2: #ffd486;
+$color-okada-light-3: #f8d76d;
+$color-okada-light-4: #f9d86d;
+
+$color-okada-normal-1: #e2b058;
+$color-okada-normal-2: #d79e40;
+$color-okada-normal-3: #cd8734;
+$color-okada-normal-4: #d3943b;
+$color-okada-normal-5: #cf8c37;
+$color-okada-normal-6: #d59a3e;
+$color-okada-normal-7: #d69b3f;
+
+$color-okada-dark-1: #cd8634;
+$color-okada-dark-2: #b67c30;
+
+// hero section
+$hero-section-bg: linear-gradient(
+  135deg,
+  rgba(255, 212, 134, 1) 0%,
+  rgba(226, 176, 88, 1) 13%,
+  rgba(226, 176, 88, 1) 14%,
+  rgba(215, 158, 64, 1) 32%,
+  rgba(205, 134, 52, 1) 79%,
+  rgba(182, 124, 48, 1) 100%
+);
+
+// with gradient
+// for: the fountain
+$dazzling-mask-color: linear-gradient(
+  39deg,
+  rgba(182, 124, 48, 1) 0%,
+  rgba(205, 134, 52, 1) 30%,
+  rgba(205, 135, 52, 1) 41%,
+  rgba(208, 142, 56, 1) 52%,
+  rgba(213, 154, 62, 1) 61%,
+  rgba(215, 158, 64, 1) 70%,
+  rgba(255, 212, 134, 1) 80%,
+  rgba(226, 176, 88, 1) 90%
+);
+
+// guest name
+$guest-name-info-bg: linear-gradient(
+  90deg,
+  rgba(29, 29, 27, 1) 0%,
+  rgba(30, 30, 29, 1) 25%,
+  rgba(47, 47, 45, 1) 50%,
+  rgba(56, 56, 55, 1) 75%,
+  rgba(60, 60, 59, 1) 100%
+);
+
+// others
+$navbar-primary-color: #f8d76d;
+$hero-section-right-color: #ce8735;
+$countdown-color: $color-okada-dark-1;
+$hero-heading-color: $color-okada-dark-1;
+$hero-caption-color: #828282;
+$hero-gray-bg-color-1: #e8e8e8;
+$hero-gray-bg-color-2: #c2c2c1;
+$caption-color: $hero-caption-color;

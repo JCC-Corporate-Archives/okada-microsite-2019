@@ -1,0 +1,57 @@
+// NOTE:
+// This should be grid related.
+// Other cosmetic styling should be on /themes/others
+.main-container {
+  margin-top: -#{$navbar-default-height};
+
+  .hero-row {
+    height: $hero-row-height;
+    min-height: $hero-row-height-default;
+  }
+
+  .guests-row {
+    flex-wrap: wrap;
+    padding: 1.1875rem;
+  }
+
+  // Tablets below
+  @include media-breakpoint-down(md) {
+    .countdown-row {
+      padding: $row-default-padding;
+    }
+
+    .world-class-row,
+    .the-company-row {
+      padding: 55px 0;
+    }
+
+    .the-company-row {
+      padding-bottom: 0;
+
+      .image-col {
+        margin-bottom: 31px;
+      }
+    }
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  // Currently testing md
+  // If something happenned weird on mobile, will use sm
+  // @include media-breakpoint-down(sm) {
+  //   .night-show-row {
+  //     max-height: $the-fountain-md-height;
+  //   }
+  // }
+}
+
+// Tablets below
+// @include media-breakpoint-down(md) {
+//   // Main container
+//   .main-container,
+//   .container {
+//     max-width: unset;
+//   }
+// }

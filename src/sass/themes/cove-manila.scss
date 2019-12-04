@@ -1,0 +1,33 @@
+// begin with .container
+.container,
+.container-fluid,
+.main-container {
+  // COVE MANILA
+  .cove-manila-row {
+    @include display-bg-image('MeEGDK');
+    min-height: 250px;
+
+    .cove-manila-logo {
+      @include display-bg-image('cove-manila', center, auto);
+      height: 52px;
+      margin: 28px 0;
+    }
+
+    .cove-manila-logo-caption {
+      color: $white;
+      font-family: 'Gotham Medium';
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+  }
+
+  .cove-manila-row-1 {
+    @include display-bg-image('XTTRbX-1');
+    min-height: 437px;
+  }
+
+  .cove-manila-row-2 {
+    @include display-bg-image('5EsOJA');
+    min-height: 517px;
+  }
+}

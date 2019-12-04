@@ -1,0 +1,64 @@
+.navbar {
+  min-height: $navbar-default-height;
+  z-index: 999;
+
+  &.okada * {
+    color: $navbar-primary-color !important;
+  }
+
+  &.okada .navbar-toggler-icon {
+    border-color: $navbar-primary-color !important;
+  }
+
+  &.navbar-trans {
+    background: transparent;
+    transition: 0.1s ease;
+  }
+
+  &.justify-content-center {
+    .navbar-brand {
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .navbar-toggle {
+      position: absolute;
+      right: 0;
+    }
+
+    .navbar-collapse {
+      margin-top: 40px;
+    }
+  }
+
+  .navbar-toggler {
+    display: flex;
+    flex-direction: column;
+
+    .line {
+      width: 25px !important;
+      // float: left;
+      height: 2px;
+      background-color: $navbar-primary-color;
+      margin-bottom: 5px;
+    }
+
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none !important;
+    }
+  }
+
+  .navbar-toggler-right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  // .navbar-brand {
+  // }
+}
