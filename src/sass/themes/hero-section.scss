@@ -40,14 +40,11 @@
     //   }
     // }
 
-    @include media-breakpoint-down(md) {
-      .image-2020 {
-        background-size: auto;
-        height: 50%;
-        margin-bottom: 50%;
-        margin-top: 50%;
-      }
-    }
+    // @include media-breakpoint-down(md) {
+    //   .image-2020 {
+    //     background-size: auto;
+    //   }
+    // }
 
     // TABLETS AND UP
     @include media-breakpoint-up(md) {
@@ -56,7 +53,7 @@
       .image-2020 {
         background-image: url('../images/2020@3x.png');
         background-position: 72% !important;
-        background-size: 45vh;
+        background-size: 40vh;
       }
 
       .image-hero-model {
