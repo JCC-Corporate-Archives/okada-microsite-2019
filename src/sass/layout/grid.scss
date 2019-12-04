@@ -61,7 +61,7 @@
     margin-top: -#{$navbar-md-height};
 
     .hero-row {
-      padding-top: calc(#{$navbar-md-height} + 25px);
+      padding-top: $navbar-md-height;
     }
 
     .countdown-row {
