@@ -53,11 +53,10 @@
   // }
 }
 
-// Tablets below
+// Tablets & up
 @include media-breakpoint-up(md) {
   // Main container
-  .main-container,
-  .container {
+  .main-container {
     margin-top: -#{$navbar-md-height};
 
     .hero-row {
@@ -65,7 +64,18 @@
     }
 
     .countdown-row {
-      padding: 3rem 0;
+      padding: 2rem 0;
+    }
+
+    @include browser(Safari) {
+      .countdown-row {
+        padding: 4rem 0;
+      }
+
+      .countdown-container {
+        position: relative;
+        z-index: 1;
+      }
     }
 
     .world-class-row {

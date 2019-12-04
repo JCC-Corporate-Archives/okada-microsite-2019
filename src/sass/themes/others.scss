@@ -186,7 +186,7 @@ body {
     // GUEST LIST FOR TABLETS & UP
     @include media-breakpoint-up(md) {
       height: 54vw;
-      padding: 2em;
+      padding: 1.2em;
 
       .night-show-col .night-show-logo {
         background-size: contain;
@@ -368,7 +368,7 @@ body {
       justify-content: center;
 
       .the-restaurants-content {
-        padding: 0 10px;
+        padding: 10px;
       }
 
       .the-restaurants-logo {
@@ -388,6 +388,16 @@ body {
       .okada-hero-caption {
         font-family: $font-family-gotham-book;
         font-size: 24px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .main-container {
+    .the-restaurants-col {
+      .the-restaurants-content {
+        padding: 5em;
       }
     }
   }
