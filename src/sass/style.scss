@@ -1,5 +1,8 @@
 // Import bootstrap
 @import 'vendors/bootstrap4/bootstrap';
+// Import sass-mediaqueries
+// for advanced media query
+@import 'vendors/sass-mediaqueries/media-queries';
 // Import font-awesome
 @import 'vendors/fontawesome/font-awesome';
 // Import swiper (sass)
@@ -21,8 +24,9 @@
 @import 'layout/grid';
 
 // Theming
-@import 'themes/mobile';
 @import 'themes/hero-section';
 @import 'themes/countdown-section';
 @import 'themes/cove-manila';
 @import 'themes/others';
+@import 'themes/mobile';
+@import 'themes/tablets';

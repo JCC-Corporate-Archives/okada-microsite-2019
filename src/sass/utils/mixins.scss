@@ -75,3 +75,10 @@
     }
   }
 }
+
+// Disable animations (absolute)
+@mixin disable-animations($transition: inherit) {
+  animation: none !important;
+  transition: $transition !important;
+  visibility: visible !important;
+}

@@ -1,14 +1,12 @@
 @import 'vendors/bootstrap4/bootstrap';
+@import 'vendors/sass-mediaqueries/media-queries';
 @import 'utils/mixins';
 
 .wow {
-  @include media-breakpoint-down(sm) {
-    animation: none !important;
-    visibility: visible !important;
-  }
-
-  @include browser(Safari) {
-    animation: none !important;
-    visibility: visible !important;
+  // countdown number of ..
+  &.number-of {
+    @include browser(Safari) {
+      @include disable-animations;
+    }
   }
 }

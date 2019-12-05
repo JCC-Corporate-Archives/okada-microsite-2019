@@ -246,21 +246,15 @@ gulp.task("copy-assets", function() {
     .src(`${paths.node}font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}`)
     .pipe(gulp.dest("./fonts"));
 
-  // Copy all Open Sans Fonts
-  gulp
-    .src(`${paths.node}open-sans-fonts/open-sans/**/*.{ttf,woff,woff2,eot,svg}`)
-    .pipe(gulp.dest(`${paths.sass}/vendors/open-sans-fonts/open-sans`))
-    .pipe(gulp.dest("./fonts/open-sans"));
-
-  // Copy all Open Sans SCSS
-  gulp
-    .src(`${paths.node}open-sans-fonts/*.scss`)
-    .pipe(gulp.dest(`${paths.sass}/vendors/open-sans-fonts`));
-
   // Copy all Font Awesome SCSS files
   gulp
     .src(`${paths.node}font-awesome/scss/*.scss`)
     .pipe(gulp.dest(`${paths.sass}/vendors/fontawesome`));
+
+  // Copy sass-mediaqueries
+  gulp
+    .src(`${paths.node}sass-mediaqueries/*.scss`)
+    .pipe(gulp.dest(`${paths.sass}/vendors/sass-mediaqueries`));
 
   // _s SCSS files
   gulp
