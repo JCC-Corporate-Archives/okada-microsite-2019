@@ -6504,11 +6504,6 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-open-sans-fonts@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/open-sans-fonts/-/open-sans-fonts-1.5.1.tgz#435ec3d0941068e43e5eec3686bd64c8eccc7352"
-  integrity sha512-VN8BBWX0Cdv2eV6+XEee7mpQZOAPwFxFf6l/nxv6rcZSiyRW9+kbCwiI0zILJ6brH8CHa4kOWKCOFxlhHAy2dQ==
-
 openurl@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/openurl/-/openurl-1.1.1.tgz#3875b4b0ef7a52c156f0db41d4609dbb0f94b387"
@@ -7847,6 +7842,11 @@ sass-lint@^1.12.0:
     merge "^1.2.0"
     path-is-absolute "^1.0.0"
     util "^0.10.3"
+
+sass-mediaqueries@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/sass-mediaqueries/-/sass-mediaqueries-1.6.1.tgz#53fe4a3fd481d104cf6779df6f264e735826a78b"
+  integrity sha1-U/5KP9SB0QTPZ3nfbyZOc1gmp4s=
 
 sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
   version "1.2.4"
