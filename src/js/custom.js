@@ -80,7 +80,7 @@ window.onload = function() {
   // init WOW.js
   // Anti Flickering
   // Disable on mobile. Cause: https://github.com/matthieua/WOW/issues/34
-  new WOW({ offset: 0, mobile: false }).init();
+  new WOW({ offset: 0 }).init();
 
   // The Restaurant slider
   new Swiper("#theRestaurantsSlider", {
