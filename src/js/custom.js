@@ -22,12 +22,14 @@ window.onload = function() {
 
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
+    $("body").css("overflow", "hidden");
     $("#myNav").css("height", "100%");
     setTimeout(function() {
       $("#myNav").addClass("collapsed");
     }, 100);
   });
   $("#closeNav").on("click", function() {
+    $("body").css("overflow", "");
     $("#myNav")
       .css("height", "0%")
       .removeClass("collapsed");
