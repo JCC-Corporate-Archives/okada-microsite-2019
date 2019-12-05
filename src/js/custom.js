@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
 
   // NAVBAR
   $(".navbar-nav>li>a").on("click", function() {
@@ -6,7 +6,7 @@ window.onload = function() {
   });
 
   // Add scrollspy to <body>
-  $("body").scrollspy({ target: ".navbar", offset: 70 });
+  // $("body").scrollspy({ target: ".navbar", offset: 70 });
 
   $("#collapsibleNavbar").on("show.bs.collapse", function() {
     $("#navBar").css({
@@ -93,4 +93,7 @@ window.onload = function() {
       el: ".swiper-pagination"
     }
   });
-};
+});
+
+// window.onload = function() {
+// };

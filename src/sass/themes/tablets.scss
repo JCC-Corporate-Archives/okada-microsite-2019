@@ -80,7 +80,60 @@
 }
 
 @include ipad(portrait) {
+  .navbar {
+    .navbar-toggler-right {
+      right: 1.5em;
+    }
+  }
+
   .main-container {
+    .hero-row {
+      .image-2020 {
+        background-position: 10% !important;
+        background-size: 38vh;
+      }
+
+      .image-hero-model {
+        background-position: 115% bottom !important;
+      }
+    }
+
+    .countdown-container {
+      .number-of {
+        font-size: 75px;
+      }
+    }
+
+    .world-class-row {
+      padding-bottom: 0;
+      padding-top: 0;
+
+      .heading-col {
+        .okada-hero-heading {
+          // hyphens: auto;
+          font-size: 1.49rem;
+          word-break: break-word;
+        }
+      }
+    }
+
+    .the-company-row {
+      padding-top: 0;
+
+      .heading-col {
+        align-self: center;
+      }
+
+      .image-col {
+        background-position: center bottom;
+        min-height: calc(636px / 1.4);
+      }
+    }
+
+    .night-show-row {
+      height: 67vh;
+    }
+
     .the-restaurants-row {
       // "cols" which is all of columns
       .the-restaurants-cols {
