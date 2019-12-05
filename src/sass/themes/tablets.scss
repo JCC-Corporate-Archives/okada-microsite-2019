@@ -2,7 +2,7 @@
 // Adjustments for Tablets
 // ------------------------------------------------------
 
-@include ipad {
+@include ipad(landscape) {
   .main-container {
     .night-show-row {
       height: 90vh;
@@ -87,6 +87,8 @@
   }
 
   .main-container {
+    margin-bottom: 10em;
+
     .hero-row {
       .image-2020 {
         background-position: 10% !important;
@@ -155,6 +157,121 @@
           font-size: 16px;
         }
       }
+    }
+
+    // COVE MANILA ======================================
+
+    .cove-manila-row {
+      height: 80vw;
+    }
+
+    .featured-dj-1 {
+      .dj-solaii-wrapper {
+        height: 14.45em;
+        min-height: unset;
+        overflow: visible;
+      }
+
+      .dj-solaii-head {
+        // bottom: 9.4em;
+        height: 25em;
+        // position: relative;
+        // z-index: 2;
+      }
+
+      .dj-solaii-details {
+        overflow: hidden;
+
+        .dj-solaii-logo {
+          // background-size: 90%;
+          // min-width: unset;
+          // width: 95%;
+        }
+
+        .dj-solaii-desc-wrapper {
+          // width: 95%;
+          border-width: 2px;
+
+          .dj-solaii-desc {
+            font-size: 1.025rem;
+          }
+        }
+
+        .dj-solaii-button-container {
+          // margin: 0;
+          // width: 95%;
+
+          .visit-channel-button {
+            // width: 100%;
+            border-width: 2px;
+          }
+        }
+      }
+    }
+
+    .cove-manila-row-2 {
+      padding-top: 0;
+    }
+
+    .cove-manila-row-2-sub-1 {
+      height: 45em;
+    }
+
+    .featured-dj-2 {
+      top: 0;
+
+      .grid-container {
+        height: 100%;
+      }
+
+      .dj-kaka-head-wrapper,
+      .dj-kaka-details-wrapper {
+        // width: calc(#{$cove-dj-kaka-width-x3} - 9.99em);
+        top: unset;
+      }
+
+      .dj-kaka-head-wrapper {
+        min-height: calc(993px - 32em);
+        width: calc(695px - 19em);
+
+        .dj-kaka-head {
+          min-height: 42em;
+          top: -12.1em;
+        }
+      }
+
+      .dj-kaka-details-wrapper {
+        height: 20em;
+        position: relative;
+        top: -19em; // Affects .cove-manila-row-2-sub-1's height
+        width: unset;
+
+        .dj-kaka-details-container {
+          max-height: unset;
+        }
+
+        .dj-kaka-details {
+          transform: translateY(-4.45em) !important;
+        }
+
+        .dj-kaka-name {
+          // font-size: 3em;
+        }
+
+        .dj-kaka-desc {
+          font-size: 18px;
+        }
+      }
+
+      // .main-container .featured-dj-2 .dj-kaka-details-wrapper .dj-kaka-name
+
+      .dj-kaka-details-wrapper .dj-kaka-desc {
+        // font-size: 21px;
+      }
+    }
+
+    .cove-manila-row-2-sub-2 {
+      height: 20em;
     }
   }
 }
