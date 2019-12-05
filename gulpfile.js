@@ -26,6 +26,57 @@ var sassLint = require("gulp-sass-lint");
 var cfg = require("./gulpconfig.json");
 var paths = cfg.paths;
 
+// gulp-shell
+var shell = require("gulp-shell");
+
+// set files to be ignore here!
+const ignorePaths = [
+  `!${paths.bower}/`,
+  `!${paths.bower}/**`,
+  `!${paths.node}/`,
+  `!${paths.node}/**`,
+  `!${paths.src}/`,
+  `!${paths.src}/**`,
+  `!${paths.dist}/`,
+  `!${paths.dist}/**`,
+  `!${paths.distprod}/`,
+  `!${paths.distprod}/**`,
+  `!${paths.sass}/`,
+  `!${paths.sass}/**`,
+  "!build/",
+  "!build/**",
+];
+const deletePaths = [
+  `${paths.dist}/bower_components/`,
+  `${paths.dist}/node_modules/`,
+  `${paths.dist}/src/`,
+  `${paths.dist}/dist/`,
+  "build/",
+];
+const ignoreFiles = [
+  "!readme.txt",
+  "!readme.md",
+  "!package.json",
+  "!package-lock.json",
+  "!gulpfile.js",
+  "!gulpconfig.json",
+  "!CHANGELOG.md",
+  "!.travis.yml",
+  "!jshintignore",
+  "!codesniffer.ruleset.xml",
+  "!bitbucket-pipelines.yml",
+  "!yarn.lock",
+];
+const deleteFiles = [
+  `${paths.dist}/bitbucket-pipelines.yml`,
+  `${paths.dist}/yarn.lock`,
+  `${paths.dist}/gulpconfig.json.sample`,
+  `${paths.dist}/gulpfile.js`,
+  `${paths.dist}/unix_build.sh`,
+  `${paths.dist}/config.rb`,
+  "build/",
+];
+
 // Run:
 // gulp sass
 // Compiles SCSS files (if you don't have compass)
@@ -55,7 +106,12 @@ gulp.task("sass", function() {
 gulp.task("watch", function() {
   gulp.watch(`${paths.sass}/**/*.scss`, gulp.series("styles"));
   gulp.watch(
-    [`${paths.src}/js/**/*.js`, "js/**/*.js", "!js/custom.js", "!js/custom.min.js"],
+    [
+      `${paths.src}/js/**/*.js`,
+      "js/**/*.js",
+      "!js/custom.js",
+      "!js/custom.min.js",
+    ],
     gulp.series("scripts")
   );
 
@@ -267,22 +323,34 @@ gulp.task("copy-assets", function() {
     .pipe(gulp.dest(`${paths.src}/js/vendors`));
 
   // Animate CSS files
-  gulp.src(`${paths.node}animate.css/animate.min.css`).pipe(gulp.dest(`${paths.css}`));
-  gulp.src(`${paths.node}animate.css/animate.css`).pipe(gulp.dest(`${paths.css}`));
+  gulp
+    .src(`${paths.node}animate.css/animate.min.css`)
+    .pipe(gulp.dest(`${paths.css}`));
+  gulp
+    .src(`${paths.node}animate.css/animate.css`)
+    .pipe(gulp.dest(`${paths.css}`));
 
   // WOW.js
   gulp.src(`${paths.node}wowjs/dist/wow.min.js`).pipe(gulp.dest(`${paths.js}`));
   gulp.src(`${paths.node}wowjs/dist/wow.js`).pipe(gulp.dest(`${paths.js}`));
 
   // Moment.js
-  gulp.src(`${paths.node}moment/**/*.js`).pipe(gulp.dest(`${paths.src}/js/vendors/moment`));
+  gulp
+    .src(`${paths.node}moment/**/*.js`)
+    .pipe(gulp.dest(`${paths.src}/js/vendors/moment`));
 
   // Countdown.js
-  gulp.src(`${paths.node}countdown/**/*.js`).pipe(gulp.dest(`${paths.src}/js/vendors/countdown`));
+  gulp
+    .src(`${paths.node}countdown/**/*.js`)
+    .pipe(gulp.dest(`${paths.src}/js/vendors/countdown`));
 
   // Swiper
-  gulp.src(`${paths.node}swiper/**/*.js`).pipe(gulp.dest(`${paths.src}/js/vendors/swiper`));
-  gulp.src(`${paths.node}swiper/**/*.scss`).pipe(gulp.dest(`${paths.src}/sass/vendors/swiper`));
+  gulp
+    .src(`${paths.node}swiper/**/*.js`)
+    .pipe(gulp.dest(`${paths.src}/js/vendors/swiper`));
+  gulp
+    .src(`${paths.node}swiper/**/*.scss`)
+    .pipe(gulp.dest(`${paths.src}/sass/vendors/swiper`));
   gulp.src(`${paths.node}swiper/css/*.css`).pipe(gulp.dest(paths.css));
 
   // Hover.css
@@ -312,7 +380,13 @@ gulp.task("clean-vendor-assets", function() {
 
 // Deleting any file inside the /dist folder
 gulp.task("clean-dist", function() {
-  return del([`!${paths.dist}/.git/**`, `!${paths.dist}/.gitinclude`, `${paths.dist}/**`]);
+  return del([
+    `!${paths.dist}/.git/**`,
+    `!${paths.dist}/.gitinclude`,
+    // ignorePaths,
+    // ignoreFiles,
+    `${paths.dist}/**`,
+  ]);
 });
 
 // Run
@@ -321,56 +395,47 @@ gulp.task("clean-dist", function() {
 gulp.task(
   "dist",
   gulp.series(function copyToDistFolder() {
-    const ignorePaths = [
-      `!${paths.bower}`,
-      `!${paths.bower}/**`,
-      `!${paths.node}`,
-      `!${paths.node}/**`,
-      `!${paths.src}`,
-      `!${paths.src}/**`,
-      `!${paths.dist}`,
-      `!${paths.dist}/**`,
-      `!${paths.distprod}`,
-      `!${paths.distprod}/**`,
-      `!${paths.sass}`,
-      `!${paths.sass}/**`,
-    ];
-    const ignoreFiles = [
-      "!readme.txt",
-      "!readme.md",
-      "!package.json",
-      "!package-lock.json",
-      "!gulpfile.js",
-      "!gulpconfig.json",
-      "!CHANGELOG.md",
-      "!.travis.yml",
-      "!jshintignore",
-      "!codesniffer.ruleset.xml",
-      "!bitbucket-pipelines.yml",
-      "!yarn.lock",
-    ];
     return gulp
       .src(["**/*", ...ignorePaths, ...ignoreFiles, "*"], { buffer: false })
       .pipe(
-        replace("/js/jquery.slim.min.js", `/js${paths.vendor}/jquery.slim.min.js`, {
+        replace(
+          "/js/jquery.slim.min.js",
+          `/js${paths.vendor}/jquery.slim.min.js`,
+          {
+            skipBinary: true,
+          }
+        )
+      )
+      .pipe(
+        replace("/js/popper.min.js", `/js${paths.vendor}/popper.min.js`, {
           skipBinary: true,
         })
       )
-      .pipe(replace("/js/popper.min.js", `/js${paths.vendor}/popper.min.js`, { skipBinary: true }))
       .pipe(
-        replace("/js/skip-link-focus-fix.js", `/js${paths.vendor}/skip-link-focus-fix.js`, {
-          skipBinary: true,
-        })
+        replace(
+          "/js/skip-link-focus-fix.js",
+          `/js${paths.vendor}/skip-link-focus-fix.js`,
+          {
+            skipBinary: true,
+          }
+        )
       )
       .pipe(gulp.dest(paths.dist));
   })
 );
 
+gulp.task("dist-post", function() {
+  return del([...deletePaths, ...deleteFiles]);
+});
+
+// Generate build
+gulp.task("build", shell.task(["mkdir -p build", `sh unix_build.sh`]));
+
 // Execute all linters
 gulp.task("lint", gulp.parallel("eslint", "sass-lint"));
 
 // Deleting any file inside the /dist-product folder
-gulp.task("compile", gulp.series("lint", "styles", "scripts", "dist"));
+gulp.task("compile", gulp.series("lint", "styles", "scripts", "dist", "build"));
 
 // Setup styles & scripts to test it
 gulp.task("setup", gulp.series("lint", "styles", "scripts"));
