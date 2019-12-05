@@ -163,7 +163,7 @@ body {
 
   // THE FOUNTAIN
   .night-show-row {
-    @include display-bg-image('X5X8Aj', 18% center);
+    @include display-bg-image('X5X8Aj', 18% center, cover, md);
     max-height: calc(#{$the-fountain-md-height} + 2em);
     min-height: calc(#{$the-fountain-md-height} + 2em);
     padding: 19px;
@@ -214,7 +214,7 @@ body {
     padding: 1em !important;
 
     .night-show-logo {
-      @include display-bg-image('the-fountain', right, auto);
+      @include display-bg-image('the-fountain', right, auto, md);
       height: 53.48px;
     }
 

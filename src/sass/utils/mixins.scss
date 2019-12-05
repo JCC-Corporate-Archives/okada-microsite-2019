@@ -24,14 +24,24 @@
     background-image: url('../images/#{$image-name}@3x.png') !important;
   }
   @include media-breakpoint-up(md) {
-    background-image: url('../images/#{$image-name}@2x.png');
+    @if $breakpoint-override == 'md' {
+      background-image: url('../images/#{$image-name}@3x.png') !important;
+    } @else {
+      background-image: url('../images/#{$image-name}@2x.png');
+    }
   }
   @include media-breakpoint-down(md) {
-    background-image: url('../images/#{$image-name}.png');
-  }
-  @if $breakpoint-override == 'sm' {
-    @include media-breakpoint-down(sm) {
+    @if $breakpoint-override == 'md' {
+      background-image: url('../images/#{$image-name}@3x.png') !important;
+    } @else {
       background-image: url('../images/#{$image-name}@2x.png');
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    @if $breakpoint-override == 'sm' {
+      background-image: url('../images/#{$image-name}@2x.png') !important;
+    } @else {
+      background-image: url('../images/#{$image-name}.png');
     }
   }
   background-position: $background-position;

@@ -1,4 +1,115 @@
-@include ipad(landscape) {
+// ------------------------------------------------------
+// Adjustments for Tablets
+// ------------------------------------------------------
+
+@include ipad {
   .main-container {
+    .night-show-row {
+      height: 90vh;
+    }
+
+    // COVE MANILA
+
+    .cove-manila-row-1,
+    .cove-manila-row-2 {
+      background-position: center;
+      height: 100vh;
+    }
+
+    .featured-dj-1 {
+      .dj-solaii-wrapper {
+        height: 41vw;
+        overflow: visible;
+      }
+
+      .dj-solaii-head {
+        bottom: 9.4em;
+        height: 75vh;
+        position: relative;
+        z-index: 2;
+      }
+
+      .dj-solaii-details {
+        overflow: hidden;
+
+        .dj-solaii-logo {
+          background-size: 90%;
+          min-width: unset;
+          width: 95%;
+        }
+
+        .dj-solaii-desc-wrapper {
+          width: 95%;
+
+          .dj-solaii-desc {
+            font-size: 21px;
+          }
+        }
+
+        .dj-solaii-button-container {
+          margin: 0;
+          width: 95%;
+
+          .visit-channel-button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .featured-dj-2 {
+      top: 0;
+
+      .dj-kaka-head-wrapper {
+        width: calc(#{$cove-dj-kaka-width-x3} - 9.99em);
+      }
+
+      .dj-kaka-details-wrapper .dj-kaka-desc {
+        font-size: 21px;
+      }
+    }
+
+    .cove-manila-row-2-sub-2 {
+      margin-top: 65%;
+    }
+  }
+
+  .footer-wrapper {
+    padding-top: 50%;
   }
 }
+
+@include ipad(portrait) {
+  .main-container {
+    .the-restaurants-row {
+      // "cols" which is all of columns
+      .the-restaurants-cols {
+        height: 50vh;
+      }
+
+      .the-restaurants-col,
+      .the-restaurants-content {
+        height: 100%;
+      }
+
+      .the-restaurants-col {
+        .the-restaurants-heading {
+          font-size: 35px;
+          line-height: 1em;
+        }
+
+        .okada-hero-caption {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// @include ipad-retina(landscape) {
+//   .main-container {
+//     .featured-dj-1 {
+//       visibility: hidden;
+//     }
+//   }
+// }
