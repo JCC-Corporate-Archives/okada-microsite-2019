@@ -14,7 +14,8 @@
   &:active,
   &:focus,
   &:hover {
-    background-color: transparent;
-    border-color: unset;
+    background: unset;
+    border-color: $color-okada-light-1;
+    outline: unset;
   }
 }

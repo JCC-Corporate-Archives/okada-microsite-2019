@@ -1,20 +1,14 @@
-// Import Open Sans
-$FontPathOpenSans: '/fonts/open-sans';
-@import '../vendors/open-sans-fonts/open-sans';
+// Import Open Sans, Playfair Display & Roboto Family
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Playfair+Display|Roboto:400,700,700i&display=swap');
 
 // Gothan Family
-@include font-face-dynamic('Gotham Book', '../fonts/GothamBook', normal, normal);
-@include font-face-dynamic('Gotham Light', '../fonts/GothamLight', normal, normal);
-@include font-face-dynamic('Gotham Medium', '../fonts/GothamMedium', inherit, normal);
-@include font-face-dynamic('Gotham Bold', '../fonts/GothamBold', bold, normal);
-@include font-face-dynamic('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic);
-@include font-face-dynamic('Gotham Black', '../fonts/GothamBlack', bolder, normal);
-
-// Playfair Display Family
-@include font-face-dynamic('Playfair Display', '../fonts/PlayfairDisplayRegular');
-
-// Roboto Family
-@include font-face-dynamic('Roboto Bold Italic', '../fonts/RobotoBoldItalic', bold, italic);
+// NOTE: CURRENTLY NOT WORKING ON SAFARI
+@include font-face('Gotham Book', '../fonts/GothamBook', normal, normal);
+@include font-face('Gotham Light', '../fonts/GothamLight', normal, normal);
+@include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal);
+@include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal);
+@include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic);
+@include font-face('Gotham Black', '../fonts/GothamBlack', bolder, normal);
 
 html,
 body {
