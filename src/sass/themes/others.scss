@@ -396,8 +396,10 @@ body {
 @include media-breakpoint-down(sm) {
   .main-container {
     .the-restaurants-col {
+      padding: 15px;
+
       .the-restaurants-content {
-        padding: 5em;
+        padding: 0;
       }
     }
   }
