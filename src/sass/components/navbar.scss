@@ -21,20 +21,10 @@
 
   &.justify-content-center {
     .navbar-brand {
-      left: 50%;
-      position: relative;
-      top: 0;
-      transform: translateX(-50%);
+      position: absolute;
+      top: 10px;
+      // transform: translateX(-50%);
     }
-
-    // .navbar-toggle {
-    //   position: absolute;
-    //   right: 0;
-    // }
-
-    // .navbar-collapse {
-    //   margin-top: 40px;
-    // }
   }
 
   .navbar-toggler {
@@ -51,12 +41,6 @@
   .navbar-toggler-right {
     position: absolute;
     right: 10px;
-    top: 10px;
-  }
-
-  .navbar-brand {
-    left: calc(50% - 2.5em);
-    position: absolute;
     top: 10px;
   }
 
