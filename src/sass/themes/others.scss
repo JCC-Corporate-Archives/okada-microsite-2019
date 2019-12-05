@@ -105,40 +105,40 @@ body {
         min-height: 172px;
 
         &.bugoy-drilon {
-          @include display-bg-image('bugoy-drilon');
+          @include display-bg-image('bugoy-drilon', center top, cover, sm);
         }
 
         &.daryl-ong {
-          @include display-bg-image('daryl-ong');
+          @include display-bg-image('daryl-ong', center top, cover, sm);
         }
 
         &.michael-pangilinan {
-          @include display-bg-image('michael-pangilinan');
+          @include display-bg-image('michael-pangilinan', center top, cover, sm);
         }
 
         &.liezel-garcia {
-          @include display-bg-image('liezel-garcia');
+          @include display-bg-image('liezel-garcia', center top, cover, sm);
         }
 
         &.jason-dy {
-          @include display-bg-image('jason-dy');
+          @include display-bg-image('jason-dy', center top, cover, sm);
         }
 
         &.erik-santos {
-          @include display-bg-image('erik-santos');
+          @include display-bg-image('erik-santos', center top, cover, sm);
         }
 
-        &.mayonnaise {
-          @include display-bg-image('mayonnaise', center bottom, 340px);
-        }
+        // &.mayonnaise {
+        //   @include display-bg-image('mayonnaise', center bottom, 340px);
+        // }
 
-        &.udd {
-          @include display-bg-image('udd', center right);
-        }
+        // &.udd {
+        //   @include display-bg-image('udd', center right);
+        // }
 
-        &.the-ransom-collective {
-          @include display-bg-image('trc');
-        }
+        // &.the-ransom-collective {
+        //   @include display-bg-image('trc');
+        // }
       }
 
       .guest-info {
