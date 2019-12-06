@@ -37,8 +37,9 @@ body {
     // THE FOUNTAIN
     .night-show-col {
       .night-show-logo {
-        @include display-bg-image('the-fountain', right, auto);
-        height: 53.48px;
+        @include display-bg-image('the-fountain', right, contain, sm);
+        // height: 53.48px;
+        height: 6em;
       }
 
       .dazzling {
