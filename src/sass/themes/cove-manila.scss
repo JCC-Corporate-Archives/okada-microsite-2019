@@ -463,7 +463,7 @@
         @include display-bg-image('dj-solaii-head', 95% bottom, auto);
         // bottom: 0;
         height: 40vw;
-        // min-width: 196.93;
+        min-height: 553px;
         // padding: 0;
         // position: absolute;
       }
@@ -497,7 +497,7 @@
           align-self: center;
           // border: $color-okada-normal-4 1px solid;
           border-width: 2px;
-          height: 9.6vw;
+          height: 11.5em;
           margin-top: 4em;
           max-height: unset;
           position: relative;
@@ -528,7 +528,7 @@
     // DJ KAKA
     .featured-dj-2 {
       margin-top: unset; // TODO: Remove this on mobile view
-      top: -20em;
+      top: -13em !important;
 
       // TODO: Not yet tested for larger devices
       .dj-kaka-head-wrapper {
@@ -539,7 +539,7 @@
         min-height: $cove-dj-kaka-wrapper-height-x3;
         position: absolute;
         top: 100%;
-        width: $cove-dj-kaka-width-x3;
+        width: calc(#{$cove-dj-kaka-width-x3} - 3.9vw);
 
         .dj-kaka-head {
           min-height: $cove-dj-kaka-height-x3;
@@ -555,9 +555,10 @@
         flex-direction: column;
         grid-area: dj-kaka-details-wrapper;
         position: absolute;
-        right: 15%;
+        // right: 2.99em;
         top: 155%;
         width: 50%;
+        // width: 46.4%;
 
         .dj-kaka-details-container {
           // border: $color-okada-normal-4 1px solid;
@@ -585,7 +586,7 @@
         .dj-kaka-desc {
           color: $white;
           font-family: $font-family-gotham-medium;
-          font-size: 28px;
+          font-size: 25.5px;
           margin-bottom: 0;
         }
 
@@ -599,7 +600,7 @@
     // FEATURED DJ BELOW
     .cove-manila-row-2-sub-2 {
       height: 40em;
-      margin-top: 30%;
+      margin-top: 38%;
       position: absolute;
       width: 100%;
 
@@ -730,7 +731,8 @@
         // position: absolute;
         right: 1em;
         top: 155%;
-        width: 50%;
+        // width: 50%;
+        width: 46.4%;
 
         // .dj-kaka-details-container {
         //   border-width: 2px;
@@ -757,7 +759,7 @@
         .dj-kaka-desc {
           // color: $white;
           // font-family: $font-family-gotham-medium;
-          font-size: 24px;
+          font-size: 23px;
           margin-bottom: 0;
         }
 
