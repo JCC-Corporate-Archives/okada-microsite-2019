@@ -21,8 +21,8 @@
 
     &:hover,
     &:focus {
-      // color: $black;
-      background: $nav-overlay-hover-gradient;
+      background: $white;
+      color: $black !important;
     }
   }
 
@@ -44,7 +44,7 @@
   }
 
   .closebtn {
-    color: $white;
+    color: $color-okada-light-3;
     font-size: 60px;
     position: absolute;
     right: 1.15em;
