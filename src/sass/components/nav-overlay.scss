@@ -19,8 +19,7 @@
     text-decoration: none;
     transition: 0.3s;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background: $white;
       color: $black !important;
     }
@@ -47,7 +46,7 @@
     color: $color-okada-light-3;
     font-size: 60px;
     position: absolute;
-    right: 1.15em;
+    right: 37px;
     top: 1.5px;
 
     &:hover,
