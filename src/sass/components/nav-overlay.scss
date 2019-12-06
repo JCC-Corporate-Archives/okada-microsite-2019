@@ -44,11 +44,11 @@
   }
 
   .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 1em;
-    font-size: 60px;
     color: $white;
+    font-size: 60px;
+    position: absolute;
+    right: 1.15em;
+    top: 1.5px;
 
     &:hover,
     &:focus,
