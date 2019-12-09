@@ -421,6 +421,8 @@
 // DESKTOP UP
 @include media-breakpoint-up(lg) {
   .main-container {
+    margin-bottom: 45em;
+
     .cove-manila-row {
       height: 60vw;
 
@@ -536,10 +538,11 @@
         border-width: 2px;
         grid-area: dj-kaka-head-wrapper;
         left: 2.8em;
+        max-width: $cove-dj-kaka-width-x3;
         min-height: $cove-dj-kaka-wrapper-height-x3;
         position: absolute;
         top: 100%;
-        width: calc(#{$cove-dj-kaka-width-x3} - 3.9vw);
+        // width: calc(#{$cove-dj-kaka-width-x3} - 3.9vw);
 
         .dj-kaka-head {
           min-height: $cove-dj-kaka-height-x3;
@@ -555,7 +558,7 @@
         flex-direction: column;
         grid-area: dj-kaka-details-wrapper;
         position: absolute;
-        // right: 2.99em;
+        right: 16.3em;
         top: 155%;
         width: 50%;
         // width: 46.4%;
