@@ -4,7 +4,7 @@
 # PARAMS
 TODAY="$( date +"%Y%m%d" )"
 VERSION="$( git rev-parse --verify --short HEAD )"
-FILE_NAME="build/okada-nye-${VERSION}-${TODAY}.zip"
+FILE_NAME="../build/okada-nye-${VERSION}-${TODAY}.zip"
 
 # Get OS type
 case "$OSTYPE" in
@@ -42,9 +42,9 @@ if [ "$OS" == "Linux" ]; then
   # Remove OSX directory links
   # rm -rf $FILE_NAME $IMAGES/__MACOSX/
   # Compress!
-  zip -r -0 $FILE_NAME images/ scripts fonts/ stylesheets/ index.html
+  (cd dist; zip -r -0 $FILE_NAME images scripts fonts stylesheets index.html)
 else
   # For MacOSX
-  zip -0 $FILE_NAME images/ scripts fonts/ stylesheets/ index.html
+  (cd dist; zip -r -0 $FILE_NAME images scripts fonts stylesheets index.html)
 fi
 echo "Done creating ${FILE_NAME}"
