@@ -7,8 +7,7 @@
 }
 
 // Gothan Family
-// NOTE: CURRENTLY NOT WORKING ON SAFARI
-@include font-face('Gotham Book', '../fonts/GothamBook', normal, normal);
+@include font-face('Gotham Book', '../fonts/GothamBook', normal, normal); // NOT WORKING!
 @include font-face('Gotham Light', '../fonts/GothamLight', normal, normal);
 @include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal);
 @include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal);
