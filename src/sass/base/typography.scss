@@ -1,5 +1,12 @@
 // Import Open Sans, Playfair Display & Roboto Family
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display|Roboto:400,700,700i&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display|Roboto:400,700,700i&display=swap');
+// using Google Font Mixin 2.0
+// https://codepen.io/jakob-e/pen/LVVXjO
+@include google-font {
+  @include google-font('Open Sans', 300 400 700, 800);
+  @include google-font('Playfair Display');
+  @include google-font('Roboto', 300 400 700);
+}
 
 // Gothan Family
 // NOTE: CURRENTLY NOT WORKING ON SAFARI
