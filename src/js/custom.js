@@ -1,39 +1,53 @@
 $(document).ready(function() {
 
-  // NAVBAR
-  $(".navbar-nav>li>a").on("click", function() {
-    $(".navbar-collapse").collapse("hide");
-  });
-
-  // Add scrollspy to <body>
-  // $("body").scrollspy({ target: ".navbar", offset: 70 });
-
-  $("#collapsibleNavbar").on("show.bs.collapse", function() {
-    $("#navBar").css({
-      background: "#000"
-    });
-  });
-
-  $("#collapsibleNavbar").on("hide.bs.collapse", function() {
-    $("#navBar").css({
-      background: "transparent"
-    });
-  });
-
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
-    $("body").css("overflow", "hidden");
     $("#myNav").css("height", "100%");
     setTimeout(function() {
-      $("#myNav").addClass("collapsed");
+      $("#myNav")
+        .fadeIn()
+        .addClass("collapsed");
+      $("body").css("overflow", "hidden");
     }, 100);
   });
   $("#closeNav").on("click", function() {
-    $("body").css("overflow", "");
     $("#myNav")
       .css("height", "0%")
       .removeClass("collapsed");
+    setTimeout(function() {
+      $("body").css("overflow", "");
+    }, 100);
   });
+  $("a.nav-modal-link[href*=\"#\"]")
+    .on("click", function() {
+      $("body").css("overflow", "");
+
+      // setTimeout(function() {
+      // }, 350);
+      $("#myNav")
+        .fadeOut()
+        .css("height", "0%")
+        .removeClass("collapsed");
+    })
+    .smoothscroll({ duration: 400, easing: "swing" });
+
+  // Scroll to Top
+  $(window).scroll(function() {
+
+    // If page is scrolled more than 75px
+    if ($(this).scrollTop() >= 75) {
+      $("#return-to-top").fadeIn(200); // Fade in the arrow
+    } else {
+      $("#return-to-top").fadeOut(200); // Else fade out the arrow
+    }
+  });
+  $("#return-to-top")
+    .on("click", function() {
+
+      // simply unset to avoid bugs for mobile
+      $("#myNav").css("display", "");
+    })
+    .smoothscroll({ duration: 500, easing: "swing" });
 
   var $clock = $("#countdown");
   var interval = 1000;
