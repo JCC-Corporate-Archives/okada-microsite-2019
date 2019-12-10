@@ -179,6 +179,34 @@ body {
         }
       }
     }
+
+    @include media-breakpoint-up(xl) {
+      // & > .col-12 > .row {
+      //   // align-content: space-around;
+      //   flex-wrap: wrap;
+      //   height: calc(100% + 5em);
+      //   justify-content: space-around;
+      //   padding: 4em 2rem 6em;
+      // }
+
+      .guest-entry {
+        // display: flex;
+        // justify-content: center;
+        // margin-top: unset;
+
+        .guest-info-container {
+          height: calc(320px + 16vw);
+          // min-height: 320px;
+          // width: calc(100% - 2rem);
+
+          .guest-image {
+            height: calc(320px + 12vw);
+            min-height: 320px;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
   // THE FOUNTAIN

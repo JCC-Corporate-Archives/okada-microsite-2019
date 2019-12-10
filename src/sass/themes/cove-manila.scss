@@ -1,8 +1,7 @@
+// COVE MANILA == BASE STYLING ===
+// NOTE: This is a mobile-first styling!!!
 // begin with .container
-.container,
-.container-fluid,
 .main-container {
-  // COVE MANILA
   .cove-manila-row,
   .cove-manila-row-1,
   .cove-manila-row-2 {
@@ -261,167 +260,15 @@
     font-weight: bold;
     margin: 0;
   }
-}
 
-// TABLETS ABOVE
-@include media-breakpoint-up(md) {
-  .main-container {
-    .cove-manila-row {
-      height: 60vw;
-
-      .cove-manila-logo {
-        height: 17rem;
-      }
-
-      .cove-manila-logo-caption {
-        font-size: inherit;
-        letter-spacing: 0.5em;
-      }
-    }
-
-    .cove-manila-row-1 {
-      height: 60vw;
-    }
-
-    // DJ SOLAII
-    .featured-dj-1 {
-      // TODO: Set gradient on borders
-      // border: $color-okada-normal-4 1px solid;
-      border-width: 2px;
-
-      .dj-solaii-head {
-        @include display-bg-image('dj-solaii-head', 95% bottom, auto);
-        // bottom: 0;
-        height: 40vw;
-        // min-width: 196.93;
-        // padding: 0;
-        // position: absolute;
-      }
-
-      .dj-solaii-wrapper {
-        min-height: 26.5em;
-      }
-
-      .dj-solaii-details {
-        padding: 0;
-        position: absolute;
-        right: 0;
-        top: 15.26px;
-
-        .dj-solaii-logo {
-          @include display-bg-image('dj-solaii-logo', center, auto);
-          margin: 0 auto;
-          min-height: 76px; // NOTE: This is for 2x reso image
-          min-width: 268px;
-        }
-
-        .dj-solaii-desc-wrapper,
-        .dj-solaii-button-container {
-          margin-left: 15px;
-          margin-right: 15px;
-        }
-
-        .dj-solaii-desc-wrapper {
-          border: $color-okada-normal-4 1px solid;
-          margin-top: 0.55em;
-          max-height: 133.15px;
-          padding: 0 15px 0 40px;
-          position: relative;
-
-          // TODO: DRY these paragraph styles
-          .dj-solaii-desc {
-            color: $white;
-            font-family: $font-family-gotham-medium;
-            font-size: 9px;
-            margin-bottom: 0;
-          }
-        }
-
-        // BUTTON ADJUSTMENTS
-        // For DJ SOLAII
-        .dj-solaii-button-container {
-          .visit-channel-button {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    // DJ KAKA
-    .featured-dj-2 {
-      margin-top: 30px;
-
-      .grid-container {
-        // display: grid;
-        // grid-template-areas: 'dj-kaka-head-wrapper dj-kaka-details-wrapper';
-        // grid-template-columns: 1.3fr 0.7fr;
-        // grid-template-rows: 1fr;
-        // height: 20vw;
-      }
-
-      // TODO: Not yet tested for larger devices
-      .dj-kaka-head-wrapper {
-        border: $color-okada-normal-4 1px solid;
-        grid-area: dj-kaka-head-wrapper;
-        min-height: 220px;
-        position: absolute;
-        top: 30%;
-        width: 59%;
-
-        .dj-kaka-head {
-          min-height: $cove-dj-kaka-height-x2;
-          position: inherit;
-          top: -96px;
-          width: 100%;
-        }
-      }
-
-      .dj-kaka-details-wrapper {
-        align-self: end;
-        display: flex;
-        flex-direction: column;
-        grid-area: dj-kaka-details-wrapper;
-
-        .dj-kaka-details-container {
-          border: $color-okada-normal-4 1px solid;
-          max-height: 133.15px;
-          padding: 0 15px 0 40px;
-          position: relative;
-
-          .dj-kaka-details {
-            transform: translateY(-1.9em);
-          }
-        }
-
-        .dj-kaka-name {
-          color: $color-okada-dark-1;
-          font-family: $font-family-gotham-black;
-          font-size: 42px;
-          line-height: 0.65em;
-          // margin-bottom: 20px;
-        }
-
-        // TODO: DRY these paragraph styles
-        .dj-kaka-desc {
-          color: $white;
-          font-family: $font-family-gotham-medium;
-          font-size: 9px;
-          margin-bottom: 0;
-        }
-
-        .dj-kaka-button-container {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-      }
-    }
+  // LARGER SCREENS
+  @include media-breakpoint-up(xl) {
+    margin-bottom: calc(52em + 3vw);
   }
-}
 
-// DESKTOP UP
-@include media-breakpoint-up(lg) {
-  .main-container {
-    margin-bottom: 45em;
+  // DESKTOP UP
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 52em;
 
     .cove-manila-row {
       height: 60vw;
@@ -674,20 +521,400 @@
       }
     }
   }
-}
 
-// FOR LOWER LAPTOP SCREENS BELOW (incl. Tablets)
-// Not working for Bootstrap XL breakpoint
-// @include media-breakpoint-down(xl) {
-//   .main-container {}
-// }
+  // TABLETS ABOVE
+  @include media-breakpoint-up(md) {
+    .cove-manila-row {
+      height: 60vw;
 
-@include media-breakpoint-down(md) {
-  .main-container {
+      .cove-manila-logo {
+        height: 17rem;
+      }
+
+      .cove-manila-logo-caption {
+        font-size: inherit;
+        letter-spacing: 0.5em;
+      }
+    }
+
+    .cove-manila-row-1 {
+      height: 60vw;
+    }
+
+    // DJ SOLAII
+    .featured-dj-1 {
+      // TODO: Set gradient on borders
+      // border: $color-okada-normal-4 1px solid;
+      border-width: 2px;
+
+      .dj-solaii-head {
+        @include display-bg-image('dj-solaii-head', 95% bottom, auto);
+        // bottom: 0;
+        height: 40vw;
+        // min-width: 196.93;
+        // padding: 0;
+        // position: absolute;
+      }
+
+      .dj-solaii-wrapper {
+        min-height: 26.5em;
+      }
+
+      .dj-solaii-details {
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 15.26px;
+
+        .dj-solaii-logo {
+          @include display-bg-image('dj-solaii-logo', center, auto);
+          margin: 0 auto;
+          min-height: 76px; // NOTE: This is for 2x reso image
+          min-width: 268px;
+        }
+
+        .dj-solaii-desc-wrapper,
+        .dj-solaii-button-container {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+        .dj-solaii-desc-wrapper {
+          border: $color-okada-normal-4 1px solid;
+          margin-top: 0.55em;
+          max-height: 133.15px;
+          padding: 0 15px 0 40px;
+          position: relative;
+
+          // TODO: DRY these paragraph styles
+          .dj-solaii-desc {
+            color: $white;
+            font-family: $font-family-gotham-medium;
+            font-size: 9px;
+            margin-bottom: 0;
+          }
+        }
+
+        // BUTTON ADJUSTMENTS
+        // For DJ SOLAII
+        .dj-solaii-button-container {
+          .visit-channel-button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // DJ KAKA
+    .featured-dj-2 {
+      margin-top: 30px;
+
+      .grid-container {
+        // display: grid;
+        // grid-template-areas: 'dj-kaka-head-wrapper dj-kaka-details-wrapper';
+        // grid-template-columns: 1.3fr 0.7fr;
+        // grid-template-rows: 1fr;
+        // height: 20vw;
+      }
+
+      // TODO: Not yet tested for larger devices
+      .dj-kaka-head-wrapper {
+        border: $color-okada-normal-4 1px solid;
+        grid-area: dj-kaka-head-wrapper;
+        min-height: 220px;
+        position: absolute;
+        top: 30%;
+        width: 59%;
+
+        .dj-kaka-head {
+          min-height: $cove-dj-kaka-height-x2;
+          position: inherit;
+          top: -96px;
+          width: 100%;
+        }
+      }
+
+      .dj-kaka-details-wrapper {
+        align-self: end;
+        display: flex;
+        flex-direction: column;
+        grid-area: dj-kaka-details-wrapper;
+
+        .dj-kaka-details-container {
+          border: $color-okada-normal-4 1px solid;
+          max-height: 133.15px;
+          padding: 0 15px 0 40px;
+          position: relative;
+
+          .dj-kaka-details {
+            transform: translateY(-1.9em);
+          }
+        }
+
+        .dj-kaka-name {
+          color: $color-okada-dark-1;
+          font-family: $font-family-gotham-black;
+          font-size: 42px;
+          line-height: 0.65em;
+          // margin-bottom: 20px;
+        }
+
+        // TODO: DRY these paragraph styles
+        .dj-kaka-desc {
+          color: $white;
+          font-family: $font-family-gotham-medium;
+          font-size: 9px;
+          margin-bottom: 0;
+        }
+
+        .dj-kaka-button-container {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+
+  // Between sm - md
+  @include media-breakpoint-between(sm, md) {
     // DJ KAKA
     .featured-dj-2 {
       .dj-kaka-details-wrapper .dj-kaka-button-container {
         z-index: 1;
+      }
+    }
+  }
+
+  // OVERRIDE FOR MOBILE BELOW
+  // TODO: Cleanup!
+  @include media-breakpoint-down(sm) {
+    .cove-manila-row,
+    .cove-manila-row-1,
+    .cove-manila-row-2 {
+      background-color: $black;
+    }
+
+    .cove-manila-row {
+      @include display-bg-image('MeEGDK');
+      background-color: $black;
+      min-height: 250px !important;
+
+      .cove-manila-logo {
+        @include display-bg-image('cove-manila', center, auto);
+        height: 52px;
+        margin: 28px 0;
+      }
+
+      .cove-manila-logo-caption {
+        color: $white;
+        font-family: $font-family-gotham-medium;
+        font-size: 10px;
+        letter-spacing: 3px;
+      }
+    }
+
+    .cove-manila-row-1 {
+      @include display-bg-image('XTTRbX-1');
+      min-height: 437px;
+    }
+
+    // OTHER DJs
+    .cove-manila-row-2 {
+      @include display-bg-image('5EsOJA');
+      min-height: 517px;
+      padding-top: 9em;
+
+      .featured-dj-below {
+        align-items: flex-end;
+        display: flex;
+        justify-content: center;
+        padding: 0 0.3em;
+
+        .featured-dj-below-profile-details {
+          min-width: 167.9px;
+          position: relative;
+          top: 12px;
+
+          .featured-dj-name {
+            color: $color-okada-dark-1;
+            font-family: $font-family-gotham-black;
+            font-size: 8px;
+            margin-bottom: 0.4em;
+          }
+
+          .featured-dj-name-desc {
+            color: $white;
+            font-family: $font-family-gotham-medium;
+            font-size: 9px;
+          }
+        }
+      }
+
+      // images
+      .featured-dj-below-profile {
+        align-items: end;
+        border: $color-okada-dark-1 1px solid;
+        display: flex;
+        justify-content: center;
+        max-height: 68.9px;
+        min-width: 186.72px;
+
+        .featured-dj-below-profile-image {
+          // changing .featured-dj-name-desc sizes would affect this
+          bottom: 36px;
+          min-height: 174.63px;
+          min-width: 167.9px;
+          position: absolute;
+        }
+
+        &.carlo-atendido .featured-dj-below-profile-image {
+          @include display-bg-image('lw0KTy');
+        }
+
+        &.everyday-people .featured-dj-below-profile-image {
+          @include display-bg-image('t076tc');
+        }
+      }
+    }
+
+    .cove-manila-row-1-sub-1,
+    .cove-manila-row-1-sub-2 {
+      padding: 0 $default-padding-px;
+    }
+
+    .cove-manila-row-1-sub-2 {
+      margin-top: 1em;
+    }
+
+    // DJ SOLAII
+    .featured-dj-1 {
+      border: $color-okada-normal-4 1px solid;
+
+      .dj-solaii-head {
+        @include display-bg-image('dj-solaii-head', center bottom, auto);
+        bottom: 0;
+        min-height: 183.84px;
+        min-width: 196.93;
+        padding: 0;
+        position: absolute;
+      }
+
+      .dj-solaii-wrapper {
+        min-height: 138.89px;
+      }
+
+      .dj-solaii-details {
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 15.26px;
+        z-index: 2;
+
+        .dj-solaii-logo {
+          @include display-bg-image('dj-solaii-logo', center, auto);
+          margin: 0 auto;
+          min-height: 37.94px;
+          min-width: 133.93px;
+        }
+
+        .dj-solaii-desc-wrapper,
+        .dj-solaii-button-container {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+        .dj-solaii-desc-wrapper {
+          border: $color-okada-normal-4 1px solid;
+          margin-top: 0.55em;
+          max-height: 133.15px;
+          padding: 0 15px 0 40px;
+          position: relative;
+
+          // TODO: DRY these paragraph styles
+          .dj-solaii-desc {
+            color: $white;
+            font-family: $font-family-gotham-medium;
+            font-size: 9px;
+            margin-bottom: 0;
+          }
+        }
+
+        // BUTTON ADJUSTMENTS
+        // For DJ SOLAII
+        .dj-solaii-button-container {
+          .visit-channel-button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // DJ KAKA
+    .featured-dj-2 {
+      margin-top: 30px;
+
+      .grid-container {
+        display: grid;
+        grid-template-areas: 'dj-kaka-head-wrapper dj-kaka-details-wrapper';
+        grid-template-columns: 1.3fr 0.7fr;
+        grid-template-rows: 1fr;
+        min-height: 330.73px;
+      }
+
+      // TODO: Not yet tested for larger devices
+      .dj-kaka-head-wrapper {
+        border: $color-okada-normal-4 1px solid;
+        grid-area: dj-kaka-head-wrapper;
+        min-height: 220px;
+        position: absolute;
+        top: 30%;
+        width: 59%;
+
+        .dj-kaka-head {
+          @include display-bg-image('dj-kaka', center bottom, auto);
+          min-height: $cove-dj-kaka-height;
+          position: inherit;
+          top: -96px;
+        }
+      }
+
+      .dj-kaka-details-wrapper {
+        align-self: end;
+        display: flex;
+        flex-direction: column;
+        grid-area: dj-kaka-details-wrapper;
+
+        .dj-kaka-details-container {
+          border: $color-okada-normal-4 1px solid;
+          max-height: 133.15px;
+          padding: 0 15px 0 40px;
+          position: relative;
+
+          .dj-kaka-details {
+            transform: translateY(-1.9em);
+          }
+        }
+
+        .dj-kaka-name {
+          color: $color-okada-dark-1;
+          font-family: $font-family-gotham-black;
+          font-size: 42px;
+          line-height: 0.65em;
+          // margin-bottom: 20px;
+        }
+
+        // TODO: DRY these paragraph styles
+        .dj-kaka-desc {
+          color: $white;
+          font-family: $font-family-gotham-medium;
+          font-size: 9px;
+          margin-bottom: 0;
+        }
+
+        .dj-kaka-button-container {
+          display: flex;
+          flex-direction: row-reverse;
+        }
       }
     }
   }
@@ -776,8 +1003,6 @@
 }
 
 @media screen and (max-width: 400px) {
-  .container,
-  .container-fluid,
   .main-container {
     // OTHER DJs
     .cove-manila-row-2 {
