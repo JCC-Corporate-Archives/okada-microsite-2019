@@ -101,8 +101,9 @@ body {
 
       .guest-info .guest-name {
         color: $color-okada-dark-1;
-        font-family: $font-family-gotham-black;
+        font-family: $font-family-open-sans;
         font-size: 18px; // Moved to mobile
+        font-weight: bolder;
       }
 
       .guest-info .guest-name-info {
@@ -114,42 +115,42 @@ body {
     }
 
     // GUEST LIST FOR TABLETS & BELOW
-    @include media-breakpoint-down(md) {
-      .guest-entry {
-        .guest-info-container {
-          width: max-content;
+    // @include media-breakpoint-down(md) {
+    //   .guest-entry {
+    //     .guest-info-container {
+    //       width: max-content;
 
-          // .guest-image {
-          //   min-height: 320px;
-          //   width: 100%;
-          // }
+    //       // .guest-image {
+    //       //   min-height: 320px;
+    //       //   width: 100%;
+    //       // }
 
-          .guest-image.mayonnaise {
-            // The image was not on portrait
-            @include display-bg-image('mayonnaise', center bottom, 215%);
-          }
+    //       .guest-image.mayonnaise {
+    //         // The image was not on portrait
+    //         @include display-bg-image('mayonnaise', center bottom, 215%);
+    //       }
 
-          .guest-name {
-            font-size: 12px !important;
-          }
+    //       .guest-name {
+    //         font-size: 12px !important;
+    //       }
 
-          .guest-name-info {
-            font-size: 8px;
-            width: 67%;
-          }
-        }
-      }
-    }
+    //       .guest-name-info {
+    //         font-size: 8px;
+    //         width: 67%;
+    //       }
+    //     }
+    //   }
+    // }
 
-    @include media-breakpoint-down(sm) {
-      .guest-entry {
-        .guest-info-container {
-          .guest-image {
-            min-height: calc(172px + 15vw);
-          }
-        }
-      }
-    }
+    // @include media-breakpoint-down(sm) {
+    //   .guest-entry {
+    //     .guest-info-container {
+    //       .guest-image {
+    //         min-height: calc(172px + 15vw);
+    //       }
+    //     }
+    //   }
+    // }
 
     @include media-breakpoint-up(md) {
       & > .col-12 > .row {
@@ -276,8 +277,9 @@ body {
 
     .dazzling-details {
       color: $white;
-      font-family: $font-family-gotham-book;
+      font-family: $font-family-open-sans;
       font-size: 14px;
+      font-weight: 300;
     }
 
     // .btn-dazzling {
@@ -435,20 +437,9 @@ body {
       }
 
       .okada-hero-caption {
-        font-family: $font-family-gotham-book;
+        font-family: $font-family-open-sans;
         font-size: 24px;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .main-container {
-    .the-restaurants-col {
-      padding: 15px;
-
-      .the-restaurants-content {
-        padding: 0;
+        font-weight: 300;
       }
     }
   }

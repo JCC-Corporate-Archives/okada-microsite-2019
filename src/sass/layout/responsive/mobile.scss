@@ -53,8 +53,9 @@
           width: 100% !important;
         }
 
-        .guest-info-container .guest-image {
-          min-height: 172px; // TODO: Not working yet
+        // inside .guest-info-container
+        .guest-image {
+          min-height: calc(172px + 15vw);
         }
       }
     }
@@ -72,6 +73,15 @@
       }
     }
 
+    .the-restaurants-col {
+      padding: 15px;
+
+      .the-restaurants-content {
+        padding: 0;
+      }
+    }
+
+    // others
     .image {
       width: 100%;
     }
