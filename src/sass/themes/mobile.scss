@@ -11,7 +11,19 @@ body {
   @include media-breakpoint-down(sm) {
     margin-bottom: 7vw;
 
+    .countdown-row {
+      .countdown-container {
+        max-width: 95%;
+      }
+
+      br {
+        display: none;
+      }
+    }
+
     .the-company-row {
+      transition: unset; // animation bug on scroll
+
       .image-col {
         background-position: center bottom;
         min-height: 46vh;
@@ -23,7 +35,11 @@ body {
     }
 
     .guests-row {
+      padding: 0 0 1.1em 0.4em !important;
+
       .guest-entry {
+        max-width: 50%; // explicit set due to xs breakpoint was already removed for BS4
+
         .guest-info-container {
           width: 100% !important;
         }
@@ -221,4 +237,43 @@ body {
   //     }
   //   }
   // }
+}
+
+// explicit set due to xs breakpoint was already removed for BS4
+@media screen and (max-width: 320px) {
+  .main-container {
+    .countdown-row {
+      .countdown-container {
+        max-width: unset;
+      }
+
+      br {
+        display: none;
+      }
+    }
+
+    .the-company-row {
+      .image-col {
+        background-position: center bottom;
+        background-size: auto;
+        min-height: 65vh;
+      }
+    }
+
+    .guests-row {
+      padding: 1em !important;
+
+      .guest-entry {
+        min-width: 100%;
+
+        .guest-info-container {
+          width: 100% !important;
+        }
+
+        .guest-info-container .guest-image {
+          min-height: 320px;
+        }
+      }
+    }
+  }
 }
