@@ -1,6 +1,7 @@
-// NOTE:
-// This should be grid related.
-// Other cosmetic styling should be on /themes/others
+@import 'responsive/mobile';
+@import 'responsive/tablets';
+
+// BASE GRID FOR MAIN CONTAINER
 .main-container {
   margin-bottom: 30em;
   margin-top: -#{$navbar-default-height};
@@ -15,81 +16,10 @@
     padding: 1.1875rem;
   }
 
-  // Tablets below
-  @include media-breakpoint-down(md) {
-    .countdown-row {
-      padding: $row-default-padding;
-    }
-
-    .world-class-row,
-    .the-company-row {
-      padding: 55px 0;
-    }
-
-    .the-company-row {
-      padding-bottom: 0;
-
-      // .image-col {
-      //   margin-bottom: 31px;
-      // }
-    }
-
-    .image {
-      width: 100%;
-    }
-  }
-
+  // Enable transitions for every column movement
   // https://stackoverflow.com/a/42980961
-  .row [class*='col-'] {
+  .row > [class*='col-'] {
     transition: 0.5s ease;
-  }
-
-  // Currently testing md
-  // If something happenned weird on mobile, will use sm
-  // @include media-breakpoint-down(sm) {
-  //   .night-show-row {
-  //     max-height: $the-fountain-md-height;
-  //   }
-  // }
-}
-
-// Tablets & up
-@include media-breakpoint-up(md) {
-  // Main container
-  .main-container {
-    margin-top: -#{$navbar-md-height};
-
-    .hero-row {
-      padding-top: $navbar-md-height;
-    }
-
-    .countdown-row {
-      padding: 2rem 0;
-    }
-
-    @include browser(Safari) {
-      .countdown-row {
-        padding: 4rem 0;
-      }
-
-      .countdown-container {
-        position: relative;
-        z-index: 1;
-      }
-    }
-
-    .world-class-row {
-      height: 580px;
-      padding: 65px 0;
-
-      .heading-col {
-        align-self: center;
-      }
-
-      .image-col {
-        background-position: right center !important;
-      }
-    }
   }
 }
 
