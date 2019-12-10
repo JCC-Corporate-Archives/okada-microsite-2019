@@ -2,6 +2,7 @@
 // This should be grid related.
 // Other cosmetic styling should be on /themes/others
 .main-container {
+  margin-bottom: 30em;
   margin-top: -#{$navbar-default-height};
 
   .hero-row {
@@ -28,14 +29,19 @@
     .the-company-row {
       padding-bottom: 0;
 
-      .image-col {
-        margin-bottom: 31px;
-      }
+      // .image-col {
+      //   margin-bottom: 31px;
+      // }
     }
 
     .image {
       width: 100%;
     }
+  }
+
+  // https://stackoverflow.com/a/42980961
+  .row [class*='col-'] {
+    transition: 0.5s ease;
   }
 
   // Currently testing md
@@ -47,11 +53,48 @@
   // }
 }
 
-// Tablets below
-// @include media-breakpoint-down(md) {
-//   // Main container
-//   .main-container,
-//   .container {
-//     max-width: unset;
-//   }
-// }
+// Tablets & up
+@include media-breakpoint-up(md) {
+  // Main container
+  .main-container {
+    margin-top: -#{$navbar-md-height};
+
+    .hero-row {
+      padding-top: $navbar-md-height;
+    }
+
+    .countdown-row {
+      padding: 2rem 0;
+    }
+
+    @include browser(Safari) {
+      .countdown-row {
+        padding: 4rem 0;
+      }
+
+      .countdown-container {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .world-class-row {
+      height: 580px;
+      padding: 65px 0;
+
+      .heading-col {
+        align-self: center;
+      }
+
+      .image-col {
+        background-position: right center !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main-container {
+    margin-bottom: 60vw;
+  }
+}

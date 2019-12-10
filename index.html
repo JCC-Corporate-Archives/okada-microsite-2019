@@ -4,181 +4,171 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
 
   <title>Okada Manila NYE 2019</title>
 
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/swiper.min.css" rel="stylesheet" type="text/css" />
 
   <!-- Main Style -->
-  <link href="/stylesheets/style.min.css" rel="stylesheet" type="text/css" />
-  <link href="/stylesheets/animate.min.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/style.min.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/animate.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Inline script -->
+  <script type="text/javascript">
+    document.documentElement.setAttribute("data-browser", navigator.userAgent);
+  </script>
 
   <!--[if IE]>
     <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 </head>
 
-<body>
-  <nav id="navBar" class="navbar navbar-dark navbar-trans okada">
+<body id="top">
+  <nav id="navBar" class="navbar navbar-dark justify-content-center okada">
     <a class="navbar-brand mx-auto" href="#">
       <img src="images/okada-logo-small.png" width="41" />
     </a>
-    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-      data-target="#collapsibleNavbar">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
+    <button id="openNav" class="navbar-toggler navbar-toggler-right" type="button" data-target="#myNav"
+      aria-controls="myNav" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Guests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">The Fountain</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cove Manila</a>
-        </li>
-      </ul>
-    </div>
   </nav>
+  <div id="myNav" class="nav-overlay">
+    <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+    <div class="overlay-content">
+      <a class="nav-modal-link" href="#top">Home</a>
+      <a class="nav-modal-link" href="#worldClass">World Class Entertainment</a>
+      <a class="nav-modal-link" href="#guests">Guests</a>
+      <a class="nav-modal-link" href="#theFountain">The Fountain</a>
+      <a class="nav-modal-link" href="#theRestaurants">The Restaurants</a>
+      <a class="nav-modal-link" href="#coveManila">Cove Manila</a>
+    </div>
+  </div>
+  <!-- Return to Top -->
+  <a href="#top" id="return-to-top" class="return-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Main Container -->
   <div class="container-fluid main-container">
-    <div class="row hero-row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+    <div class="row hero-row justify-content-lg-center">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-0">
         <div class="grid">
           <div class="image-2020 wow animated fadeIn delay-1s"></div>
           <div class="image-hero-model wow animated fadeIn"></div>
         </div>
       </div>
     </div>
-    <div class="row countdown-row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div id="countdown" class="countdown-container"></div>
+    <div class="row countdown-row justify-content-center">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xs-9">
+        <div id="countdown" class="countdown-container">
+          <div class="number-of days wow fadeInDown animated" data-wow-delay="0.2s">00</div>
+          <div class="number-of hours wow fadeInDown animated" data-wow-delay="0.4s">00</div>
+          <div class="number-of minutes wow fadeInDown animated" data-wow-delay="0.6s">00</div>
+          <div class="number-of seconds wow fadeInDown animated" data-wow-delay="0.8s">00</div>
+        </div>
 
-        <div class="okada-hero">
-          <h1 class="okada-hero-heading">
-            Okada Manila is taking its New Year’s Eve celebrations to bigger, more extravagant levels.
+        <div class="okada-hero wow animated fadeIn" data-wow-delay="1s">
+          <h1 class=" okada-hero-heading">
+            Okada Manila is taking its New<br />
+            Year’s Eve celebrations to bigger,<br />
+            more extravagant levels.
           </h1>
           <p class="okada-hero-caption">
-            It’s a full explosion of spectacular performances and special treats that will make this night of partying
-            the
+            It’s a full explosion of spectacular performances and<br />
+            special treats that will make this night of partying the<br />
             metro’s most unforgettable one.
           </p>
         </div>
       </div>
     </div>
-    <div class="row world-class-row">
-      <div class="col-xs-12 col-md-4 col-lg-5 col-xl-6 heading-col">
-        <h1 class="okada-hero-heading">
+    <div id="worldClass" class="row world-class-row justify-content-center">
+      <div class="col-12 col-md-4 col-lg-5 col-xl-4 heading-col">
+        <h1 class="okada-hero-heading text-center text-md-left">
           WORLD CLASS ENTERTAINMENT
         </h1>
-        <p class="okada-hero-caption">
+        <p class="okada-hero-caption text-center text-md-left">
           At Okada Manila, Entertainment is paramount to the complete guest experience.
         </p>
       </div>
-      <div class="col-xs-12 col-md-8 col-lg-7 col-xl-6 image-col"></div>
+      <div class="col-12 col-md-8 col-lg-7 col-xl-7 image-col"></div>
     </div>
-    <div class="row the-company-row">
-      <div class="col-xs-12 col-md-8 col-lg-7 col-xl-6 image-col"></div>
-      <div class="col-xs-12 col-md-4 col-lg-5 col-xl-6 heading-col">
+    <div id="guests" class="row the-company-row justify-content-center">
+      <div class="col-12 col-md-4 col-lg-5 col-xl-4 heading-col">
+        <img class="the-company-logo" src="images/the-company@2x.png" />
+        <br /><br />
         <p class="okada-hero-caption">
-          The CompanY. Asia’s premiere vocal harmony act was formed in July, 1985 by alumni of the Ateneo College Glee
+          The Company. Asia’s premiere vocal harmony act was formed in July, 1985 by alumni of the Ateneo College Glee
           Club. Initially, they sang as back up vocalists for the country's reigning pop stars of the '80's before
           turning professional as the headlining concert and recording artists that they are today.
         </p>
-
-        <img class="image the-company-group" src="images/the-company-group@2x.png" />
       </div>
+      <div class="col-12 col-md-8 col-lg-7 col-xl-7 image-col"></div>
     </div>
-    <div class="row guests-row justify-content-between align-content-around">
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image bugoy-drilon"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Bugoy Drilon</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+    <div id="guestsOther" class="row guests-row justify-content-between justify-content-md-center align-content-around">
+      <div class="col-12">
+        <div class="row">
+          <div class="guest-entry col-4 col-sm-2 col-md-4 col-lg-4 col-xl-4">
+            <div class="guest-info-container hvr-float-shadow">
+              <div class="guest-image bugoy-drilon"></div>
+              <div class="guest-info">
+                <strong class="guest-name">Bugoy Drilon</strong>
+                <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image daryl-ong"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Daryl Ong</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+          <div class="guest-entry col-4 col-sm-2 col-md-4 col-lg-4 col-xl-4">
+            <div class="guest-info-container hvr-float-shadow">
+              <div class="guest-image daryl-ong"></div>
+              <div class="guest-info">
+                <strong class="guest-name">Daryl Ong</strong>
+                <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image michael-pangilinan"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Michael Pangilinan</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+          <div class="guest-entry col-4 col-sm-2 col-md-4 col-lg-4 col-xl-4">
+            <div class="guest-info-container hvr-float-shadow">
+              <div class="guest-image michael-pangilinan"></div>
+              <div class="guest-info">
+                <strong class="guest-name">Michael Pangilinan</strong>
+                <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image liezel-garcia"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Liezel Garcia</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+          <div class="guest-entry col-4 col-sm-2 col-md-4 col-lg-4 col-xl-4">
+            <div class="guest-info-container hvr-float-shadow">
+              <div class="guest-image liezel-garcia"></div>
+              <div class="guest-info">
+                <strong class="guest-name">Liezel Garcia</strong>
+                <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image erik-santos"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Erik Santos</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+          <div class="guest-entry col-4 col-sm-2 col-md-4 col-lg-4 col-xl-4">
+            <div class="guest-info-container hvr-float-shadow">
+              <div class="guest-image jason-dy"></div>
+              <div class="guest-info">
+                <strong class="guest-name">Jason Dy</strong>
+                <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image mayonnaise"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Mayonnaise</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image udd"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">UDD</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image the-ransom-collective"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">The Ransom Collective</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="guest-entry col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="guest-info-container">
-          <div class="guest-image bugoy-drilon"></div>
-          <div class="guest-info">
-            <h6 class="guest-name">Jason Dy</h6>
-            <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+          <div class="guest-entry col-4 col-sm-2 col-md-4 col-lg-4 col-xl-4">
+            <div class="guest-info-container hvr-float-shadow">
+              <div class="guest-image erik-santos"></div>
+              <div class="guest-info">
+                <strong class="guest-name">Erik Santos</strong>
+                <p class="guest-name-info">Nunc dignissim vehicula lorem. Fusce eu congue tellus.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row night-show-row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 night-show-col">
+    <div id="theFountain" class="row night-show-row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 night-show-col">
         <div class="night-show-logo"></div>
         <div class="night-show-details">
           <h1 class="dazzling">
@@ -187,75 +177,206 @@
           <p class="dazzling-details">
             The Fountain stands as Okada Manila’s bold take on creating a global icon.
           </p>
-          <button type="button" class="btn btn-dark btn-dazzling">
+          <button type="button" class="btn btn-default btn-dark btn-dazzling">
             LEARN MORE
           </button>
         </div>
       </div>
     </div>
-    <div class="row the-restaurants-row">
-      <div class="col-xs-12 col-md-4 col-lg-5 col-xl-5">
-        THE RESTAURANTS SLIDER
+    <div id="theRestaurants" class="row the-restaurants-row">
+      <div class="col-12 col-md-7 col-lg-7 col-xl-7 p-0 the-restaurants-cols">
+        <!-- Swiper -->
+        <div id="theRestaurantsSlider" class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="swiper-image" src="images/the-restaurants-1@2x.png" />
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-image" src="images/the-restaurants-1@2x.png" />
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-image" src="images/the-restaurants-1@2x.png" />
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-image" src="images/the-restaurants-1@2x.png" />
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
-      <div class="col-xs-12 col-md-6 col-lg-7 col-xl-7">
-        THE RESTAURANTS
+      <div class="col-12 col-md-5 col-lg-5 col-xl-5 the-restaurants-col the-restaurants-cols">
+        <div class="the-restaurants-content">
+          <div class="the-restaurants-logo"></div>
+          <h1 class="the-restaurants-heading">
+            A feast of<br />
+            the finest<br />
+            holiday flavors
+          </h1>
+          <p class="okada-hero-caption text-left">
+            Spread the holiday cheer with family and friends only at Okada Manila's signature restaurants.
+            <br /><br />
+            November 4 — January 4
+          </p>
+          <button type="button" class="btn btn-dark btn-dazzling dazzling-text">
+            LEARN MORE
+          </button>
+        </div>
       </div>
     </div>
-    <div class="row cove-manila-row text-center">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div id="coveManila" class="row cove-manila-row text-center">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         <div class="cove-manila-logo mx-auto"></div>
         <p class="cove-manila-logo-caption">
           LITERALLY THE LAST PARTY OF THE YEAR
         </p>
-        <!-- <div class="row p-0"><div class="col-12"></div></div> -->
       </div>
     </div>
     <div class="row cove-manila-row-1">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="row cove-manila-row-1-sub-1">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            DJ SOLAII
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row cove-manila-row-1-sub-1 justify-content-md-center">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-1 wow animated fadeInUp">
+            <div class="row dj-solaii-wrapper">
+              <div class="col-7 dj-solaii-head"></div>
+              <div class="col-5 dj-solaii-details">
+                <div class="dj-solaii-logo"></div>
+                <div class="dj-solaii-desc-wrapper p-1 p-lg-2 p-xl-3">
+                  <p class="dj-solaii-desc">
+                    The genre of DJ Solaii is Techno-Electronic music, focused more on beats and rhythms than vocals or
+                    melody.
+                  </p>
+                </div>
+                <div class="dj-solaii-button-container">
+                  <a href="#" class="btn visit-channel-button wow animated fadeIn fast" data-wow-delay="0.5"
+                    target="_blank">
+                    <h2 class="visit-channel-text">VISIT CHANNEL</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row cove-manila-row-1-sub-2">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            DJ KAKA
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="row cove-manila-row-2">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        DJ KAKA
-      </div>
-    </div> -->
-    <div class="row cove-manila-row-2">
-      <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        DJ CARLO
-      </div>
-      <div class="col-6 col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        EVERYDAY PEOPLE
-      </div>
-      <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="row cove-manila-row-2-sub-1">
-          <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            PRE-FOOTER
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row footer-row">
 
+      </div>
     </div>
+    <div class="row cove-manila-row-2">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row cove-manila-row-2-sub-1 justify-content-md-center">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-2 p-0">
+            <div class="dj-kaka grid-container">
+              <div class="dj-kaka-head-wrapper wow animated fadeInLeft">
+                <div class="dj-kaka-head"></div>
+              </div>
+              <div class="dj-kaka-details-wrapper wow animated fadeInRight" data-wow-delay="0.2s">
+                <div class="dj-kaka-details-container">
+                  <div class="dj-kaka-details">
+                    <h1 class="dj-kaka-name">
+                      DJ<br />
+                      KAKA
+                    </h1>
+                    <p class="dj-kaka-desc">
+                      Express your feelings on the dancefloor with DJ Kaka's spine tingling music. Be zapped and stunned
+                      as
+                      we roll through a night of electronic dance music.
+                    </p>
+                  </div>
+                </div>
+                <div class="dj-kaka-button-container">
+                  <a href="#" class="btn visit-channel-button wow animated fadeIn fast" data-wow-delay="0.4"
+                    target="_blank">
+                    <h2 class="visit-channel-text">VISIT CHANNEL</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row cove-manila-row-2-sub-2 justify-content-md-center">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-5 featured-dj-below">
+            <div class="featured-dj-below-profile carlo-atendido wow animated fadeInDown">
+              <div class="featured-dj-below-profile-image"></div>
+              <div class="featured-dj-below-profile-details">
+                <p class="featured-dj-name">Carlo Atendido</p>
+                <p class="featured-dj-name-desc">Resident Cove Manila DJ</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-5 featured-dj-below">
+            <div class="featured-dj-below-profile everyday-people wow animated fadeInDown" data-wow-delay="0.2s">
+              <div class="featured-dj-below-profile-image"></div>
+              <div class="featured-dj-below-profile-details">
+                <p class="featured-dj-name">Everyday People</p>
+                <p class="featured-dj-name-desc">Cove Manila NYE DJs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Don't put social media links to this  -->
   </div>
+  <footer class="footer-wrapper">
+    <div class="container-fluid">
+      <div class="row cove-manila-row-3">
+        <div class="col-12 pre-footer-wrapper">
+          <div class="row cove-manila-row-2-sub-1 pre-footer-row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-10 col-lg-10 pre-footer-col text-center">
+              <p class="nye-gold-rush wow animated zoomIn" data-wow-delay="0.1s"><strong>NEW YEAR'S EVE GOLD
+                  RUSH</strong></p>
+              <p class="nye-gold-rush-sub wow animated zoomIn" data-wow-delay="0.3s">LET'S PAINT IT ALL GOLD.</p>
+
+              <div class="row justify-content-center">
+                <div class="col-12 text-center social-icons-wrapper">
+                  <ul class="social-icons">
+                    <li class="social-icon hvr-grow wow animated fadeInUp" data-wow-delay="0.1s">
+                      <a class="social-icon-link fb-icon" href="#">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="social-icon hvr-grow wow animated fadeInUp" data-wow-delay="0.2s">
+                      <a class="social-icon-link ig-icon" href="#">
+                        <i class="fa fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li class="social-icon hvr-grow wow animated fadeInUp" data-wow-delay="0.3s">
+                      <a class="social-icon-link in-icon" href="#">
+                        <i class="fa fa-linkedin"></i>
+                      </a>
+                    </li>
+                    <li class="social-icon hvr-grow wow animated fadeInUp" data-wow-delay="0.4s">
+                      <a class="social-icon-link yt-icon" href="#">
+                        <i class="fa fa-youtube-play"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row footer-row">
+        <div class="col-12 text-center text-white">
+          <p class="footer-text footer-address">
+            New Seaside Drive, Entertainment City, Parañaque City, 1701,<br />
+            Metro Manila, Philippines
+          </p>
+          <p class="footer-text footer-okada">
+            Copyright © 2019 Okada Manila. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
     integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="scripts/jquery.smoothscroll.min.js"></script>
   <script src="scripts/custom.min.js"></script>
   <script src="scripts/wow.min.js"></script>
 </body>

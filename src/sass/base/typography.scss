@@ -1,21 +1,27 @@
-// Gothan Book
-@include font-face('Gotham Book', '../fonts/GothamBook');
+// Import Open Sans, Playfair Display & Roboto Family
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display|Roboto:400,700,700i&display=swap');
+// using Google Font Mixin 2.0
+// https://codepen.io/jakob-e/pen/LVVXjO
+@include google-font {
+  @include google-font('Open Sans', 300 400 700, 800);
+  @include google-font('Playfair Display');
+  @include google-font('Roboto', 300 400 700);
+}
 
-// Gotham Light
-@include font-face('Gotham Light', '../fonts/GothamLight', normal, normal, 'recent');
+// Gothan Family
+// NOTE: CURRENTLY NOT WORKING ON SAFARI
+@include font-face('Gotham Book', '../fonts/GothamBook', normal, normal);
+@include font-face('Gotham Light', '../fonts/GothamLight', normal, normal);
+@include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal);
+@include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal);
+@include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic);
+@include font-face('Gotham Black', '../fonts/GothamBlack', bolder, normal);
 
-// Gotham Medium
-@include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal, 'recent');
-
-// Gotham Bold
-@include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal, 'recent');
-@include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic, 'recent');
-
-// Gotham Black
-@include font-face('Gotham Black', '../fonts/GothamBlack', bolder, normal, 'recent');
-
-// Playfair Display
-@include font-face('Playfair Display', '../fonts/PlayfairDisplayRegular');
+html,
+body {
+  font-family: $font-family-open-sans;
+  font-weight: normal;
+}
 
 .okada-hero {
   margin-top: 34px;
@@ -24,13 +30,21 @@
 
 .okada-hero-heading {
   color: $hero-heading-color;
-  font-family: 'Gotham Black', sans-serif;
+  font-family: $font-family-gotham-medium;
   font-size: 22px;
+  font-weight: bold;
 }
 
+.container-caption,
 .okada-hero-caption {
   color: $hero-caption-color;
-  font-family: 'Gotham Medium', sans-serif;
+  font-family: $font-family-gotham-medium;
   font-size: 14px;
-  text-align: center;
+  // text-align: center;
+}
+
+@include media-breakpoint-up(md) {
+  .okada-hero-heading {
+    font-size: 2.5rem;
+  }
 }

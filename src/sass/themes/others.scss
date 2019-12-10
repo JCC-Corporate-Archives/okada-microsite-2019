@@ -1,5 +1,14 @@
+body {
+  background: $black;
+}
+
 // Other cosmetic changes here
 .main-container {
+  & > .countdown-row,
+  & > .the-restaurants-row {
+    background: $white;
+  }
+
   .world-class-row,
   .the-company-row {
     background: $hero-gray-bg-color-1;
@@ -14,11 +23,15 @@
 
   .the-company-row {
     .image-col {
-      background-image: url('../images/the-company.png');
+      background-image: url('../images/the-company-group.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      min-height: 73px;
+      // min-height: 73px;
+    }
+
+    .the-company-logo {
+      width: 100%;
     }
   }
 
@@ -30,49 +43,55 @@
 
     .guest-entry {
       margin-top: 19px;
-      max-width: 181.35px;
+      min-width: 181.35px;
       padding: 0;
 
-      .guest-info-container {
-        min-height: $guest-container-min-height;
-      }
+      // .guest-info-container {
+      //   min-height: $guest-container-min-height;
+      // }
     }
 
     .guest-info-container {
+      min-height: $guest-container-min-height;
+
       .guest-image {
         min-height: 172px;
 
         &.bugoy-drilon {
-          @include display-bg-image('bugoy-drilon');
+          @include display-bg-image('bugoy-drilon', center top, cover, sm);
         }
 
         &.daryl-ong {
-          @include display-bg-image('daryl-ong');
+          @include display-bg-image('daryl-ong', center top, cover, sm);
         }
 
         &.michael-pangilinan {
-          @include display-bg-image('michael-pangilinan');
+          @include display-bg-image('michael-pangilinan', center top, cover, sm);
         }
 
         &.liezel-garcia {
-          @include display-bg-image('liezel-garcia');
+          @include display-bg-image('liezel-garcia', center top, cover, sm);
+        }
+
+        &.jason-dy {
+          @include display-bg-image('jason-dy', center top, cover, sm);
         }
 
         &.erik-santos {
-          @include display-bg-image('erik-santos');
+          @include display-bg-image('erik-santos', center top, cover, sm);
         }
 
-        &.mayonnaise {
-          @include display-bg-image('mayonnaise', center bottom, 340px);
-        }
+        // &.mayonnaise {
+        //   @include display-bg-image('mayonnaise', center bottom, 340px);
+        // }
 
-        &.udd {
-          @include display-bg-image('udd', center right);
-        }
+        // &.udd {
+        //   @include display-bg-image('udd', center right);
+        // }
 
-        &.the-ransom-collective {
-          @include display-bg-image('trc');
-        }
+        // &.the-ransom-collective {
+        //   @include display-bg-image('trc');
+        // }
       }
 
       .guest-info {
@@ -82,47 +101,168 @@
 
       .guest-info .guest-name {
         color: $color-okada-dark-1;
-        font-family: 'Gotham Black';
-        font-size: 11px;
+        font-family: $font-family-gotham-black;
+        font-size: 18px; // Moved to mobile
       }
 
       .guest-info .guest-name-info {
         color: $caption-color;
-        font-family: 'Gotham Medium';
+        font-family: $font-family-gotham-medium;
         font-size: 10px;
         margin-bottom: 0;
+      }
+    }
+
+    // GUEST LIST FOR TABLETS & BELOW
+    @include media-breakpoint-down(md) {
+      .guest-entry {
+        .guest-info-container {
+          width: max-content;
+
+          // .guest-image {
+          //   min-height: 320px;
+          //   width: 100%;
+          // }
+
+          .guest-image.mayonnaise {
+            // The image was not on portrait
+            @include display-bg-image('mayonnaise', center bottom, 215%);
+          }
+
+          .guest-name {
+            font-size: 12px !important;
+          }
+
+          .guest-name-info {
+            font-size: 8px;
+            width: 67%;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .guest-entry {
+        .guest-info-container {
+          .guest-image {
+            min-height: calc(172px + 15vw);
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      & > .col-12 > .row {
+        // align-content: space-around;
+        flex-wrap: wrap;
+        height: calc(100% + 5em);
+        justify-content: space-around;
+        padding: 4em 2rem 6em;
+      }
+
+      .guest-entry {
+        display: flex;
+        justify-content: center;
+        // margin-top: 3em;
+        margin-top: unset;
+
+        .guest-info-container {
+          height: calc(320px + 10vw);
+          min-height: 320px;
+          width: calc(100% - 2rem);
+
+          .guest-image {
+            height: calc(320px + 5.5vw);
+            min-height: 320px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      // & > .col-12 > .row {
+      //   // align-content: space-around;
+      //   flex-wrap: wrap;
+      //   height: calc(100% + 5em);
+      //   justify-content: space-around;
+      //   padding: 4em 2rem 6em;
+      // }
+
+      .guest-entry {
+        // display: flex;
+        // justify-content: center;
+        // margin-top: unset;
+
+        .guest-info-container {
+          height: calc(320px + 16vw);
+          // min-height: 320px;
+          // width: calc(100% - 2rem);
+
+          .guest-image {
+            height: calc(320px + 12vw);
+            min-height: 320px;
+            width: 100%;
+          }
+        }
       }
     }
   }
 
   // THE FOUNTAIN
   .night-show-row {
-    @include display-bg-image('X5X8Aj', 18% center);
-    max-height: $the-fountain-md-height;
-    min-height: $the-fountain-md-height;
+    @include display-bg-image('X5X8Aj', 18% center, cover, md);
+    max-height: calc(#{$the-fountain-md-height} + 2em);
+    min-height: calc(#{$the-fountain-md-height} + 2em);
+    padding: 19px;
 
     .night-show-col {
       @include night-show-container('night-show-logo', 'night-show-details');
       border: 1px $color-okada-light-1 solid;
-      margin: 19px;
       // calculation of second argument: (19px x 2 = 28px + 12 = 40px)
-      max-height: calc(#{$the-fountain-md-height} - 40px);
+      // max-height: calc(#{$the-fountain-md-height} - 40px);
+    }
+
+    @include media-breakpoint-down(xl) {
+      max-height: 100vh;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-height: unset;
+    }
+
+    // GUEST LIST FOR TABLETS & UP
+    @include media-breakpoint-up(md) {
+      height: 54vw;
+      padding: 1.2em;
+
+      .night-show-col .night-show-logo {
+        background-size: contain;
+        height: 30%;
+      }
+
+      .night-show-col .night-show-details {
+        align-content: flex-end;
+        align-items: flex-end;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        position: absolute;
+
+        .btn {
+          width: max-content;
+        }
+      }
     }
   }
 
-  // .night-show-row {
-
-  //   .night-show-col {
-
-  //   }
-  // }
-
   // THE FOUNTAIN
   .night-show-col {
-    padding: 19px !important;
+    padding: 1em !important;
 
     .night-show-logo {
-      @include display-bg-image('the-fountain', right, auto);
+      @include display-bg-image('the-fountain', right, auto, md);
       height: 53.48px;
     }
 
@@ -130,24 +270,186 @@
       -webkit-text-fill-color: transparent;
       background: $dazzling-mask-color;
       background-clip: text;
-      font-family: 'Playfair Display';
+      font-family: $font-family-playfair-display-regular;
       font-size: 23px;
     }
 
     .dazzling-details {
       color: $white;
-      font-family: 'Gotham Book';
+      font-family: $font-family-gotham-book;
       font-size: 14px;
     }
 
-    .btn-dazzling {
-      font-family: 'Gotham Black';
-      font-size: 11px;
-      background-color: transparent;
-      border-color: $color-okada-light-1;
-      border-radius: 0.6625rem;
-      padding-left: 2em;
-      padding-right: 2em;
+    // .btn-dazzling {
+    //   font-family: $font-family-gotham-black;
+    //   font-size: 11px;
+    //   background-color: transparent;
+    //   border-color: $color-okada-light-1;
+    //   border-radius: 0.6625rem;
+    //   padding-left: 2em;
+    //   padding-right: 2em;
+    // }
+  }
+
+  // THE RESTAURANTS
+  .the-restaurants-col {
+    @include media-breakpoint-up(lg) {
+      padding: 40px 19px;
+    }
+
+    .the-restaurants-logo {
+      @include display-bg-image('the-restaurants-logo', left, auto);
+      margin-bottom: 15px;
+      min-height: 56px;
+    }
+
+    .the-restaurants-heading {
+      color: $hero-caption-color-darker;
+      font-family: $font-family-playfair-display-regular;
+      font-size: 37px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .main-container {
+    .the-company-row {
+      .image-col {
+        background-image: url('../images/the-company-group@3x.png') !important;
+        // background-position: right;
+        // min-height: 636px;
+      }
+    }
+
+    // THE FOUNTAIN
+    .night-show-col {
+      // padding: 4em !important;
+
+      .night-show-logo {
+        @include display-bg-image('the-fountain', right, auto);
+        height: 53.48px;
+      }
+
+      .dazzling {
+        font-size: 60px !important;
+        max-width: 750px !important;
+      }
+
+      .dazzling-details {
+        // color: $white;
+        // font-family: 'Gotham Book';
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .main-container {
+    .the-restaurants-col {
+      .the-restaurants-content {
+        padding: 0 5em;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .main-container {
+    .the-company-row {
+      .image-col {
+        background-image: url('../images/the-company-group@2x.png');
+        background-position: right bottom;
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        min-height: 636px;
+      }
+    }
+
+    .guests-row {
+      .guest-info-container .guest-image {
+        background-size: cover !important;
+        height: calc(172px + 8vw);
+      }
+
+      .guest-info-container .guest-image.mayonnaise {
+        // The image was not on portrait
+        @include display-bg-image('mayonnaise', center bottom);
+        background-size: 215% !important;
+      }
+    }
+
+    // THE FOUNTAIN
+    .night-show-col {
+      padding: 2em !important;
+
+      .night-show-logo {
+        @include display-bg-image('the-fountain', right, auto);
+        height: 53.48px;
+      }
+
+      .dazzling {
+        // -webkit-text-fill-color: transparent;
+        // background: $dazzling-mask-color;
+        // background-clip: text;
+        // font-family: 'Playfair Display';
+        font-size: 40px;
+        max-width: 540px;
+      }
+
+      .dazzling-details {
+        // color: $white;
+        // font-family: 'Gotham Book';
+        font-size: 24px;
+      }
+    }
+
+    // THE RESTAURANTS
+    .the-restaurants-row {
+      flex-direction: row-reverse;
+    }
+
+    .the-restaurants-col {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .the-restaurants-content {
+        padding: 10px;
+      }
+
+      .the-restaurants-logo {
+        background-size: contain;
+        height: 120px;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      .the-restaurants-heading {
+        // color: $hero-caption-color-darker;
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 0.3em;
+        // width: 60%;
+      }
+
+      .okada-hero-caption {
+        font-family: $font-family-gotham-book;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .main-container {
+    .the-restaurants-col {
+      padding: 15px;
+
+      .the-restaurants-content {
+        padding: 0;
+      }
     }
   }
 }

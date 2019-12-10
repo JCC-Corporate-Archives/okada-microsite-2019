@@ -1,23 +1,61 @@
-window.onload = function() {
-  $("#collapsibleNavbar").on("show.bs.collapse", function() {
-    $("#navBar").css({
-      background: "#000"
-    });
-  });
+$(document).ready(function() {
 
-  $("#collapsibleNavbar").on("hide.bs.collapse", function() {
-    $("#navBar").css({
-      background: "transparent"
-    });
+  // NAVBAR OVERLAY
+  $("#openNav").on("click", function() {
+    $("#myNav").css("height", "100%");
+    setTimeout(function() {
+      $("#myNav")
+        .fadeIn()
+        .addClass("collapsed");
+      $("body").css("overflow", "hidden");
+    }, 100);
   });
+  $("#closeNav").on("click", function() {
+    $("#myNav")
+      .css("height", "0%")
+      .removeClass("collapsed");
+    setTimeout(function() {
+      $("body").css("overflow", "");
+    }, 100);
+  });
+  $("a.nav-modal-link[href*=\"#\"]")
+    .on("click", function() {
+      $("body").css("overflow", "");
+
+      // setTimeout(function() {
+      // }, 350);
+      $("#myNav")
+        .fadeOut()
+        .css("height", "0%")
+        .removeClass("collapsed");
+    })
+    .smoothscroll({ duration: 400, easing: "swing" });
+
+  // Scroll to Top
+  $(window).scroll(function() {
+
+    // If page is scrolled more than 75px
+    if ($(this).scrollTop() >= 75) {
+      $("#return-to-top").fadeIn(200); // Fade in the arrow
+    } else {
+      $("#return-to-top").fadeOut(200); // Else fade out the arrow
+    }
+  });
+  $("#return-to-top")
+    .on("click", function() {
+
+      // simply unset to avoid bugs for mobile
+      $("#myNav").css("display", "");
+    })
+    .smoothscroll({ duration: 500, easing: "swing" });
 
   var $clock = $("#countdown");
   var interval = 1000;
 
-  var $d = $("<div class=\"number-of days\" ></div>").appendTo($clock),
-    $h = $("<div class=\"number-of hours\" ></div>").appendTo($clock),
-    $m = $("<div class=\"number-of minutes\" ></div>").appendTo($clock),
-    $s = $("<div class=\"number-of seconds\" ></div>").appendTo($clock);
+  var $d = $($clock).find(".number-of.days"),
+    $h = $($clock).find(".number-of.hours"),
+    $m = $($clock).find(".number-of.minutes"),
+    $s = $($clock).find(".number-of.seconds");
 
   /**
    * Timer by setting interval
@@ -52,4 +90,24 @@ window.onload = function() {
     $m.text(m).append("<div class=\"days-label\">MINUTES</div>");
     $s.text(s).append("<div class=\"days-label\">SECONDS</div>");
   }, interval);
-};
+
+  // init WOW.js
+  // Anti Flickering
+  new WOW({ offset: 0 }).init();
+
+  // The Restaurant slider
+  new Swiper("#theRestaurantsSlider", {
+    loop: 1,
+    spaceBetween: 0,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination"
+    }
+  });
+});
+
+// window.onload = function() {
+// };

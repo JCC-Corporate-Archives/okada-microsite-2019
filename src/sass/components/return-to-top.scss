@@ -1,0 +1,49 @@
+// Forked from source: https://codepen.io/rdallaire/pen/apoyx
+.return-to-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 4rem;
+  background: rgba($color-okada-dark-1, 0.7);
+  width: 75px;
+  height: 75px;
+  display: block;
+  text-decoration: none;
+  border-radius: 50%;
+  display: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+
+  i {
+    color: $black;
+    margin: 0;
+    position: relative;
+    left: 28px;
+    top: 24px;
+    font-size: 19px;
+    transition: all 0.2s ease;
+  }
+
+  &:hover {
+    background: $color-okada-dark-1;
+
+    i {
+      color: $white;
+      top: 18px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .return-to-top {
+    left: inherit;
+    right: 40%;
+  }
+
+  // footer patches
+  .page-footer,
+  .footer-wrapper {
+    .footer-row {
+      padding-bottom: 8em;
+    }
+  }
+}

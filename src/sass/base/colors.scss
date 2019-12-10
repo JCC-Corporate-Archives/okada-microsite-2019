@@ -15,6 +15,28 @@ $color-okada-normal-7: #d69b3f;
 $color-okada-dark-1: #cd8634;
 $color-okada-dark-2: #b67c30;
 
+// others
+$okada-logo-color: #f0e6c3;
+$navbar-primary-color: $color-okada-light-3;
+$hero-section-right-color: #ce8735;
+$countdown-color: $color-okada-dark-1;
+$hero-heading-color: $color-okada-dark-1;
+$hero-caption-color: #828282;
+$hero-caption-color-darker: #575756;
+$hero-gray-bg-color-1: #e8e8e8;
+$hero-gray-bg-color-2: #c2c2c1;
+$caption-color: $hero-caption-color;
+$footer-text-color: $hero-gray-bg-color-2;
+$nav-overlay-bg-color: rgba($black, 0.94);
+
+// navbars
+$navbar-okada-icon-bg-color: rgba($navbar-primary-color, 0.5) !default;
+$navbar-okada-icon-bg: str-replace(
+  url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-okada-icon-bg-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"),
+  '#',
+  '%23'
+) !default;
+
 // hero section
 $hero-section-bg: linear-gradient(
   135deg,
@@ -26,20 +48,6 @@ $hero-section-bg: linear-gradient(
   rgba(182, 124, 48, 1) 100%
 );
 
-// with gradient
-// for: the fountain
-$dazzling-mask-color: linear-gradient(
-  39deg,
-  rgba(182, 124, 48, 1) 0%,
-  rgba(205, 134, 52, 1) 30%,
-  rgba(205, 135, 52, 1) 41%,
-  rgba(208, 142, 56, 1) 52%,
-  rgba(213, 154, 62, 1) 61%,
-  rgba(215, 158, 64, 1) 70%,
-  rgba(255, 212, 134, 1) 80%,
-  rgba(226, 176, 88, 1) 90%
-);
-
 // guest name
 $guest-name-info-bg: linear-gradient(
   90deg,
@@ -49,13 +57,32 @@ $guest-name-info-bg: linear-gradient(
   rgba(56, 56, 55, 1) 75%,
   rgba(60, 60, 59, 1) 100%
 );
+$nav-overlay-hover-gradient: $guest-name-info-bg;
+$nav-overlay-bg: rgba($color-okada-dark-1, 0.89);
 
-// others
-$navbar-primary-color: #f8d76d;
-$hero-section-right-color: #ce8735;
-$countdown-color: $color-okada-dark-1;
-$hero-heading-color: $color-okada-dark-1;
-$hero-caption-color: #828282;
-$hero-gray-bg-color-1: #e8e8e8;
-$hero-gray-bg-color-2: #c2c2c1;
-$caption-color: $hero-caption-color;
+// base gradient pallette
+$okada-base-gradient-color-1: rgba(182, 124, 48, 1);
+$okada-base-gradient-color-2: rgba(205, 134, 52, 1);
+$okada-base-gradient-color-3: rgba(205, 135, 52, 1);
+$okada-base-gradient-color-4: rgba(208, 142, 56, 1);
+$okada-base-gradient-color-5: rgba(213, 154, 62, 1);
+$okada-base-gradient-color-6: rgba(215, 158, 64, 1);
+$okada-base-gradient-color-7: rgba(255, 212, 134, 1);
+$okada-base-gradient-color-8: rgba(226, 176, 88, 1);
+
+// base gradient
+$okada-base-gradient: linear-gradient(
+  39deg,
+  #{$okada-base-gradient-color-1} 0%,
+  #{$okada-base-gradient-color-2} 17%,
+  #{$okada-base-gradient-color-3} 38%,
+  #{$okada-base-gradient-color-4} 45%,
+  #{$okada-base-gradient-color-5} 52%,
+  #{$okada-base-gradient-color-6} 53%,
+  #{$okada-base-gradient-color-7} 71%,
+  #{$okada-base-gradient-color-8} 100%
+);
+$dazzling-mask-color: $okada-base-gradient;
+
+// IDK about the terms of it
+$common-shining-mask-bg: $dazzling-mask-color;

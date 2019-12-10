@@ -1,0 +1,112 @@
+.page-footer,
+.footer-wrapper {
+  background: $black;
+
+  .footer-row {
+    padding-bottom: 3em;
+  }
+
+  .footer-text {
+    color: $footer-text-color;
+    font-family: $font-family-gotham-book;
+    font-size: 11px;
+  }
+
+  @include media-breakpoint-up(md) {
+    .footer-text {
+      font-size: 18px;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.pre-footer-wrapper {
+  display: flex;
+
+  .nye-gold-rush,
+  .nye-gold-rush-sub {
+    -webkit-text-fill-color: transparent;
+    background: $common-shining-mask-bg; // tentative variable
+    background-clip: text;
+  }
+
+  .nye-gold-rush {
+    font-family: $font-family-gotham-black;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+  }
+
+  .nye-gold-rush-sub {
+    font-family: $font-family-gotham-medium;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 2.5em;
+  }
+
+  @include browser(Safari) {
+    .nye-gold-rush-sub {
+      font-family: $font-family-gotham-medium-fall-back;
+    }
+  }
+
+  .pre-footer-row {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .social-icons-wrapper {
+    border-top: $gray-600 1px solid;
+
+    .social-icons {
+      list-style: none;
+      margin: 38px 0;
+      padding-left: 0;
+
+      .social-icon {
+        display: inline-block;
+      }
+
+      .social-icon + .social-icon {
+        margin-left: 2em;
+      }
+
+      .social-icon .fa {
+        -webkit-text-fill-color: transparent;
+        background: $common-shining-mask-bg; // tentative variable
+        background-clip: text;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .nye-gold-rush {
+      font-size: 20px;
+      letter-spacing: 10px;
+    }
+
+    .nye-gold-rush-sub {
+      font-size: 15px;
+      letter-spacing: 7px;
+    }
+
+    .social-icons-wrapper {
+      .social-icons {
+        list-style: none;
+        margin: 50px 0;
+        padding-left: 0;
+
+        .social-icon .fa {
+          font-size: 33px;
+        }
+
+        .social-icon + .social-icon {
+          margin-left: 3em;
+        }
+      }
+    }
+  }
+}
