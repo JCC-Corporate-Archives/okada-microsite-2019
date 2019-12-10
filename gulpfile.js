@@ -79,7 +79,6 @@ const deleteFiles = [
 
 // Run:
 // gulp sass
-// Compiles SCSS files (if you don't have compass)
 gulp.task("sass", function() {
   var stream = gulp
     .src([`!${paths.sass}/animations.scss`, `${paths.sass}/*.scss`])
