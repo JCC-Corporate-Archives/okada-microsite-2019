@@ -24,7 +24,7 @@
 
   <!--[if IE]>
     <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 </head>
 
@@ -42,13 +42,16 @@
     <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
     <div class="overlay-content">
       <a class="nav-modal-link" href="#top">Home</a>
-      <a class="nav-modal-link" href="#">World Class Entertainment</a>
-      <a class="nav-modal-link" href="#">Guests</a>
-      <a class="nav-modal-link" href="#">The Fountain</a>
-      <a class="nav-modal-link" href="#">The Restaurants</a>
-      <a class="nav-modal-link" href="#">Cove Manila</a>
+      <a class="nav-modal-link" href="#worldClass">World Class Entertainment</a>
+      <a class="nav-modal-link" href="#guests">Guests</a>
+      <a class="nav-modal-link" href="#theFountain">The Fountain</a>
+      <a class="nav-modal-link" href="#theRestaurants">The Restaurants</a>
+      <a class="nav-modal-link" href="#coveManila">Cove Manila</a>
     </div>
   </div>
+  <!-- Return to Top -->
+  <a href="#top" id="return-to-top" class="return-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Main Container -->
   <div class="container-fluid main-container">
     <div class="row hero-row justify-content-lg-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-0">
@@ -81,7 +84,7 @@
         </div>
       </div>
     </div>
-    <div class="row world-class-row justify-content-center">
+    <div id="worldClass" class="row world-class-row justify-content-center">
       <div class="col-12 col-md-4 col-lg-5 col-xl-4 heading-col">
         <h1 class="okada-hero-heading text-center text-md-left">
           WORLD CLASS ENTERTAINMENT
@@ -92,7 +95,7 @@
       </div>
       <div class="col-12 col-md-8 col-lg-7 col-xl-7 image-col"></div>
     </div>
-    <div class="row the-company-row justify-content-center">
+    <div id="guests" class="row the-company-row justify-content-center">
       <div class="col-12 col-md-4 col-lg-5 col-xl-4 heading-col">
         <img class="the-company-logo" src="images/the-company@2x.png" />
         <br /><br />
@@ -104,7 +107,7 @@
       </div>
       <div class="col-12 col-md-8 col-lg-7 col-xl-7 image-col"></div>
     </div>
-    <div id="guests" class="row guests-row justify-content-between justify-content-md-center align-content-around">
+    <div id="guestsOther" class="row guests-row justify-content-between justify-content-md-center align-content-around">
       <div class="col-12">
         <div class="row">
           <div class="guest-entry col-4 col-sm-2 col-md-4 col-lg-4 col-xl-4">
@@ -164,7 +167,7 @@
         </div>
       </div>
     </div>
-    <div id="nightShow" class="row night-show-row">
+    <div id="theFountain" class="row night-show-row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 night-show-col">
         <div class="night-show-logo"></div>
         <div class="night-show-details">
@@ -367,12 +370,13 @@
   </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
     integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="scripts/jquery.smoothscroll.min.js"></script>
   <script src="scripts/custom.min.js"></script>
   <script src="scripts/wow.min.js"></script>
 </body>
