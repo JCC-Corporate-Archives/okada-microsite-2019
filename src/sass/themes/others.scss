@@ -46,61 +46,14 @@ body {
       min-width: 181.35px;
       padding: 0;
 
-      .guest-info-container {
-        min-height: $guest-container-min-height;
-      }
-    }
-
-    // GUEST LIST FOR TABLETS & UP
-    @include media-breakpoint-down(md) {
-      .guest-entry {
-        .guest-info-container {
-          width: max-content;
-
-          .guest-image {
-            min-height: 320px;
-            width: 100%;
-          }
-
-          .guest-image.mayonnaise {
-            // The image was not on portrait
-            @include display-bg-image('mayonnaise', center bottom, 215%);
-          }
-
-          .guest-name {
-            font-size: 12px !important;
-          }
-
-          .guest-name-info {
-            font-size: 8px;
-            width: 67%;
-          }
-        }
-      }
-    }
-
-    @include media-breakpoint-down(sm) {
-      .guest-entry {
-        .guest-info-container {
-          .guest-image {
-            min-height: calc(172px + 15vw);
-          }
-        }
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      .guest-entry {
-        display: flex;
-        justify-content: center;
-
-        .guest-info-container {
-          width: unset;
-        }
-      }
+      // .guest-info-container {
+      //   min-height: $guest-container-min-height;
+      // }
     }
 
     .guest-info-container {
+      min-height: $guest-container-min-height;
+
       .guest-image {
         min-height: 172px;
 
@@ -157,6 +110,73 @@ body {
         font-family: $font-family-gotham-medium;
         font-size: 10px;
         margin-bottom: 0;
+      }
+    }
+
+    // GUEST LIST FOR TABLETS & BELOW
+    @include media-breakpoint-down(md) {
+      .guest-entry {
+        .guest-info-container {
+          width: max-content;
+
+          // .guest-image {
+          //   min-height: 320px;
+          //   width: 100%;
+          // }
+
+          .guest-image.mayonnaise {
+            // The image was not on portrait
+            @include display-bg-image('mayonnaise', center bottom, 215%);
+          }
+
+          .guest-name {
+            font-size: 12px !important;
+          }
+
+          .guest-name-info {
+            font-size: 8px;
+            width: 67%;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .guest-entry {
+        .guest-info-container {
+          .guest-image {
+            min-height: calc(172px + 15vw);
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      & > .col-12 > .row {
+        // align-content: space-around;
+        flex-wrap: wrap;
+        height: calc(100% + 5em);
+        justify-content: space-around;
+        padding: 4em 2rem 6em;
+      }
+
+      .guest-entry {
+        display: flex;
+        justify-content: center;
+        // margin-top: 3em;
+        margin-top: unset;
+
+        .guest-info-container {
+          height: calc(320px + 10vw);
+          min-height: 320px;
+          width: calc(100% - 2rem);
+
+          .guest-image {
+            height: calc(320px + 5.5vw);
+            min-height: 320px;
+            width: 100%;
+          }
+        }
       }
     }
   }
