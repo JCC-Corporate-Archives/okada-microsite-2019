@@ -1,5 +1,6 @@
 .nav-overlay {
   background: $nav-overlay-bg;
+  display: flex;
   height: 0;
   left: 0;
   overflow: hidden;
@@ -8,6 +9,10 @@
   transition: 0.25s ease;
   width: 100%;
   z-index: 1000;
+
+  .overlay-content {
+    display: none;
+  }
 
   .nav-modal-link {
     color: $color-okada-dark-1;
@@ -34,11 +39,11 @@
     }
   }
 
+  // nav overlay must be flex
   .overlay-content {
-    // margin-top: 30px;
+    align-self: center;
     position: relative;
     text-align: center;
-    top: 8em;
     width: 100%;
   }
 

@@ -5,15 +5,18 @@ $(document).ready(function() {
     $("#myNav").css("height", "100%");
     setTimeout(function() {
       $("#myNav")
-        .fadeIn()
-        .addClass("collapsed");
+        .addClass("collapsed")
+        .find(".overlay-content")
+        .fadeIn();
       $("body").css("overflow", "hidden");
-    }, 100);
+    }, 250);
   });
   $("#closeNav").on("click", function() {
     $("#myNav")
       .css("height", "0%")
-      .removeClass("collapsed");
+      .removeClass("collapsed")
+      .find(".overlay-content")
+      .hide(); // this causes to display: none
     setTimeout(function() {
       $("body").css("overflow", "");
     }, 100);
@@ -22,12 +25,11 @@ $(document).ready(function() {
     .on("click", function() {
       $("body").css("overflow", "");
 
-      // setTimeout(function() {
-      // }, 350);
       $("#myNav")
-        .fadeOut()
         .css("height", "0%")
-        .removeClass("collapsed");
+        .removeClass("collapsed")
+        .find(".overlay-content")
+        .hide(); // this causes to display: none
     })
     .smoothscroll({ duration: 400, easing: "swing" });
 
@@ -40,12 +42,15 @@ $(document).ready(function() {
     } else {
       $("#return-to-top").fadeOut(200); // Else fade out the arrow
     }
+
+    // simply unset to avoid bugs for mobile
+    $("#myNav").css("display", "flex");
   });
   $("#return-to-top")
     .on("click", function() {
 
       // simply unset to avoid bugs for mobile
-      $("#myNav").css("display", "");
+      $("#myNav").css("display", "flex");
     })
     .smoothscroll({ duration: 500, easing: "swing" });
 
