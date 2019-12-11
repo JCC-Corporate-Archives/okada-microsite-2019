@@ -27,7 +27,7 @@
 @include media-breakpoint-up(lg) {
   .countdown-container {
     .number-of {
-      font-size: 88px !important;
+      font-size: 88px;
     }
   }
 }
@@ -36,7 +36,7 @@
 @include media-breakpoint-up(md) {
   .countdown-container {
     .number-of {
-      font-size: 4vw;
+      font-size: 88px;
 
       .days-label {
         font-size: 18px;
@@ -49,6 +49,6 @@
 
 @media screen and (min-width: 1400px) {
   .countdown-container {
-    max-width: 75% !important;
+    max-width: 55% !important;
   }
 }
