@@ -1,0 +1,162 @@
+// ROOT
+a {
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+// DJ KAKA
+.dj-kaka-layer {
+  .cls-1 {
+    fill: $white;
+    font-family: $font-family-montserrat;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .cls-2 {
+    letter-spacing: -0.02em;
+  }
+
+  .cls-3 {
+    letter-spacing: -0.01em;
+  }
+
+  .cls-4 {
+    letter-spacing: -0.03em;
+  }
+
+  .cls-5 {
+    letter-spacing: -0.02em;
+  }
+
+  .cls-6 {
+    letter-spacing: -0.04em;
+  }
+
+  .cls-7 {
+    letter-spacing: -0.01em;
+  }
+
+  .cls-8 {
+    letter-spacing: -0.03em;
+  }
+
+  .cls-9 {
+    letter-spacing: -0.02em;
+  }
+
+  .cls-10,
+  .cls-11,
+  .cls-22 {
+    fill: none;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-10 {
+    stroke-width: 1.98px;
+    stroke: url(#Golden_Gradient);
+  }
+
+  .cls-11,
+  .cls-22 {
+    stroke-width: 1.9px;
+  }
+
+  .cls-11 {
+    stroke: url(#Golden_Gradient-2);
+  }
+
+  .cls-12 {
+    font-size: 81.84px;
+    fill: $color-okada-dark-1;
+    font-family: $font-family-gotham-black;
+  }
+
+  .cls-13 {
+    letter-spacing: -0.04em;
+  }
+
+  .cls-14 {
+    letter-spacing: -0.02em;
+  }
+
+  .cls-15 {
+    letter-spacing: -0.02em;
+  }
+
+  .cls-16 {
+    letter-spacing: 0em;
+  }
+
+  .cls-17 {
+    font-family: $font-family-roboto-bold-italic;
+    font-size: 22.88px;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .cls-18 {
+    letter-spacing: -0.01em;
+  }
+
+  .cls-19 {
+    letter-spacing: -0.03em;
+  }
+
+  .cls-20 {
+    letter-spacing: 0.01em;
+  }
+
+  .cls-21 {
+    fill: url(#Golden_Gradient-3);
+  }
+
+  .cls-22 {
+    stroke: url(#Golden_Gradient-15);
+  }
+
+  // .dj-kaka-button-container {}
+
+  .dj-kaka-details p {
+    color: $white;
+  }
+
+  .visit-channel-button {
+    border-radius: 0;
+    border-top: 0 !important;
+    display: block;
+    // border: $color-okada-normal-4 1px solid;
+    height: 4.8em;
+    text-align: center;
+    // transform: translate(0, 21px);
+    // width: 80%;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $dazzling-mask-color;
+      box-shadow: unset;
+      text-decoration: none;
+
+      .visit-channel-text {
+        @include dazzling-text-disable;
+        color: $black;
+      }
+    }
+
+    .visit-channel-text {
+      // color: $color-okada-dark-1;
+      @include dazzling-text;
+      font-family: $font-family-roboto-bold-italic;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: bold;
+      margin: 0;
+      transform: translate(0, 20px);
+    }
+  }
+}
