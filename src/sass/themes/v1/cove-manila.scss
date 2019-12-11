@@ -96,13 +96,23 @@
     padding: 0 $default-padding-px;
   }
 
-  .cove-manila-row-1-sub-2 {
-    margin-top: 1em;
+  // FOR DJ SOLAII
+  .cove-manila-row-1-sub-1 {
+    margin-top: unset;
+    position: relative;
+    top: -10em;
+  }
+
+  // FOR DJ KAKA
+  .cove-manila-row-2-sub-1 {
+    margin-top: unset;
+    position: relative;
+    top: -20em;
   }
 
   // DJ SOLAII
   .featured-dj-1 {
-    border: $color-okada-normal-4 1px solid;
+    // border: $color-okada-normal-4 1px solid;
 
     .dj-solaii-head {
       @include display-bg-image('dj-solaii-head', center bottom, auto);
@@ -232,12 +242,18 @@
     }
   }
 
-  iframe,
   .dj-solaii-svg,
   .dj-kaka-svg {
     border: 0;
-    height: 50em;
     width: 100%;
+  }
+
+  .dj-solaii-svg {
+    height: 36em;
+  }
+
+  .dj-kaka-svg {
+    height: 50em;
   }
 
   // COMPONENTS =====================
@@ -270,13 +286,13 @@
   }
 
   // LARGER SCREENS
-  @include media-breakpoint-up(xl) {
-    margin-bottom: calc(52em + 3vw);
-  }
+  // @include media-breakpoint-up(xl) {
+  //   margin-bottom: calc(52em + 3vw);
+  // }
 
   // DESKTOP UP
   @include media-breakpoint-up(lg) {
-    margin-bottom: 52em;
+    // margin-bottom: 52em;
 
     .cove-manila-row {
       height: 60vw;
@@ -383,83 +399,12 @@
     }
 
     // DJ KAKA
-    .featured-dj-2 {
-      margin-top: unset; // TODO: Remove this on mobile view
-      top: -13em !important;
-
-      // TODO: Not yet tested for larger devices
-      .dj-kaka-head-wrapper {
-        // border: $color-okada-normal-4 1px solid;
-        border-width: 2px;
-        grid-area: dj-kaka-head-wrapper;
-        left: 2.8em;
-        max-width: $cove-dj-kaka-width-x3;
-        min-height: $cove-dj-kaka-wrapper-height-x3;
-        position: absolute;
-        top: 100%;
-        // width: calc(#{$cove-dj-kaka-width-x3} - 3.9vw);
-
-        .dj-kaka-head {
-          min-height: $cove-dj-kaka-height-x3;
-          position: inherit;
-          top: -20.21em;
-          width: 100%;
-        }
-      }
-
-      .dj-kaka-details-wrapper {
-        align-self: end;
-        display: flex;
-        flex-direction: column;
-        grid-area: dj-kaka-details-wrapper;
-        position: absolute;
-        right: 16.3em;
-        top: 155%;
-        width: 50%;
-        // width: 46.4%;
-
-        .dj-kaka-details-container {
-          // border: $color-okada-normal-4 1px solid;
-          border-width: 2px;
-          height: 20em;
-          max-height: unset;
-          padding: 0 15px 0 40px;
-          position: relative;
-
-          .dj-kaka-details {
-            transform: translate(7em, -4.4em);
-            width: 68%;
-          }
-        }
-
-        .dj-kaka-name {
-          color: $color-okada-dark-1;
-          font-family: $font-family-gotham-black;
-          font-size: 6em;
-          line-height: 0.7em;
-          margin-bottom: 25px;
-        }
-
-        // TODO: DRY these paragraph styles
-        .dj-kaka-desc {
-          color: $white;
-          font-family: $font-family-gotham-medium;
-          font-size: 25.5px;
-          margin-bottom: 0;
-        }
-
-        .dj-kaka-button-container {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-      }
-    }
+    // .featured-dj-2 {}
 
     // FEATURED DJ BELOW
     .cove-manila-row-2-sub-2 {
-      height: 40em;
-      margin-top: 38%;
-      position: absolute;
+      position: relative;
+      top: 3em;
       width: 100%;
 
       .featured-dj-below {
@@ -615,71 +560,6 @@
 
     // DJ KAKA
     .featured-dj-2 {
-      margin-top: 30px;
-
-      .grid-container {
-        // display: grid;
-        // grid-template-areas: 'dj-kaka-head-wrapper dj-kaka-details-wrapper';
-        // grid-template-columns: 1.3fr 0.7fr;
-        // grid-template-rows: 1fr;
-        // height: 20vw;
-      }
-
-      // TODO: Not yet tested for larger devices
-      .dj-kaka-head-wrapper {
-        border: $color-okada-normal-4 1px solid;
-        grid-area: dj-kaka-head-wrapper;
-        min-height: 220px;
-        position: absolute;
-        top: 30%;
-        width: 59%;
-
-        .dj-kaka-head {
-          min-height: $cove-dj-kaka-height-x2;
-          position: inherit;
-          top: -96px;
-          width: 100%;
-        }
-      }
-
-      .dj-kaka-details-wrapper {
-        align-self: end;
-        display: flex;
-        flex-direction: column;
-        grid-area: dj-kaka-details-wrapper;
-
-        .dj-kaka-details-container {
-          border: $color-okada-normal-4 1px solid;
-          max-height: 133.15px;
-          padding: 0 15px 0 40px;
-          position: relative;
-
-          .dj-kaka-details {
-            transform: translateY(-1.9em);
-          }
-        }
-
-        .dj-kaka-name {
-          color: $color-okada-dark-1;
-          font-family: $font-family-gotham-black;
-          font-size: 42px;
-          line-height: 0.65em;
-          // margin-bottom: 20px;
-        }
-
-        // TODO: DRY these paragraph styles
-        .dj-kaka-desc {
-          color: $white;
-          font-family: $font-family-gotham-medium;
-          font-size: 9px;
-          margin-bottom: 0;
-        }
-
-        .dj-kaka-button-container {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-      }
     }
   }
 
@@ -925,87 +805,9 @@
         }
       }
     }
-  }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1400px) {
-  .main-container {
-    // DJ SOLAII
-    .dj-solaii-details {
-      .dj-solaii-desc-wrapper {
-        height: 11.5em !important;
-      }
-    }
-
-    // DJ KAKA
-    .featured-dj-2 {
-      margin-top: unset; // TODO: Remove this on mobile view
-      top: -20em;
-
-      // TODO: Not yet tested for larger devices
-      .dj-kaka-head-wrapper {
-        // border: $color-okada-normal-4 1px solid;
-        border-width: 2px;
-        grid-area: dj-kaka-head-wrapper;
-        left: 2.8em;
-        min-height: $cove-dj-kaka-wrapper-height-x3;
-        position: absolute;
-        top: 100%;
-        width: $cove-dj-kaka-width-x3;
-
-        .dj-kaka-head {
-          min-height: $cove-dj-kaka-height-x3;
-          position: inherit;
-          top: -20.21em;
-          width: 100%;
-        }
-      }
-
-      .dj-kaka-details-wrapper {
-        // align-self: end;
-        // display: flex;
-        // flex-direction: column;
-        grid-area: dj-kaka-details-wrapper;
-        // position: absolute;
-        right: 1em;
-        top: 155%;
-        // width: 50%;
-        width: 46.4%;
-
-        // .dj-kaka-details-container {
-        //   border-width: 2px;
-        //   height: 20em;
-        //   max-height: unset;
-        //   padding: 0 15px 0 40px;
-        //   position: relative;
-
-        //   .dj-kaka-details {
-        //     transform: translate(7em, -4.4em);
-        //     width: 68%;
-        //   }
-        // }
-
-        .dj-kaka-name {
-          // color: $color-okada-dark-1;
-          // font-family: $font-family-gotham-black;
-          font-size: 6em;
-          line-height: 0.7em;
-          margin-bottom: 25px;
-        }
-
-        // TODO: DRY these paragraph styles
-        .dj-kaka-desc {
-          // color: $white;
-          // font-family: $font-family-gotham-medium;
-          font-size: 23px;
-          margin-bottom: 0;
-        }
-
-        .dj-kaka-button-container {
-          display: flex;
-          flex-direction: row-reverse;
-        }
-      }
+    .dj-kaka-svg {
+      max-height: 330.73px;
     }
   }
 }
