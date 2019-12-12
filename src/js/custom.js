@@ -54,6 +54,47 @@ $(document).ready(function() {
     })
     .smoothscroll({ duration: 500, easing: "swing" });
 
+  // Clickable SVGs
+  // Get a reference to the iframe document
+  var iframeDJSolaii = $("iframe.dj-solaii-svg")
+    .contents()
+    .get(0);
+  var iframeDJKaka = $("iframe.dj-kaka-svg")
+    .contents()
+    .get(0);
+  var djSolaiiVisitLink = "https://youtube.com";
+  var djKakaVisitLink = "https://youtube.com";
+  $(iframeDJSolaii).on("click", "a.btn", function(event) {
+    event.preventDefault();
+
+    // alert("NOTICE: UNDER CONSTRUCTION");
+    var win = window.open(djSolaiiVisitLink, "_blank");
+    if (win) {
+
+      //Browser has allowed it to be opened
+      win.focus();
+    } else {
+
+      //Browser has blocked it
+      console.error("Please allow popups for this website");
+    }
+  });
+  $(iframeDJKaka).on("click", "a.btn", function(event) {
+    event.preventDefault();
+
+    // alert("NOTICE: UNDER CONSTRUCTION");
+    var win = window.open(djKakaVisitLink, "_blank");
+    if (win) {
+
+      //Browser has allowed it to be opened
+      win.focus();
+    } else {
+
+      //Browser has blocked it
+      console.error("Please allow popups for this website");
+    }
+  });
+
   var $clock = $("#countdown");
   var interval = 1000;
 
