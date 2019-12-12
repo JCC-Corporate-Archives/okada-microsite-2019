@@ -3,12 +3,13 @@ $(document).ready(function() {
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
     $("#myNav").css("height", "100%");
+
+    // $("body").css("overflow", "hidden");
     setTimeout(function() {
       $("#myNav")
         .addClass("collapsed")
         .find(".overlay-content")
         .fadeIn();
-      $("body").css("overflow", "hidden");
     }, 250);
   });
   $("#closeNav").on("click", function() {
@@ -17,13 +18,14 @@ $(document).ready(function() {
       .removeClass("collapsed")
       .find(".overlay-content")
       .hide(); // this causes to display: none
-    setTimeout(function() {
-      $("body").css("overflow", "");
-    }, 100);
+    // setTimeout(function() {
+    //   $("body").css("overflow", "");
+    // }, 100);
   });
   $("a.nav-modal-link[href*=\"#\"]")
     .on("click", function() {
-      $("body").css("overflow", "");
+
+      // $("body").css("overflow", "");
 
       $("#myNav")
         .css("height", "0%")
