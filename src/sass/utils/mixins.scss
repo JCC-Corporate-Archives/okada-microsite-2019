@@ -22,10 +22,12 @@
 ) {
   @include media-breakpoint-up(lg) {
     background-image: url('../images/#{$image-name}@3x.png') !important;
+    background-size: $background-size !important;
   }
   @include media-breakpoint-up(md) {
     @if $breakpoint-override == 'md' {
       background-image: url('../images/#{$image-name}@3x.png') !important;
+      background-size: $background-size !important;
     } @else {
       background-image: url('../images/#{$image-name}@2x.png');
     }
@@ -33,6 +35,7 @@
   @include media-breakpoint-down(md) {
     @if $breakpoint-override == 'md' {
       background-image: url('../images/#{$image-name}@3x.png') !important;
+      background-size: $background-size !important;
     } @else {
       background-image: url('../images/#{$image-name}@2x.png');
     }
@@ -40,6 +43,7 @@
   @include media-breakpoint-down(sm) {
     @if $breakpoint-override == 'sm' {
       background-image: url('../images/#{$image-name}@2x.png') !important;
+      background-size: $background-size !important;
     } @else {
       background-image: url('../images/#{$image-name}.png');
     }

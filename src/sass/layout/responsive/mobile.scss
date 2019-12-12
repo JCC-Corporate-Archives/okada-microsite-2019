@@ -46,6 +46,11 @@
     .guests-row {
       padding: 0 0 1.1em 0.4em !important;
 
+      // tentative selection
+      .col-12 .row {
+        justify-content: space-between;
+      }
+
       .guest-entry {
         max-width: 50%; // explicit set due to xs breakpoint was already removed for BS4
 
@@ -96,8 +101,10 @@
 }
 
 // explicit set due to xs breakpoint was already removed for BS4
-@media screen and (max-width: 320px) {
+@include screen(0, 480px, portrait) {
   .main-container {
+    margin-bottom: 12em !important;
+
     .countdown-row {
       .countdown-container {
         max-width: unset;
@@ -108,11 +115,16 @@
       }
     }
 
+    .world-class-row {
+      margin-bottom: 0;
+      padding: 3em 0;
+    }
+
     .the-company-row {
       .image-col {
-        background-position: center bottom;
-        background-size: auto;
-        min-height: 65vh;
+        background-position: center bottom !important;
+        background-size: auto !important;
+        min-height: 21em;
       }
     }
 
@@ -120,16 +132,62 @@
       padding: 1em !important;
 
       .guest-entry {
-        min-width: 100%;
+        max-width: unset;
+        min-width: unset !important;
+        padding-bottom: 1em !important;
 
         .guest-info-container {
           width: 100% !important;
         }
 
         .guest-info-container .guest-image {
-          min-height: 320px;
+          min-height: 13rem;
+        }
+
+        .guest-info-container .guest-info {
+          min-height: 8em;
+
+          .guest-name {
+            display: block;
+            line-height: 1em;
+            margin-bottom: 10px;
+          }
         }
       }
+    }
+
+    .cove-manila-row-1,
+    .cove-manila-row-2 {
+      .col-12 {
+        height: 100%;
+      }
+    }
+
+    .cove-manila-row-2 {
+      padding: 0 !important;
+    }
+
+    .featured-dj-1,
+    .featured-dj-2 {
+      padding: 0 1em !important;
+    }
+
+    .cove-manila-row-1-sub-1 {
+      padding: 0 !important;
+      top: 0 !important;
+    }
+
+    .cove-manila-row-2-sub-1 {
+      top: -18em !important;
+    }
+
+    .dj-solaii-svg {
+      // height: 320px !important;
+      height: 50vw !important;
+    }
+
+    .dj-kaka-svg {
+      height: 400px !important;
     }
   }
 }

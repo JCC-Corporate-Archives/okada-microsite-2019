@@ -39,7 +39,13 @@ body {
   .guests-row {
     background: $hero-gray-bg-color-2;
     flex-wrap: wrap;
-    padding: 0 1.1875rem 1.1875rem !important;
+    padding: 1em 1.1875rem 1.1875rem !important;
+
+    // tentative patch for larger screens
+    .col-12 .row {
+      margin: 0 auto;
+      max-width: $viewport-default-width;
+    }
 
     .guest-entry {
       // margin-top: 19px;
@@ -267,7 +273,7 @@ body {
     padding: 1em !important;
 
     .night-show-logo {
-      @include display-bg-image('the-fountain', right, auto, md);
+      @include display-bg-image('the-fountain', right, contain, md);
       height: 53.48px;
     }
 
