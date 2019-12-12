@@ -1,5 +1,5 @@
-body {
-  background: $black;
+html {
+  background: $white;
 }
 
 // Other cosmetic changes here
@@ -328,7 +328,7 @@ body {
       // padding: 4em !important;
 
       .night-show-logo {
-        @include display-bg-image('the-fountain', right, auto);
+        @include display-bg-image('the-fountain', right, contain);
         height: 53.48px;
       }
 
@@ -376,7 +376,7 @@ body {
       padding: 2em !important;
 
       .night-show-logo {
-        @include display-bg-image('the-fountain', right, auto);
+        @include display-bg-image('the-fountain', right, contain);
         height: 53.48px;
       }
 

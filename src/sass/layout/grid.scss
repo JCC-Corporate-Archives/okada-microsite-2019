@@ -1,6 +1,13 @@
 @import 'responsive/mobile';
 @import 'responsive/tablets';
 
+// CONTAINER WRAP
+.container-wrapper {
+  background: $black;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
 // BASE GRID FOR MAIN CONTAINER
 .main-container {
   // base margin

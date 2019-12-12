@@ -172,25 +172,11 @@ a {
   }
 
   .visit-channel-button {
-    border-radius: 0;
-    border-top: 0 !important;
-    display: block;
-    // border: $color-okada-normal-4 1px solid;
+    // border-radius: 0;
+    // border-top: 0 !important;
+    // display: block;
     height: 4.8em;
-    text-align: center;
-    // transform: translate(0, 21px);
-    // width: 80%;
-
-    &:hover,
-    &:active,
-    &:focus {
-      @include dazzling-background;
-
-      .visit-channel-text {
-        @include dazzling-text-disable;
-        color: $black;
-      }
-    }
+    // text-align: center;
 
     .visit-channel-text {
       @include dazzling-text;
@@ -206,3 +192,20 @@ a {
     }
   }
 }
+
+.visit-channel-button {
+  border-radius: 0;
+  border-top: 0 !important;
+  display: block;
+  text-align: center;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include dazzling-background;
+
+    .visit-channel-text {
+      @include dazzling-text-disable;
+      color: $black;
+    }
+  }
