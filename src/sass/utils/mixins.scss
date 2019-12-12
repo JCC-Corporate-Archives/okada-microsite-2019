@@ -65,6 +65,12 @@
   }
 }
 
+@mixin dazzling-background {
+  background: $dazzling-mask-color;
+  box-shadow: unset;
+  text-decoration: none;
+}
+
 @mixin dazzling-text {
   -webkit-text-fill-color: transparent;
   background: $dazzling-mask-color;

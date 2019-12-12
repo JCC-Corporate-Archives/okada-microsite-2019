@@ -8,14 +8,60 @@ a {
   }
 }
 
+.cls-1 {
+  fill: $white;
+  font-family: $font-family-montserrat;
+  font-size: 19px;
+  font-weight: 400;
+
+  p {
+    color: $white;
+  }
+}
+
+// DJ SOLAII
+.dj-solaii-layer {
+  .visit-channel-button {
+    border-radius: 0;
+    border-top: 0 !important;
+    display: block;
+    height: 5em;
+    text-align: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include dazzling-background;
+
+      .visit-channel-text {
+        @include dazzling-text-disable;
+        color: $black;
+      }
+    }
+
+    .visit-channel-text {
+      @include dazzling-text;
+      display: inline;
+      font-family: $font-family-roboto-bold-italic;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: bold;
+      margin: 0;
+      position: relative;
+      top: 26px;
+      // transform: translate(0, 20px);
+    }
+  }
+}
+
 // DJ KAKA
 .dj-kaka-layer {
-  .cls-1 {
-    fill: $white;
-    font-family: $font-family-montserrat;
-    font-size: 19px;
-    font-weight: 700;
-  }
+  // .cls-1 {
+  //   fill: $white;
+  //   font-family: $font-family-montserrat;
+  //   font-size: 19px;
+  //   font-weight: 400;
+  // }
 
   .cls-2 {
     letter-spacing: -0.02em;
@@ -138,9 +184,7 @@ a {
     &:hover,
     &:active,
     &:focus {
-      background: $dazzling-mask-color;
-      box-shadow: unset;
-      text-decoration: none;
+      @include dazzling-background;
 
       .visit-channel-text {
         @include dazzling-text-disable;
@@ -149,14 +193,16 @@ a {
     }
 
     .visit-channel-text {
-      // color: $color-okada-dark-1;
       @include dazzling-text;
+      display: inline;
       font-family: $font-family-roboto-bold-italic;
       font-size: 28px;
       font-style: italic;
       font-weight: bold;
       margin: 0;
-      transform: translate(0, 20px);
+      position: relative;
+      top: 22px;
+      // transform: translate(0, 20px);
     }
   }
 }
