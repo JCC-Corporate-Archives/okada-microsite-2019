@@ -1,0 +1,80 @@
+.main-container {
+  // THE RESTAURANTS
+  // .the-restaurants-row {}
+
+  .the-restaurants-col {
+    .the-restaurants-logo {
+      @include display-bg-image('the-restaurants-logo', left, auto);
+      margin-bottom: 15px;
+      min-height: 56px;
+    }
+
+    .the-restaurants-heading {
+      color: $hero-caption-color-darker;
+      font-family: $font-family-playfair-display-regular;
+      font-size: 37px;
+    }
+
+    .okada-hero-caption {
+      font-family: $font-family-montserrat;
+    }
+
+    // Adjustments
+    @include media-breakpoint-up(lg) {
+      padding: 40px 5vw;
+
+      .the-restaurants-content {
+        padding: 0 5em;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      min-height: 380px;
+
+      .the-restaurants-content {
+        align-self: center;
+      }
+    }
+  }
+
+  // Adjustments
+  @include media-breakpoint-up(md) {
+    .the-restaurants-row {
+      flex-direction: row-reverse;
+    }
+
+    .the-restaurants-col {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .the-restaurants-content {
+        padding: 10px;
+      }
+
+      .the-restaurants-logo {
+        background-size: contain;
+        height: 7vw;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      .the-restaurants-heading {
+        // color: $hero-caption-color-darker;
+        font-size: 48px;
+        line-height: 50px;
+        margin-bottom: 0.5em;
+        margin-top: 0.89em;
+        // width: 60%;
+      }
+
+      .okada-hero-caption {
+        font-family: $font-family-montserrat;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+  }
+}
