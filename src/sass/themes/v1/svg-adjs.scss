@@ -22,22 +22,11 @@ a {
 // DJ SOLAII
 .dj-solaii-layer {
   .visit-channel-button {
-    border-radius: 0;
-    border-top: 0 !important;
-    display: block;
+    // border-radius: 0;
+    // border-top: 0 !important;
+    // display: block;
     height: 5em;
-    text-align: center;
-
-    &:hover,
-    &:active,
-    &:focus {
-      @include dazzling-background;
-
-      .visit-channel-text {
-        @include dazzling-text-disable;
-        color: $black;
-      }
-    }
+    // text-align: center;
 
     .visit-channel-text {
       @include dazzling-text;
@@ -200,8 +189,7 @@ a {
   text-align: center;
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     @include dazzling-background;
 
     .visit-channel-text {
@@ -209,3 +197,4 @@ a {
       color: $black;
     }
   }
+}
