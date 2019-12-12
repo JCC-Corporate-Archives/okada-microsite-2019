@@ -256,40 +256,6 @@
     height: 50em;
   }
 
-  // COMPONENTS =====================
-
-  // .visit-channel-button {
-  //   border: $color-okada-normal-4 1px solid;
-  //   border-radius: 0;
-  //   border-top: 0 !important;
-  //   width: 80%;
-
-  //   &:hover,
-  //   &:active,
-  //   &:focus {
-  //     background: $color-okada-normal-4;
-  //     box-shadow: unset;
-
-  //     .visit-channel-text {
-  //       color: $black;
-  //     }
-  //   }
-  // }
-
-  // .visit-channel-text {
-  //   color: $color-okada-dark-1;
-  //   font-family: $font-family-roboto-bold-italic;
-  //   font-size: 12px;
-  //   font-style: italic;
-  //   font-weight: bold;
-  //   margin: 0;
-  // }
-
-  // LARGER SCREENS
-  // @include media-breakpoint-up(xl) {
-  //   margin-bottom: calc(52em + 3vw);
-  // }
-
   // DESKTOP UP
   @include media-breakpoint-up(lg) {
     // margin-bottom: 52em;
