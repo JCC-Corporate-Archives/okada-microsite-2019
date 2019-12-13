@@ -10,13 +10,21 @@ a {
 
 .cls-1 {
   fill: $white;
-  font-family: $font-family-montserrat;
-  font-size: 19px;
-  font-weight: 400;
+}
 
-  p {
-    color: $white;
-  }
+.dj-solaii-details-text,
+.dj-kaka-details-text {
+  color: $white;
+  font-family: $font-family-open-sans;
+  font-weight: 300;
+}
+
+.dj-solaii-details-text {
+  font-size: 24px;
+}
+
+.dj-kaka-details-text {
+  font-size: 23px;
 }
 
 // DJ SOLAII
@@ -45,44 +53,37 @@ a {
 
 // DJ KAKA
 .dj-kaka-layer {
-  // .cls-1 {
-  //   fill: $white;
-  //   font-family: $font-family-montserrat;
-  //   font-size: 19px;
-  //   font-weight: 400;
-  // }
-
   .cls-2 {
     letter-spacing: -0.02em;
   }
 
-  .cls-3 {
-    letter-spacing: -0.01em;
-  }
+  // .cls-3 {
+  //   letter-spacing: -0.01em;
+  // }
 
-  .cls-4 {
-    letter-spacing: -0.03em;
-  }
+  // .cls-4 {
+  //   letter-spacing: -0.03em;
+  // }
 
-  .cls-5 {
-    letter-spacing: -0.02em;
-  }
+  // .cls-5 {
+  //   letter-spacing: -0.02em;
+  // }
 
-  .cls-6 {
-    letter-spacing: -0.04em;
-  }
+  // .cls-6 {
+  //   letter-spacing: -0.04em;
+  // }
 
-  .cls-7 {
-    letter-spacing: -0.01em;
-  }
+  // .cls-7 {
+  //   letter-spacing: -0.01em;
+  // }
 
-  .cls-8 {
-    letter-spacing: -0.03em;
-  }
+  // .cls-8 {
+  //   letter-spacing: -0.03em;
+  // }
 
-  .cls-9 {
-    letter-spacing: -0.02em;
-  }
+  // .cls-9 {
+  //   letter-spacing: -0.02em;
+  // }
 
   .cls-10,
   .cls-11,
