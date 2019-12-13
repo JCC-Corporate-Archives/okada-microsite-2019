@@ -75,6 +75,12 @@
   text-decoration: none;
 }
 
+@mixin dazzling-background-legacy {
+  background: $color-okada-light-1;
+  box-shadow: unset;
+  text-decoration: none;
+}
+
 @mixin dazzling-text {
   -webkit-text-fill-color: transparent;
   background: $dazzling-mask-color;
