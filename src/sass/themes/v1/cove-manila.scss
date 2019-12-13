@@ -10,7 +10,6 @@
 
   .cove-manila-row {
     @include display-bg-image('MeEGDK');
-    background-color: $black;
     min-height: 250px;
 
     .cove-manila-logo {
@@ -796,11 +795,8 @@
     // OTHER DJs
     .cove-manila-row-2 {
       .featured-dj-below {
-        max-width: 100% !important;
+        max-width: 50%;
       }
-
-      // images
-      // .featured-dj-below-profile {}
     }
   }
 }

@@ -103,7 +103,7 @@
 // explicit set due to xs breakpoint was already removed for BS4
 @include screen(0, 480px, portrait) {
   .main-container {
-    margin-bottom: 12em !important;
+    margin-bottom: 0 !important;
 
     .countdown-row {
       .countdown-container {
@@ -159,12 +159,16 @@
     .cove-manila-row-1,
     .cove-manila-row-2 {
       .col-12 {
-        height: 100%;
+        height: 0;
       }
     }
 
     .cove-manila-row-2 {
       padding: 0 !important;
+
+      .featured-dj-below-profile {
+        min-width: $cove-other-djs-below-480;
+      }
     }
 
     .featured-dj-1,
@@ -180,6 +184,11 @@
 
     .cove-manila-row-2-sub-1 {
       top: -16em !important;
+    }
+
+    .cove-manila-row-2-sub-2 {
+      position: relative;
+      top: 5em;
     }
 
     .dj-solaii-svg {
