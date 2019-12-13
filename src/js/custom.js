@@ -66,7 +66,7 @@ $(document).ready(function() {
     .get(0);
   var djSolaiiVisitLink = "https://youtube.com";
   var djKakaVisitLink = "https://youtube.com";
-  $(iframeDJSolaii).on("click", "a.btn", function(event) {
+  $(iframeDJSolaii).on("click taphold", "a.btn", function(event) {
     event.preventDefault();
 
     // alert("NOTICE: UNDER CONSTRUCTION");
@@ -81,7 +81,7 @@ $(document).ready(function() {
       console.error("Please allow popups for this website");
     }
   });
-  $(iframeDJKaka).on("click", "a.btn", function(event) {
+  $(iframeDJKaka).on("click taphold", "a.btn", function(event) {
     event.preventDefault();
 
     // alert("NOTICE: UNDER CONSTRUCTION");
