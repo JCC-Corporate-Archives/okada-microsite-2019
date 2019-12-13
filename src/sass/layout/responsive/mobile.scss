@@ -145,10 +145,11 @@
         }
 
         .guest-info-container .guest-info {
-          min-height: 8em;
+          min-height: 5em;
 
           .guest-name {
             display: block;
+            font-size: 11px;
             line-height: 1em;
             margin-bottom: 10px;
           }
