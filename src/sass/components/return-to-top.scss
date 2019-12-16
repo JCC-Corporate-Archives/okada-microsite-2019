@@ -10,7 +10,6 @@
   text-decoration: none;
   border-radius: 50%;
   display: none;
-  transition: all 0.3s ease;
   z-index: 999;
 
   i {
@@ -27,7 +26,7 @@
     background: $color-okada-dark-1;
 
     i {
-      color: $white;
+      // color: $white;
       top: 18px;
     }
   }

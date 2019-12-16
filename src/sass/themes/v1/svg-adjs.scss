@@ -222,6 +222,7 @@ a {
 
       &:hover,
       &:active {
+        -webkit-tap-highlight-color: transparent; // https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color
         color: $black;
       }
 
