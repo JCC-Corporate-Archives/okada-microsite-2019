@@ -1,0 +1,17 @@
+// Safari compatibilty patches
+@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
+  .main-container {
+    .wow {
+      &.number-of,
+      &.cove-manila-logo-caption,
+      &.zoomIn {
+        @include disable-animations;
+      }
+    }
+
+    .cove-manila-row .cove-manila-logo-caption {
+      display: inline !important;
+      font-family: $font-family-montserrat !important;
+    }
+  }
+}
