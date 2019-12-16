@@ -12,9 +12,9 @@
     margin-bottom: 7vw;
 
     // hide all line breaks for mobile
-    br {
-      display: none;
-    }
+    // br {
+    //   display: none;
+    // }
 
     .countdown-row {
       padding: $row-default-padding;
@@ -84,7 +84,7 @@
     }
 
     .the-restaurants-col {
-      padding: 15px;
+      padding: 7vw 15px;
 
       .the-restaurants-content {
         padding: 0;
