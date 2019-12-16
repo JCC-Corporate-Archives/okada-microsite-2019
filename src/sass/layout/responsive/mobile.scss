@@ -38,8 +38,13 @@
         min-height: 46vh;
       }
 
+      .heading-col {
+        text-align: center;
+      }
+
       .the-company-logo {
-        width: 100%;
+        margin-bottom: 2em;
+        width: 95%;
       }
     }
 
@@ -199,6 +204,65 @@
 
     .dj-kaka-svg {
       height: 400px !important;
+    }
+  }
+}
+
+// landscape adjustments
+@include screen(0, 767.98px, landscape) {
+  .main-container {
+    margin-bottom: 0 !important;
+
+    // .countdown-row {
+    //   .countdown-container {
+    //     max-width: unset;
+    //   }
+
+    //   br {
+    //     display: none;
+    //   }
+    // }
+
+    // .world-class-row {
+    //   margin-bottom: 0;
+    //   padding: 3em 0;
+    // }
+
+    // .the-company-row {
+    //   .image-col {
+    //     background-position: center bottom !important;
+    //     background-size: auto !important;
+    //     min-height: 21em;
+    //   }
+    // }
+
+    .guests-row {
+      padding: 1em !important;
+
+      .guest-entry {
+        // max-width: unset;
+        // min-width: unset !important;
+        // padding-bottom: 1em !important;
+
+        // .guest-info-container {
+        //   width: 100% !important;
+        // }
+
+        // .guest-info-container .guest-image {
+        //   min-height: 13rem;
+        // }
+
+        .guest-info-container .guest-info {
+          min-height: 5em;
+
+          .guest-name {
+            display: block;
+            font-size: 12px;
+            line-height: 1em;
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
 }
