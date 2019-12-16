@@ -33,7 +33,8 @@ a {
     // border-radius: 0;
     // border-top: 0 !important;
     // display: block;
-    height: 5.63rem;
+    // height: 5.63rem;
+    height: 80px;
     // text-align: center;
 
     .visit-channel-text {
@@ -45,7 +46,7 @@ a {
       font-weight: bold;
       margin: 0;
       position: relative;
-      top: 26px;
+      top: 25px;
       // transform: translate(0, 20px);
     }
   }
@@ -207,7 +208,7 @@ a {
 // Safari compatibilty patches
 @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
   .cls-2a {
-    height: 89px !important;
+    height: 80px !important;
   }
 
   .dj-solaii-layer,
@@ -236,7 +237,7 @@ a {
   .dj-solaii-layer {
     .visit-channel-button {
       .visit-channel-text {
-        margin-top: 25.5px !important;
+        margin-top: 24px !important;
       }
     }
   }
