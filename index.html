@@ -13,6 +13,12 @@
   <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
   <link href="stylesheets/swiper.min.css" rel="stylesheet" type="text/css" />
 
+  <!-- Spinkit -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinkit.min.css"
+    integrity="sha256-JLf+H3os8xYfw2Iaq4Nv8MG6dVn1gPNv4EhSWnYG3rc=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinners/8-circle.min.css"
+    integrity="sha256-2yzc3II8o774iu1cQQUuP/kBiLGRxGyzWKQVicl8aQU=" crossorigin="anonymous" />
+
   <!-- Main Style -->
   <link href="stylesheets/style.min.css" rel="stylesheet" type="text/css" />
   <link href="stylesheets/animate.min.css" rel="stylesheet" type="text/css" />
@@ -28,7 +34,7 @@
   <![endif]-->
 </head>
 
-<body id="top" class="container-wrapper">
+<body id="top" class="container-wrapper" style="overflow: hidden">
   <nav id="navBar" class="navbar navbar-dark justify-content-center okada">
     <a class="navbar-brand mx-auto" href="#">
       <img src="images/okada-logo-small.png" width="41" />
@@ -47,6 +53,25 @@
       <a class="nav-modal-link" href="#theFountain">The Fountain</a>
       <a class="nav-modal-link" href="#theRestaurants">The Restaurants</a>
       <a class="nav-modal-link" href="#coveManila">Cove Manila</a>
+    </div>
+  </div>
+  <!-- Page preloader -->
+  <div id="preloader" class="page-preloader">
+    <div class="spinkit-container">
+      <div class="sk-fading-circle">
+        <div class="sk-circle sk-circle-1"></div>
+        <div class="sk-circle sk-circle-2"></div>
+        <div class="sk-circle sk-circle-3"></div>
+        <div class="sk-circle sk-circle-4"></div>
+        <div class="sk-circle sk-circle-5"></div>
+        <div class="sk-circle sk-circle-6"></div>
+        <div class="sk-circle sk-circle-7"></div>
+        <div class="sk-circle sk-circle-8"></div>
+        <div class="sk-circle sk-circle-9"></div>
+        <div class="sk-circle sk-circle-10"></div>
+        <div class="sk-circle sk-circle-11"></div>
+        <div class="sk-circle sk-circle-12"></div>
+      </div>
     </div>
   </div>
   <!-- Return to Top -->
@@ -233,15 +258,16 @@
     <div id="coveManila" class="row cove-manila-row text-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         <div class="cove-manila-logo mx-auto"></div>
-        <p class="cove-manila-logo-caption">
+        <p class="cove-manila-logo-caption wow animated zoomIn">
           LITERALLY THE LAST PARTY OF THE YEAR
         </p>
       </div>
     </div>
     <div class="row cove-manila-row-1">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="row cove-manila-row-1-sub-1 justify-content-md-center">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-1 wow animated fadeIn">
+        <div class="row cove-manila-row-1-sub-1 justify-content-md-center wow animated fadeInLeft"
+          data-wow-offset="250">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-1">
             <div class="dj-solaii dj-solaii-container">
               <iframe class="dj-solaii-svg" src="images/dj-solaii-frame-wtext.svg"></iframe>
             </div>
@@ -251,8 +277,9 @@
     </div>
     <div class="row cove-manila-row-2">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="row cove-manila-row-2-sub-1 justify-content-md-center">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-2 p-0 wow animated fadeIn">
+        <div class="row cove-manila-row-2-sub-1 justify-content-md-center wow animated fadeInRight"
+          data-wow-offset="250">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-2 p-0">
             <div class="dj-kaka dj-kaka-container">
               <iframe class="dj-kaka-svg" src="images/dj-kaka-frame-wtext.svg"></iframe>
             </div>

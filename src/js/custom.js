@@ -1,3 +1,15 @@
+$(window).on("load", function() {
+  $("body").css("overflow", "");
+
+  $("#preloader")
+    .delay(450)
+    .fadeOut(500);
+
+  // init WOW.js after loading up assets
+  // Anti Flickering
+  new WOW({ offset: 0 }).init();
+});
+
 $(document).ready(function() {
 
   // NAVBAR OVERLAY
@@ -23,7 +35,7 @@ $(document).ready(function() {
     // }, 100);
   });
   $("a.nav-modal-link[href*=\"#\"]")
-    .on("click", function() {
+    .on("click", function(event, handler) {
 
       // $("body").css("overflow", "");
 
@@ -138,10 +150,6 @@ $(document).ready(function() {
     $m.text(m).append("<div class=\"days-label\">MINUTES</div>");
     $s.text(s).append("<div class=\"days-label\">SECONDS</div>");
   }, interval);
-
-  // init WOW.js
-  // Anti Flickering
-  new WOW({ offset: 0 }).init();
 
   // The Restaurant slider
   new Swiper("#theRestaurantsSlider", {
