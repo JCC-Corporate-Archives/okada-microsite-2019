@@ -13,10 +13,6 @@ $(window).on("load", function() {
   // Get a reference to the iframe document
   var iframeDJSolaii = document.getElementById("djSolaiiSvg").contentDocument;
   var iframeDJKaka = document.getElementById("djKakaSvg").contentDocument;
-
-  // var svg = iframeDJKaka.getElementById('external-1');
-  // var iframeDJSolaii = $("iframe.dj-solaii-svg").contents().get(0);
-  // var iframeDJKaka = $("iframe.dj-kaka-svg").contents().get(0);
   var djSolaiiVisitLink = "https://youtube.com";
   var djKakaVisitLink = "https://youtube.com";
   iframeDJSolaii.getElementsByTagName("a")[ 0 ].addEventListener(
@@ -63,7 +59,6 @@ $(document).ready(function() {
   $("#openNav").on("click", function() {
     $("#myNav").css("height", "100%");
 
-    // $("body").css("overflow", "hidden");
     setTimeout(function() {
       $("#myNav")
         .addClass("collapsed")
@@ -77,14 +72,9 @@ $(document).ready(function() {
       .removeClass("collapsed")
       .find(".overlay-content")
       .hide(); // this causes to display: none
-    // setTimeout(function() {
-    //   $("body").css("overflow", "");
-    // }, 100);
   });
   $("a.nav-modal-link[href*=\"#\"]")
     .on("click", function() {
-
-      // $("body").css("overflow", "");
 
       $("#myNav")
         .css("height", "0%")
