@@ -8,6 +8,53 @@ $(window).on("load", function() {
   // init WOW.js after loading up assets
   // Anti Flickering
   new WOW({ offset: 0 }).init();
+
+  // Clickable SVGs
+  // Get a reference to the iframe document
+  var iframeDJSolaii = document.getElementById("djSolaiiSvg").contentDocument;
+  var iframeDJKaka = document.getElementById("djKakaSvg").contentDocument;
+
+  // var svg = iframeDJKaka.getElementById('external-1');
+  // var iframeDJSolaii = $("iframe.dj-solaii-svg").contents().get(0);
+  // var iframeDJKaka = $("iframe.dj-kaka-svg").contents().get(0);
+  var djSolaiiVisitLink = "https://youtube.com";
+  var djKakaVisitLink = "https://youtube.com";
+  iframeDJSolaii.getElementsByTagName("a")[ 0 ].addEventListener(
+    "click",
+    function(e) {
+      e.preventDefault();
+      var win = window.open(djSolaiiVisitLink, "_blank");
+      if (win) {
+
+        //Browser has allowed it to be opened
+        win.focus();
+      } else {
+
+        //Browser has blocked it
+        alert("Please allow popups for this website");
+      }
+    },
+    false
+  );
+  iframeDJKaka.getElementsByTagName("a")[ 0 ].addEventListener(
+    "click",
+    function(e) {
+      e.preventDefault();
+      var win = window.open(djKakaVisitLink, "_blank");
+      if (win) {
+
+        //Browser has allowed it to be opened
+        win.focus();
+      } else {
+
+        //Browser has blocked it
+        alert("Please allow popups for this website");
+      }
+    },
+    false
+  );
+
+  // end of clickable SVGs
 });
 
 $(document).ready(function() {
@@ -67,47 +114,6 @@ $(document).ready(function() {
       $("#myNav").css("display", "flex");
     })
     .smoothscroll({ duration: 500, easing: "swing" });
-
-  // Clickable SVGs
-  // Get a reference to the iframe document
-  var iframeDJSolaii = $("iframe.dj-solaii-svg")
-    .contents()
-    .get(0);
-  var iframeDJKaka = $("iframe.dj-kaka-svg")
-    .contents()
-    .get(0);
-  var djSolaiiVisitLink = "https://youtube.com";
-  var djKakaVisitLink = "https://youtube.com";
-  $(iframeDJSolaii).on("click taphold", "a.btn", function(event) {
-    event.preventDefault();
-
-    // alert("NOTICE: UNDER CONSTRUCTION");
-    var win = window.open(djSolaiiVisitLink, "_blank");
-    if (win) {
-
-      //Browser has allowed it to be opened
-      win.focus();
-    } else {
-
-      //Browser has blocked it
-      console.error("Please allow popups for this website");
-    }
-  });
-  $(iframeDJKaka).on("click taphold", "a.btn", function(event) {
-    event.preventDefault();
-
-    // alert("NOTICE: UNDER CONSTRUCTION");
-    var win = window.open(djKakaVisitLink, "_blank");
-    if (win) {
-
-      //Browser has allowed it to be opened
-      win.focus();
-    } else {
-
-      //Browser has blocked it
-      console.error("Please allow popups for this website");
-    }
-  });
 
   var $clock = $("#countdown");
   var interval = 1000;
