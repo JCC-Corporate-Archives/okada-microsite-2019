@@ -35,7 +35,7 @@ $(document).ready(function() {
     // }, 100);
   });
   $("a.nav-modal-link[href*=\"#\"]")
-    .on("click", function(event, handler) {
+    .on("click", function() {
 
       // $("body").css("overflow", "");
 
