@@ -75,7 +75,6 @@ $(document).ready(function() {
   });
   $("a.nav-modal-link[href*=\"#\"]")
     .on("click", function() {
-
       $("#myNav")
         .css("height", "0%")
         .removeClass("collapsed")
@@ -89,9 +88,13 @@ $(document).ready(function() {
 
     // If page is scrolled more than 75px
     if ($(this).scrollTop() >= 75) {
-      $("#return-to-top").fadeIn(200); // Fade in the arrow
+
+      // Fade in the arrow
+      $("#return-to-top").fadeIn();
     } else {
-      $("#return-to-top").fadeOut(200); // Else fade out the arrow
+
+      // Else fade out the arrow
+      $("#return-to-top").hide();
     }
 
     // simply unset to avoid bugs for mobile
