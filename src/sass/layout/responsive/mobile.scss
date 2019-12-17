@@ -218,28 +218,25 @@
   .main-container {
     margin-bottom: 0 !important;
 
-    // .countdown-row {
-    //   .countdown-container {
-    //     max-width: unset;
-    //   }
+    .world-class-row {
+      .heading-col {
+        align-self: center;
+      }
 
-    //   br {
-    //     display: none;
-    //   }
-    // }
+      .image-col {
+        background-position: right center;
+      }
+    }
 
-    // .world-class-row {
-    //   margin-bottom: 0;
-    //   padding: 3em 0;
-    // }
+    .the-company-row {
+      .heading-col {
+        align-self: center !important;
+      }
 
-    // .the-company-row {
-    //   .image-col {
-    //     background-position: center bottom !important;
-    //     background-size: auto !important;
-    //     min-height: 21em;
-    //   }
-    // }
+      .image-col {
+        background-position: right bottom !important;
+      }
+    }
 
     .guests-row {
       padding: 1em !important;
@@ -269,5 +266,13 @@
         }
       }
     }
+  }
+}
+
+// another
+// Bootstrap 4 breakpoint overrides for landscape view
+@include landscape {
+  .col-sm-12 {
+    max-width: 78%;
   }
 }

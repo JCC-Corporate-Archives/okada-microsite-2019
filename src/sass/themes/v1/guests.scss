@@ -1,7 +1,7 @@
 .main-container {
   .the-company-row {
     @include media-breakpoint-up(xl) {
-      height: 41vw;
+      min-height: 41vw;
     }
 
     .heading-col {
