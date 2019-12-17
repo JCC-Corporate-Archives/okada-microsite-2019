@@ -4,6 +4,18 @@
       min-height: 41vw;
     }
 
+    @include ipad(portrait) {
+      .image-col {
+        min-height: unset !important;
+      }
+
+      .heading-col {
+        .okada-hero-caption {
+          font-size: 16px;
+        }
+      }
+    }
+
     .heading-col {
       align-self: center;
     }
@@ -102,6 +114,39 @@
         font-family: $font-family-gotham-medium;
         font-size: 10px;
         margin-bottom: 0;
+      }
+    }
+
+    @include ipad(portrait) {
+      & > .col-12 {
+        & > .row {
+          padding: 0 !important;
+        }
+      }
+
+      .guest-entry {
+        .guest-info-container {
+          width: calc(100% - 1rem);
+
+          .guest-info {
+            height: 120px;
+            padding: 0 20px;
+          }
+
+          .guest-info .guest-name {
+            font-size: 16px !important;
+            margin-bottom: 10px;
+          }
+
+          // .guest-info .guest-name-info {
+          //   font-size: 13px;
+          // }
+
+          .guest-image {
+            height: unset !important;
+            min-height: 250px !important;
+          }
+        }
       }
     }
 

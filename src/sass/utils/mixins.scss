@@ -108,3 +108,13 @@
   transition: $transition !important;
   visibility: visible !important;
 }
+
+// Custom media queries
+@mixin ipad-pro($orientation: false) {
+  $min: 768px;
+  $max: 1366px;
+
+  @include mq($min-device-width: $min, $max-device-width: $max, $orientation: $orientation) {
+    @content;
+  }
+}
