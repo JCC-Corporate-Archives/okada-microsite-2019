@@ -17,5 +17,12 @@
 
   @include media-breakpoint-up(xl) {
     margin-bottom: 0;
+
+    .cove-manila-row-2-sub-2 {
+      .featured-dj-below {
+        position: relative;
+        top: 8em !important;
+      }
+    }
   }
 }
