@@ -2,6 +2,50 @@
 // Adjustments for Tablets
 // ------------------------------------------------------
 
+// Tablets & up
+@include media-breakpoint-up(md) {
+  // Main container
+  .main-container {
+    margin-top: -#{$navbar-md-height};
+
+    .hero-row {
+      padding-top: $navbar-md-height;
+    }
+
+    .countdown-row {
+      padding: 2rem 0;
+    }
+
+    @include browser(Safari) {
+      .countdown-row {
+        padding: 4rem 0;
+      }
+
+      .countdown-container {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .world-class-row {
+      height: 580px;
+      padding: 65px 0;
+
+      .heading-col {
+        align-self: center;
+      }
+
+      .image-col {
+        background-position: right center !important;
+      }
+    }
+  }
+}
+
+// Tablets below
+// @include media-breakpoint-down(md) {}
+
+// iPad landscape
 @include ipad(landscape) {
   .main-container {
     .night-show-row {
@@ -79,6 +123,7 @@
   }
 }
 
+// iPad portrait
 @include ipad(portrait) {
   .navbar {
     .navbar-toggler-right {
@@ -275,11 +320,3 @@
     }
   }
 }
-
-// @include ipad-retina(landscape) {
-//   .main-container {
-//     .featured-dj-1 {
-//       visibility: hidden;
-//     }
-//   }
-// }
