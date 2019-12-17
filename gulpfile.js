@@ -44,14 +44,14 @@ const ignorePaths = [
   `!${paths.sass}/`,
   `!${paths.sass}/**`,
   "!build/",
-  "!build/**",
+  "!build/**"
 ];
 const deletePaths = [
   `${paths.dist}/bower_components/`,
   `${paths.dist}/node_modules/`,
   `${paths.dist}/src/`,
   `${paths.dist}/dist/`,
-  "build/",
+  "build/"
 ];
 const ignoreFiles = [
   "!readme.txt",
@@ -65,7 +65,7 @@ const ignoreFiles = [
   "!jshintignore",
   "!codesniffer.ruleset.xml",
   "!bitbucket-pipelines.yml",
-  "!yarn.lock",
+  "!yarn.lock"
 ];
 const deleteFiles = [
   `${paths.dist}/bitbucket-pipelines.yml`,
@@ -74,21 +74,21 @@ const deleteFiles = [
   `${paths.dist}/gulpfile.js`,
   `${paths.dist}/unix_build.sh`,
   `${paths.dist}/config.rb`,
-  "build/",
+  "build/"
 ];
 
 // Run:
 // gulp sass
 gulp.task("sass", function() {
   var stream = gulp
-    .src([`!${paths.sass}/animations.scss`, `${paths.sass}/*.scss`])
+    .src([`${paths.sass}/style.scss`])
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       plumber({
         errorHandler: function(err) {
           console.log(err);
           this.emit("end");
-        },
+        }
       })
     )
     .pipe(sass({ errLogToConsole: true }))
@@ -98,6 +98,25 @@ gulp.task("sass", function() {
     .pipe(rename("style.css"));
   return stream;
 });
+gulp.task("sass-svg", function() {
+  var stream = gulp
+    .src([`${paths.sass}/svg.scss`])
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(
+      plumber({
+        errorHandler: function(err) {
+          console.log(err);
+          this.emit("end");
+        }
+      })
+    )
+    .pipe(sass({ errLogToConsole: true }))
+    .pipe(autoprefixer("last 2 versions"))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(paths.css))
+    .pipe(rename("svg.css"));
+  return stream;
+});
 
 // Run:
 // gulp watch
@@ -105,12 +124,7 @@ gulp.task("sass", function() {
 gulp.task("watch", function() {
   gulp.watch(`${paths.sass}/**/*.scss`, gulp.series("styles"));
   gulp.watch(
-    [
-      `${paths.src}/js/**/*.js`,
-      "js/**/*.js",
-      "!js/custom.js",
-      "!js/custom.min.js",
-    ],
+    [`${paths.src}/js/**/*.js`, "js/**/*.js", "!js/custom.js", "!js/custom.min.js"],
     gulp.series("scripts")
   );
 
@@ -142,27 +156,9 @@ gulp.task(
 // Run:
 // gulp cssnano
 // Minifies CSS files
-gulp.task("cssnano", function() {
-  return gulp
-    .src(`${paths.css}/style.css`)
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(
-      plumber({
-        errorHandler: function(err) {
-          console.log(err);
-          this.emit("end");
-        },
-      })
-    )
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(cssnano({ discardComments: { removeAll: true } }))
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(paths.css));
-});
-
 gulp.task("minifycss", function() {
   return gulp
-    .src(paths.css + "/style.css")
+    .src([`${paths.css}/style.css`, `${paths.css}/svg.css`])
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(cleanCSS({ compatibility: "*" }))
     .pipe(
@@ -170,22 +166,14 @@ gulp.task("minifycss", function() {
         errorHandler: function(err) {
           console.log(err);
           this.emit("end");
-        },
+        }
       })
     )
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(paths.css));
 });
-
-gulp.task("cleancss", function() {
-  return gulp
-    .src(`${paths.css}/*.min.css`, { read: false }) // Much faster
-    .pipe(ignore("style.css"))
-    .pipe(rimraf());
-});
-
-gulp.task("styles", gulp.series("sass", "minifycss"));
+gulp.task("styles", gulp.series("sass", "sass-svg", "minifycss"));
 
 // Run:
 // gulp browser-sync
@@ -208,7 +196,7 @@ gulp.task("eslint", function() {
     .src([
       `${paths.src}/js/*`,
       `!${paths.src}/js/skip-link-focus-fix.js`,
-      `!${paths.src}/js/wow.js`,
+      `!${paths.src}/js/wow.js`
     ])
     .pipe(eslint({ configFile: ".eslintrc" }))
     .pipe(eslint.format())
@@ -253,7 +241,7 @@ gulp.task("scripts", function() {
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
-    `${paths.src}/js/custom.js`,
+    `${paths.src}/js/custom.js`
   ];
   gulp
     .src(scripts, { allowEmpty: true })
@@ -322,34 +310,22 @@ gulp.task("copy-assets", function() {
     .pipe(gulp.dest(`${paths.src}/js/vendors`));
 
   // Animate CSS files
-  gulp
-    .src(`${paths.node}animate.css/animate.min.css`)
-    .pipe(gulp.dest(`${paths.css}`));
-  gulp
-    .src(`${paths.node}animate.css/animate.css`)
-    .pipe(gulp.dest(`${paths.css}`));
+  gulp.src(`${paths.node}animate.css/animate.min.css`).pipe(gulp.dest(`${paths.css}`));
+  gulp.src(`${paths.node}animate.css/animate.css`).pipe(gulp.dest(`${paths.css}`));
 
   // WOW.js
   gulp.src(`${paths.node}wowjs/dist/wow.min.js`).pipe(gulp.dest(`${paths.js}`));
   gulp.src(`${paths.node}wowjs/dist/wow.js`).pipe(gulp.dest(`${paths.js}`));
 
   // Moment.js
-  gulp
-    .src(`${paths.node}moment/**/*.js`)
-    .pipe(gulp.dest(`${paths.src}/js/vendors/moment`));
+  gulp.src(`${paths.node}moment/**/*.js`).pipe(gulp.dest(`${paths.src}/js/vendors/moment`));
 
   // Countdown.js
-  gulp
-    .src(`${paths.node}countdown/**/*.js`)
-    .pipe(gulp.dest(`${paths.src}/js/vendors/countdown`));
+  gulp.src(`${paths.node}countdown/**/*.js`).pipe(gulp.dest(`${paths.src}/js/vendors/countdown`));
 
   // Swiper
-  gulp
-    .src(`${paths.node}swiper/**/*.js`)
-    .pipe(gulp.dest(`${paths.src}/js/vendors/swiper`));
-  gulp
-    .src(`${paths.node}swiper/**/*.scss`)
-    .pipe(gulp.dest(`${paths.src}/sass/vendors/swiper`));
+  gulp.src(`${paths.node}swiper/**/*.js`).pipe(gulp.dest(`${paths.src}/js/vendors/swiper`));
+  gulp.src(`${paths.node}swiper/**/*.scss`).pipe(gulp.dest(`${paths.src}/sass/vendors/swiper`));
   gulp.src(`${paths.node}swiper/css/*.css`).pipe(gulp.dest(paths.css));
 
   // Hover.css
@@ -373,7 +349,7 @@ gulp.task("clean-vendor-assets", function() {
     `${paths.js}/**/skip-link-focus-fix.js`,
     `${paths.js}/**/popper.min.js`,
     `${paths.js}/**/popper.js`,
-    paths.vendor !== "" ? `${paths.js}${paths.vendor}/**` : "",
+    paths.vendor !== "" ? `${paths.js}${paths.vendor}/**` : ""
   ]);
 });
 
@@ -384,7 +360,7 @@ gulp.task("clean-dist", function() {
     `!${paths.dist}/.gitinclude`,
     // ignorePaths,
     // ignoreFiles,
-    `${paths.dist}/**`,
+    `${paths.dist}/**`
   ]);
 });
 
@@ -397,27 +373,19 @@ gulp.task(
     return gulp
       .src(["**/*", ...ignorePaths, ...ignoreFiles, "*"], { buffer: false })
       .pipe(
-        replace(
-          "/js/jquery.slim.min.js",
-          `/js${paths.vendor}/jquery.slim.min.js`,
-          {
-            skipBinary: true,
-          }
-        )
-      )
-      .pipe(
-        replace("/js/popper.min.js", `/js${paths.vendor}/popper.min.js`, {
-          skipBinary: true,
+        replace("/js/jquery.slim.min.js", `/js${paths.vendor}/jquery.slim.min.js`, {
+          skipBinary: true
         })
       )
       .pipe(
-        replace(
-          "/js/skip-link-focus-fix.js",
-          `/js${paths.vendor}/skip-link-focus-fix.js`,
-          {
-            skipBinary: true,
-          }
-        )
+        replace("/js/popper.min.js", `/js${paths.vendor}/popper.min.js`, {
+          skipBinary: true
+        })
+      )
+      .pipe(
+        replace("/js/skip-link-focus-fix.js", `/js${paths.vendor}/skip-link-focus-fix.js`, {
+          skipBinary: true
+        })
       )
       .pipe(gulp.dest(paths.dist));
   })

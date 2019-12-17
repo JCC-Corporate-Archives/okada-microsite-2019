@@ -3,31 +3,35 @@ $(document).ready(function() {
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
     $("#myNav").css("height", "100%");
+
+    // $("body").css("overflow", "hidden");
     setTimeout(function() {
       $("#myNav")
-        .fadeIn()
-        .addClass("collapsed");
-      $("body").css("overflow", "hidden");
-    }, 100);
+        .addClass("collapsed")
+        .find(".overlay-content")
+        .fadeIn();
+    }, 250);
   });
   $("#closeNav").on("click", function() {
     $("#myNav")
       .css("height", "0%")
-      .removeClass("collapsed");
-    setTimeout(function() {
-      $("body").css("overflow", "");
-    }, 100);
+      .removeClass("collapsed")
+      .find(".overlay-content")
+      .hide(); // this causes to display: none
+    // setTimeout(function() {
+    //   $("body").css("overflow", "");
+    // }, 100);
   });
   $("a.nav-modal-link[href*=\"#\"]")
     .on("click", function() {
-      $("body").css("overflow", "");
 
-      // setTimeout(function() {
-      // }, 350);
+      // $("body").css("overflow", "");
+
       $("#myNav")
-        .fadeOut()
         .css("height", "0%")
-        .removeClass("collapsed");
+        .removeClass("collapsed")
+        .find(".overlay-content")
+        .hide(); // this causes to display: none
     })
     .smoothscroll({ duration: 400, easing: "swing" });
 
@@ -40,14 +44,58 @@ $(document).ready(function() {
     } else {
       $("#return-to-top").fadeOut(200); // Else fade out the arrow
     }
+
+    // simply unset to avoid bugs for mobile
+    $("#myNav").css("display", "flex");
   });
   $("#return-to-top")
     .on("click", function() {
 
       // simply unset to avoid bugs for mobile
-      $("#myNav").css("display", "");
+      $("#myNav").css("display", "flex");
     })
     .smoothscroll({ duration: 500, easing: "swing" });
+
+  // Clickable SVGs
+  // Get a reference to the iframe document
+  var iframeDJSolaii = $("iframe.dj-solaii-svg")
+    .contents()
+    .get(0);
+  var iframeDJKaka = $("iframe.dj-kaka-svg")
+    .contents()
+    .get(0);
+  var djSolaiiVisitLink = "https://youtube.com";
+  var djKakaVisitLink = "https://youtube.com";
+  $(iframeDJSolaii).on("click taphold", "a.btn", function(event) {
+    event.preventDefault();
+
+    // alert("NOTICE: UNDER CONSTRUCTION");
+    var win = window.open(djSolaiiVisitLink, "_blank");
+    if (win) {
+
+      //Browser has allowed it to be opened
+      win.focus();
+    } else {
+
+      //Browser has blocked it
+      console.error("Please allow popups for this website");
+    }
+  });
+  $(iframeDJKaka).on("click taphold", "a.btn", function(event) {
+    event.preventDefault();
+
+    // alert("NOTICE: UNDER CONSTRUCTION");
+    var win = window.open(djKakaVisitLink, "_blank");
+    if (win) {
+
+      //Browser has allowed it to be opened
+      win.focus();
+    } else {
+
+      //Browser has blocked it
+      console.error("Please allow popups for this website");
+    }
+  });
 
   var $clock = $("#countdown");
   var interval = 1000;

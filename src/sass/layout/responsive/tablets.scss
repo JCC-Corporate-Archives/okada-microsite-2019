@@ -40,10 +40,37 @@
       }
     }
   }
-}
 
-// Tablets below
-// @include media-breakpoint-down(md) {}
+  // Tablets below
+  @include media-breakpoint-down(md) {
+    .main-container {
+      .guests-row {
+        .guest-entry {
+          .guest-info-container {
+            width: max-content;
+          }
+
+          // inside .guest-info-container
+          .guest-image.mayonnaise {
+            // The image was not on portrait
+            @include display-bg-image('mayonnaise', center bottom, 215%);
+          }
+
+          // inside .guest-info-container
+          .guest-name {
+            font-size: 12px !important;
+          }
+
+          // inside .guest-info-container
+          .guest-name-info {
+            font-size: 8px;
+            width: 67%;
+          }
+        }
+      }
+    }
+  }
+}
 
 // iPad landscape
 @include ipad(landscape) {
