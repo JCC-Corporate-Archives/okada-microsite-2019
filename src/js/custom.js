@@ -57,21 +57,31 @@ $(document).ready(function() {
 
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
-    $("#myNav").css("height", "100%");
 
-    setTimeout(function() {
+    // CLOSE
+    if ($("#myNav").hasClass("collapsed")) {
       $("#myNav")
-        .addClass("collapsed")
+        .css("height", "0%")
+        .removeClass("collapsed")
         .find(".overlay-content")
-        .fadeIn();
-    }, 250);
-  });
-  $("#closeNav").on("click", function() {
-    $("#myNav")
-      .css("height", "0%")
-      .removeClass("collapsed")
-      .find(".overlay-content")
-      .hide(); // this causes to display: none
+        .hide(); // this causes to display: none
+      $("#navBrand").removeClass("collapsed");
+      $("#openNav").removeClass("collapsed");
+    }
+
+    // OPEN
+    else {
+      $("#navBrand").addClass("collapsed");
+      $("#openNav").addClass("collapsed");
+      $("#myNav").css("height", "100%");
+
+      setTimeout(function() {
+        $("#myNav")
+          .addClass("collapsed")
+          .find(".overlay-content")
+          .fadeIn();
+      }, 250);
+    }
   });
   $("a.nav-modal-link[href*=\"#\"]")
     .on("click", function() {
