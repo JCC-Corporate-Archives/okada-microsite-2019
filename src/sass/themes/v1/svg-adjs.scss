@@ -229,7 +229,7 @@ a {
       .visit-channel-text {
         @include dazzling-text-disable;
         display: inline-block !important;
-        margin-top: 24px !important;
+        margin-top: 23px !important;
         position: unset !important;
       }
     }
@@ -240,6 +240,16 @@ a {
       .visit-channel-text {
         margin-top: 24px !important;
       }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .dj-kaka-layer {
+    .visit-channel-button {
+      display: flex;
+      justify-content: center;
+      min-height: 104px;
     }
   }
 }

@@ -31,23 +31,8 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .main-container {
-    margin-bottom: 0;
-
-    .row.cove-manila-row-2 {
-      background-size: 100% !important;
-      height: 120em !important;
-    }
-
-    .cove-manila-row-2-sub-1 {
-      margin-bottom: 2em;
-    }
-  }
-}
-
 @media screen and (max-width: 1400px) {
   .main-container {
-    margin-bottom: 30em;
+    margin-bottom: 35em;
   }
 }

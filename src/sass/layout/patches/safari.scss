@@ -14,4 +14,8 @@
       font-family: $font-family-montserrat !important;
     }
   }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 0;
+  }
 }
