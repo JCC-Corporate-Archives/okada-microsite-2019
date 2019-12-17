@@ -89,14 +89,16 @@ $(document).ready(function() {
         .removeClass("collapsed")
         .find(".overlay-content")
         .hide(); // this causes to display: none
+      $("#navBrand").removeClass("collapsed");
+      $("#openNav").removeClass("collapsed");
     })
-    .smoothscroll({ duration: 400, easing: "swing" });
+    .smoothscroll({ duration: 500, easing: "swing" });
 
   // Scroll to Top
   $(window).scroll(function() {
 
-    // If page is scrolled more than 75px
-    if ($(this).scrollTop() >= 75) {
+    // If page is scrolled more than 300px
+    if ($(this).scrollTop() >= 300) {
 
       // Fade in the arrow
       $("#return-to-top").fadeIn();
