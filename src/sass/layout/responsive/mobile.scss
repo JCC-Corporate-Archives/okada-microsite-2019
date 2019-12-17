@@ -271,7 +271,7 @@
 
 // another
 // Bootstrap 4 breakpoint overrides for landscape view
-@include landscape {
+@include screen(0, 480px, landscape) {
   .col-sm-12 {
     max-width: 78%;
   }
