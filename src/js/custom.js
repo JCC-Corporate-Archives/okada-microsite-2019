@@ -57,9 +57,9 @@ $(document).ready(function() {
 
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
-
-    // CLOSE
     if ($("#myNav").hasClass("collapsed")) {
+
+      // CLOSE
       $("#myNav")
         .css("height", "0%")
         .removeClass("collapsed")
@@ -67,10 +67,9 @@ $(document).ready(function() {
         .hide(); // this causes to display: none
       $("#navBrand").removeClass("collapsed");
       $("#openNav").removeClass("collapsed");
-    }
+    } else {
 
-    // OPEN
-    else {
+      // OPEN
       $("#navBrand").addClass("collapsed");
       $("#openNav").addClass("collapsed");
       $("#myNav").css("height", "100%");
