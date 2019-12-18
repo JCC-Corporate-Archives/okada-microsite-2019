@@ -255,12 +255,12 @@
     height: 50em;
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-between(xl, lg) {
     // FEATURED DJ BELOW
     .cove-manila-row-2-sub-2 {
       .featured-dj-below {
         position: relative;
-        top: -20em !important;
+        top: 0 !important;
       }
     }
   }
