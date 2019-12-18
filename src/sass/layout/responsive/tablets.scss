@@ -151,125 +151,6 @@
 }
 
 // iPad portrait
-@include ipad-pro(portrait) {
-  .main-container {
-    .the-company-row {
-      height: 40vh;
-    }
-
-    .cove-manila-row {
-      height: 60vw;
-
-      .cove-manila-logo {
-        height: 17rem;
-      }
-
-      .cove-manila-logo-caption {
-        font-size: inherit;
-        letter-spacing: 0.5em;
-      }
-    }
-
-    // .cove-manila-row-1,
-    // .cove-manila-row-2 {
-    //   height: 60vw;
-    // }
-
-    .cove-manila-row-1 {
-      background-position-y: top;
-    }
-
-    .cove-manila-row-2 {
-      background-position-y: top;
-      padding: 0;
-    }
-
-    .cove-manila-row-1-sub-1 {
-      position: relative;
-      top: -15em;
-    }
-
-    .cove-manila-row-1-sub-2 {
-      height: 22em;
-      // margin-top: 29em;
-    }
-
-    // FEATURED DJ BELOW
-    .cove-manila-row-2-sub-2 {
-      height: unset !important;
-      min-height: 196px !important;
-      width: 100%;
-
-      .featured-dj-below {
-        position: relative;
-        top: -4em !important;
-
-        .featured-dj-below-profile {
-          border-width: 2px;
-          padding: 6em 1em;
-          width: 80%;
-        }
-
-        .featured-dj-below-profile-image {
-          bottom: 6.5em !important;
-          height: 29vw;
-          width: 28vw;
-        }
-
-        .featured-dj-below-profile-details {
-          align-self: flex-start !important;
-          margin-top: 0 !important;
-
-          .featured-dj-name {
-            font-size: 28px !important;
-          }
-
-          .featured-dj-name-desc {
-            font-size: 18px !important;
-          }
-        }
-      }
-    }
-
-    // COMPONENTS =====================
-
-    .visit-channel-button {
-      // border: $color-okada-normal-4 1px solid;
-      border-radius: 0;
-      // border-top: 0 !important;
-      border-width: 2px;
-      padding: 2.75rem 0.75rem;
-      width: calc(100% - 7.8rem);
-
-      &:hover,
-      &:active,
-      &:focus {
-        background: $dazzling-mask-color;
-        box-shadow: unset;
-
-        .visit-channel-text {
-          @include dazzling-text-disable;
-          color: $black;
-        }
-      }
-    }
-
-    .visit-channel-text {
-      @include dazzling-text;
-      // color: $color-okada-dark-1;
-      // font-family: 'Roboto Bold Italic';
-      font-size: 28px;
-      // margin: 0;
-
-      &:hover,
-      &:active,
-      &:focus {
-        @include dazzling-text-disable;
-      }
-    }
-  }
-}
-
 @include ipad(portrait) {
   .navbar {
     .navbar-toggler-right {
@@ -278,7 +159,7 @@
   }
 
   .main-container {
-    margin-bottom: 10em;
+    margin-bottom: 0 !important;
 
     .hero-row {
       .image-2020 {
@@ -355,50 +236,6 @@
       height: 80vw;
     }
 
-    .featured-dj-1 {
-      .dj-solaii-wrapper {
-        height: 14.45em;
-        min-height: unset;
-        overflow: visible;
-      }
-
-      .dj-solaii-head {
-        // bottom: 9.4em;
-        height: 25em;
-        // position: relative;
-        // z-index: 2;
-      }
-
-      .dj-solaii-details {
-        overflow: hidden;
-
-        .dj-solaii-logo {
-          // background-size: 90%;
-          // min-width: unset;
-          // width: 95%;
-        }
-
-        .dj-solaii-desc-wrapper {
-          // width: 95%;
-          border-width: 2px;
-
-          .dj-solaii-desc {
-            font-size: 1.025rem;
-          }
-        }
-
-        .dj-solaii-button-container {
-          // margin: 0;
-          // width: 95%;
-
-          .visit-channel-button {
-            // width: 100%;
-            border-width: 2px;
-          }
-        }
-      }
-    }
-
     .cove-manila-row-2 {
       background-size: 130% !important;
       padding-top: 0 !important;
@@ -419,7 +256,6 @@
 
       .dj-kaka-head-wrapper,
       .dj-kaka-details-wrapper {
-        // width: calc(#{$cove-dj-kaka-width-x3} - 9.99em);
         top: unset;
       }
 
@@ -447,25 +283,11 @@
           transform: translateY(-4.45em) !important;
         }
 
-        .dj-kaka-name {
-          // font-size: 3em;
-        }
-
         .dj-kaka-desc {
           font-size: 18px;
         }
       }
-
-      // .main-container .featured-dj-2 .dj-kaka-details-wrapper .dj-kaka-name
-
-      .dj-kaka-details-wrapper .dj-kaka-desc {
-        // font-size: 21px;
-      }
     }
-
-    // .cove-manila-row-2-sub-2 {
-    //   height: 20em;
-    // }
 
     // FEATURED DJ BELOW
     .cove-manila-row-2-sub-2 {
@@ -475,7 +297,7 @@
 
       .featured-dj-below {
         position: relative;
-        top: -4em !important;
+        top: -7em !important;
 
         .featured-dj-below-profile {
           border-width: 2px;
@@ -491,6 +313,92 @@
 
         .featured-dj-below-profile-details {
           align-self: flex-start;
+
+          .featured-dj-name {
+            font-size: 28px !important;
+          }
+
+          .featured-dj-name-desc {
+            font-size: 18px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include ipad-pro(portrait) {
+  .main-container {
+    margin-bottom: 30em !important;
+
+    .the-company-row {
+      height: 40vh;
+    }
+
+    .cove-manila-row {
+      height: 60vw;
+
+      .cove-manila-logo {
+        height: 17rem;
+      }
+
+      .cove-manila-logo-caption {
+        font-size: inherit;
+        letter-spacing: 0.5em;
+      }
+    }
+
+    .cove-manila-row-1 {
+      background-position-y: top;
+    }
+
+    .cove-manila-row-2 {
+      background-position-y: top;
+      padding: 0;
+    }
+
+    .cove-manila-row-1-sub-1 {
+      position: relative;
+      top: -15em;
+    }
+
+    .cove-manila-row-1-sub-2 {
+      height: 22em;
+    }
+
+    .cove-manila-row-2-sub-1 {
+      .dj-kaka-container {
+        .dj-kaka-svg {
+          height: 46em;
+        }
+      }
+    }
+
+    // FEATURED DJ BELOW
+    .cove-manila-row-2-sub-2 {
+      height: unset !important;
+      min-height: 196px !important;
+      width: 100%;
+
+      .featured-dj-below {
+        position: relative;
+        top: -2.5em !important;
+
+        .featured-dj-below-profile {
+          border-width: 2px;
+          padding: 6em 1em;
+          width: 80%;
+        }
+
+        .featured-dj-below-profile-image {
+          bottom: 6.5em !important;
+          height: 29vw;
+          width: 28vw;
+        }
+
+        .featured-dj-below-profile-details {
+          align-self: flex-start !important;
+          margin-top: 0 !important;
 
           .featured-dj-name {
             font-size: 28px !important;
