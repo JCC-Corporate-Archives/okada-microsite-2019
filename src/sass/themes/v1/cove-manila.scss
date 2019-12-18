@@ -31,9 +31,16 @@
     min-height: 437px;
   }
 
-  // OTHER DJs
+  // DJ KAKA & OTHER DJs
   .cove-manila-row-2 {
     @include display-bg-image('5EsOJA');
+    @include media-breakpoint-up(lg) {
+      .cove-manila-row-2-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
     min-height: 517px;
     padding-top: 9em;
 
@@ -827,10 +834,10 @@
     }
 
     .cove-manila-row-2-sub-2 {
-      // margin: 0 auto;
       height: 42em;
 
       .featured-dj-below {
+        height: 42em;
         position: relative;
         top: -10em !important;
       }
