@@ -111,10 +111,15 @@
 
 // Custom media queries
 @mixin ipad-pro($orientation: false) {
-  $min: 768px;
+  $min: 1024px;
   $max: 1366px;
 
   @include mq($min-device-width: $min, $max-device-width: $max, $orientation: $orientation) {
+    @content;
+  }
+}
+@mixin min-screen-cust($min, $orientation: false) {
+  @include mq($min-width: $min, $orientation: $orientation) {
     @content;
   }
 }

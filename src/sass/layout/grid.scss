@@ -31,8 +31,21 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
+@include screen(768px, 1400px, landscape) {
   .main-container {
     margin-bottom: 35em;
+  }
+}
+
+@include min-screen-cust(1920px, landscape) {
+  .main-container {
+    .okada-hero-heading {
+      font-size: 3rem;
+    }
+
+    .container-caption,
+    .okada-hero-caption {
+      font-size: 1.67rem;
+    }
   }
 }
