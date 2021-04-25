@@ -1,0 +1,58 @@
+// using Google Font Mixin 2.0
+// https://codepen.io/jakob-e/pen/LVVXjO
+@include google-font {
+  // Default fallback font
+  @include google-font('Open Sans', 300 400 700, 800);
+  // Custom font
+  @include google-font('Playfair Display');
+  // For Cove Manila
+  @include google-font('Roboto', 300 400 700);
+  // Alternative to Gotham
+  @include google-font('Montserrat', 300 400 500, 700);
+}
+
+// Gothan Family
+@include font-face('Gotham Book', '../fonts/GothamBook', normal, normal); // NOT WORKING!
+@include font-face('Gotham Light', '../fonts/GothamLight', normal, normal);
+@include font-face('Gotham Medium', '../fonts/GothamMedium', inherit, normal);
+@include font-face('Gotham Bold', '../fonts/GothamBold', bold, normal);
+@include font-face('Gotham Bold Italic', '../fonts/GothamBoldItalic', bold, italic);
+@include font-face('Gotham Black', '../fonts/GothamBlack', bolder, normal);
+
+html,
+body {
+  font-family: $font-family-open-sans;
+  font-weight: normal;
+}
+
+.okada-hero {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.okada-hero-heading {
+  color: $hero-heading-color;
+  font-family: $font-family-gotham-medium;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container-caption,
+.okada-hero-caption {
+  color: $hero-caption-color;
+  font-family: $font-family-montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  // text-align: center;
+}
+
+@include media-breakpoint-up(md) {
+  .okada-hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .container-caption,
+  .okada-hero-caption {
+    font-size: 1.1rem;
+  }
+}

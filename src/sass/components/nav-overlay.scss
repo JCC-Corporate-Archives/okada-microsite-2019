@@ -1,0 +1,78 @@
+.nav-overlay {
+  background: $nav-overlay-bg;
+  display: flex;
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition: 0.25s ease;
+  width: 100%;
+  z-index: 1000;
+
+  .overlay-content {
+    display: none;
+  }
+
+  .nav-modal-link {
+    color: $color-okada-dark-1;
+    display: block;
+    font-family: $font-family-open-sans;
+    font-size: 36px;
+    font-weight: 300;
+    padding: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background: $white;
+      color: $black !important;
+    }
+  }
+
+  &.collapsed {
+    // background: $hero-section-bg;
+    // background: $white;
+
+    .nav-modal-link {
+      color: $white;
+    }
+  }
+
+  // nav overlay must be flex
+  .overlay-content {
+    align-self: center;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  .closebtn {
+    color: $color-okada-light-3;
+    font-size: 60px;
+    position: absolute;
+    right: 4.6rem;
+    top: 1.5px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none !important;
+      text-decoration: unset;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .nav-overlay {
+    .nav-modal-link {
+      font-size: 20px;
+    }
+
+    .closebtn {
+      font-size: 40px;
+      right: 1.55rem;
+      top: 0;
+    }
+  }
+}

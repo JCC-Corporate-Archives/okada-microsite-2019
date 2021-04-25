@@ -1,0 +1,23 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "script",
+    "ecmaFeatures": {}
+  },
+  "rules": {
+    "space-in-parens": [0, "never", { "exceptions": ["empty", "()"] }]
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jquery": true
+  },
+  "globals": {
+    "jquery": true,
+    "moment": true,
+    "countdown": true,
+    "WOW": true,
+    "Swiper": true
+  },
+  "extends": ["jquery"]
+}

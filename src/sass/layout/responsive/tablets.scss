@@ -1,0 +1,349 @@
+// ------------------------------------------------------
+// Adjustments for Tablets
+// ------------------------------------------------------
+
+// Tablets & up
+@include media-breakpoint-up(md) {
+  // Main container
+  .main-container {
+    margin-top: -#{$navbar-md-height};
+
+    .hero-row {
+      padding-top: $navbar-md-height;
+    }
+
+    .countdown-row {
+      padding: 2rem 0;
+    }
+
+    @include browser(Safari) {
+      .countdown-row {
+        padding: 4rem 0;
+      }
+
+      .countdown-container {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .world-class-row {
+      height: 580px;
+      padding: 65px 0;
+
+      .heading-col {
+        align-self: center;
+      }
+
+      .image-col {
+        background-position: right center !important;
+      }
+    }
+  }
+
+  // Tablets below
+  @include media-breakpoint-down(md) {
+    .main-container {
+      .guests-row {
+        .guest-entry {
+          .guest-info-container {
+            width: max-content;
+          }
+
+          // inside .guest-info-container
+          .guest-image.mayonnaise {
+            // The image was not on portrait
+            @include display-bg-image('mayonnaise', center bottom, 215%);
+          }
+
+          // inside .guest-info-container
+          .guest-name {
+            font-size: 12px !important;
+          }
+
+          // inside .guest-info-container
+          .guest-name-info {
+            font-size: 8px;
+            width: 67%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPad landscape
+@include ipad(landscape) {
+  .main-container {
+    .night-show-row {
+      height: 90vh;
+    }
+
+    // COVE MANILA
+
+    .cove-manila-row-1,
+    .cove-manila-row-2 {
+      background-position: center;
+      height: 100vh;
+    }
+
+    .featured-dj-1 {
+      .dj-solaii-wrapper {
+        height: 41vw;
+        overflow: visible;
+      }
+
+      .dj-solaii-head {
+        bottom: 9.4em;
+        height: 75vh;
+        position: relative;
+        z-index: 2;
+      }
+
+      .dj-solaii-details {
+        overflow: hidden;
+
+        .dj-solaii-logo {
+          background-size: 90%;
+          min-width: unset;
+          width: 95%;
+        }
+
+        .dj-solaii-desc-wrapper {
+          width: 95%;
+
+          .dj-solaii-desc {
+            font-size: 21px;
+          }
+        }
+
+        .dj-solaii-button-container {
+          margin: 0;
+          width: 95%;
+
+          .visit-channel-button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .featured-dj-2 {
+      top: 0;
+
+      .dj-kaka-head-wrapper {
+        width: calc(#{$cove-dj-kaka-width-x3} - 9.99em);
+      }
+
+      .dj-kaka-details-wrapper .dj-kaka-desc {
+        font-size: 21px;
+      }
+    }
+
+    .cove-manila-row-2-sub-2 {
+      margin-top: 65%;
+    }
+  }
+
+  .footer-wrapper {
+    padding-top: 50%;
+  }
+}
+
+// iPad portrait
+@include ipad(portrait) {
+  .navbar {
+    .navbar-toggler-right {
+      right: 1.5em;
+    }
+  }
+
+  .main-container {
+    margin-bottom: 10em;
+
+    .hero-row {
+      .image-2020 {
+        background-position: 10% !important;
+        background-size: 38vh;
+      }
+
+      .image-hero-model {
+        background-position: 115% bottom !important;
+      }
+    }
+
+    .countdown-container {
+      .number-of {
+        font-size: 75px;
+      }
+    }
+
+    .world-class-row {
+      padding-bottom: 0;
+      padding-top: 0;
+
+      .heading-col {
+        .okada-hero-heading {
+          // hyphens: auto;
+          font-size: 1.49rem;
+          word-break: break-word;
+        }
+      }
+    }
+
+    .the-company-row {
+      padding-top: 0;
+
+      .heading-col {
+        align-self: center;
+      }
+
+      .image-col {
+        background-position: center bottom;
+        min-height: calc(636px / 1.4);
+      }
+    }
+
+    .night-show-row {
+      height: 67vh;
+    }
+
+    .the-restaurants-row {
+      // "cols" which is all of columns
+      .the-restaurants-cols {
+        height: 50vh;
+      }
+
+      .the-restaurants-col,
+      .the-restaurants-content {
+        height: 100%;
+      }
+
+      .the-restaurants-col {
+        .the-restaurants-heading {
+          font-size: 35px;
+          line-height: 1em;
+        }
+
+        .okada-hero-caption {
+          font-size: 16px;
+        }
+      }
+    }
+
+    // COVE MANILA ======================================
+
+    .cove-manila-row {
+      height: 80vw;
+    }
+
+    .featured-dj-1 {
+      .dj-solaii-wrapper {
+        height: 14.45em;
+        min-height: unset;
+        overflow: visible;
+      }
+
+      .dj-solaii-head {
+        // bottom: 9.4em;
+        height: 25em;
+        // position: relative;
+        // z-index: 2;
+      }
+
+      .dj-solaii-details {
+        overflow: hidden;
+
+        .dj-solaii-logo {
+          // background-size: 90%;
+          // min-width: unset;
+          // width: 95%;
+        }
+
+        .dj-solaii-desc-wrapper {
+          // width: 95%;
+          border-width: 2px;
+
+          .dj-solaii-desc {
+            font-size: 1.025rem;
+          }
+        }
+
+        .dj-solaii-button-container {
+          // margin: 0;
+          // width: 95%;
+
+          .visit-channel-button {
+            // width: 100%;
+            border-width: 2px;
+          }
+        }
+      }
+    }
+
+    .cove-manila-row-2 {
+      padding-top: 0;
+    }
+
+    .cove-manila-row-2-sub-1 {
+      height: 45em;
+    }
+
+    .featured-dj-2 {
+      top: 0;
+
+      .grid-container {
+        height: 100%;
+      }
+
+      .dj-kaka-head-wrapper,
+      .dj-kaka-details-wrapper {
+        // width: calc(#{$cove-dj-kaka-width-x3} - 9.99em);
+        top: unset;
+      }
+
+      .dj-kaka-head-wrapper {
+        min-height: calc(993px - 32em);
+        width: calc(695px - 19em);
+
+        .dj-kaka-head {
+          min-height: 42em;
+          top: -12.1em;
+        }
+      }
+
+      .dj-kaka-details-wrapper {
+        height: 20em;
+        position: relative;
+        top: -19em; // Affects .cove-manila-row-2-sub-1's height
+        width: unset;
+
+        .dj-kaka-details-container {
+          max-height: unset;
+        }
+
+        .dj-kaka-details {
+          transform: translateY(-4.45em) !important;
+        }
+
+        .dj-kaka-name {
+          // font-size: 3em;
+        }
+
+        .dj-kaka-desc {
+          font-size: 18px;
+        }
+      }
+
+      // .main-container .featured-dj-2 .dj-kaka-details-wrapper .dj-kaka-name
+
+      .dj-kaka-details-wrapper .dj-kaka-desc {
+        // font-size: 21px;
+      }
+    }
+
+    .cove-manila-row-2-sub-2 {
+      height: 20em;
+    }
+  }
+}

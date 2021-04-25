@@ -1,0 +1,18 @@
+// Import bootstrap (some)
+// @import 'vendors/bootstrap4/bootstrap';
+@import 'vendors/bootstrap4/functions';
+@import 'vendors/bootstrap4/variables';
+@import 'vendors/bootstrap4/mixins';
+@import 'vendors/bootstrap4/root';
+@import 'vendors/bootstrap4/reboot';
+// Import sass-mediaqueries
+// for advanced media query
+@import 'vendors/sass-mediaqueries/media-queries';
+// Import some
+@import 'variables';
+@import 'utils/mixins';
+@import 'utils/google-font';
+@import 'base/colors';
+@import 'base/typography';
+// Theme
+@import 'themes/v1/svg-adjs';

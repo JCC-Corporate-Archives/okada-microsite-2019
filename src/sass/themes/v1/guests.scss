@@ -1,0 +1,18 @@
+.main-container {
+  .the-company-row {
+    .heading-col {
+      align-self: center;
+    }
+
+    .image-col {
+      background-image: url('../images/the-company-group.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .the-company-logo {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.swiper-container {
+  background: $gray-400;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  .swiper-slide {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .swiper-image {
+    width: 100%;
+  }
+}
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    background: $gray-500;
+    height: 10px;
+    opacity: 1;
+    width: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-okada-dark-1;
+  }
+}

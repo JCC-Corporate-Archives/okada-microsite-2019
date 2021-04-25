@@ -1,0 +1,29 @@
+// Import bootstrap
+@import 'vendors/bootstrap4/bootstrap';
+// Import sass-mediaqueries
+// for advanced media query
+@import 'vendors/sass-mediaqueries/media-queries';
+// Import font-awesome
+@import 'vendors/fontawesome/font-awesome';
+// Import swiper (sass)
+@import 'vendors/swiper/swiper';
+// Import hover.css
+@import 'vendors/hover.css/scss/hover';
+
+// 7-1 pattern
+@import 'variables';
+@import 'animations';
+@import 'utils/mixins';
+@import 'utils/google-font';
+@import 'base/colors';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/navbar';
+@import 'components/nav-overlay';
+@import 'components/swiper';
+@import 'components/return-to-top';
+@import 'layout/grid';
+
+// Custom
+@import 'themes/default';

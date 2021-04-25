@@ -1,0 +1,30 @@
+.btn-dazzling {
+  font-family: $font-family-gotham-black;
+  font-size: 14px;
+  background-color: transparent;
+  border-color: $color-okada-light-1;
+  border-radius: 0.999rem;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  &.dazzling-text {
+    color: $color-okada-light-1;
+    letter-spacing: 1px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: unset;
+    border-color: $color-okada-light-1;
+    outline: unset;
+  }
+
+  &.dazzling-dark {
+    border-color: $color-okada-dark-1;
+
+    &.dazzling-text {
+      color: $color-okada-dark-1;
+    }
+  }
+}

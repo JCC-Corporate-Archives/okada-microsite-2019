@@ -1,0 +1,204 @@
+// ------------------------------------------------------
+// Adjustments for Mobile
+// ------------------------------------------------------
+
+// smartphone below
+@include media-breakpoint-down(sm) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-container {
+    margin-bottom: 7vw;
+
+    // hide all line breaks for mobile
+    br {
+      display: none;
+    }
+
+    .countdown-row {
+      padding: $row-default-padding;
+
+      .countdown-container {
+        max-width: 95%;
+      }
+    }
+
+    .world-class-row,
+    .the-company-row {
+      padding: 55px 0;
+    }
+
+    .the-company-row {
+      padding-bottom: 0;
+      transition: unset; // animation bug on scroll
+
+      .image-col {
+        background-position: center bottom;
+        min-height: 46vh;
+      }
+
+      .the-company-logo {
+        width: 100%;
+      }
+    }
+
+    .guests-row {
+      padding: 0 0 1.1em 0.4em !important;
+
+      // tentative selection
+      .col-12 .row {
+        justify-content: space-between;
+      }
+
+      .guest-entry {
+        max-width: 50%; // explicit set due to xs breakpoint was already removed for BS4
+
+        .guest-info-container {
+          width: 100% !important;
+        }
+
+        // inside .guest-info-container
+        .guest-image {
+          min-height: calc(172px + 15vw);
+        }
+      }
+    }
+
+    // THE FOUNTAIN
+    .night-show-col {
+      .night-show-logo {
+        @include display-bg-image('the-fountain', right, contain, sm);
+        // height: 53.48px;
+        height: 6em;
+      }
+
+      .dazzling {
+        font-size: 32px !important;
+      }
+    }
+
+    .the-restaurants-col {
+      padding: 15px;
+
+      .the-restaurants-content {
+        padding: 0;
+      }
+    }
+
+    // others
+    .image {
+      width: 100%;
+    }
+
+    // pre footer
+    .featured-dj-below {
+      & + .featured-dj-below {
+        margin-top: 185px;
+      }
+    }
+  }
+}
+
+// explicit set due to xs breakpoint was already removed for BS4
+@include screen(0, 480px, portrait) {
+  .main-container {
+    margin-bottom: 0 !important;
+
+    .countdown-row {
+      .countdown-container {
+        max-width: unset;
+      }
+
+      br {
+        display: none;
+      }
+    }
+
+    .world-class-row {
+      margin-bottom: 0;
+      padding: 3em 0;
+    }
+
+    .the-company-row {
+      .image-col {
+        background-position: center bottom !important;
+        background-size: auto !important;
+        min-height: 21em;
+      }
+    }
+
+    .guests-row {
+      padding: 1em !important;
+
+      .guest-entry {
+        max-width: unset;
+        min-width: unset !important;
+        padding-bottom: 1em !important;
+
+        .guest-info-container {
+          width: 100% !important;
+        }
+
+        .guest-info-container .guest-image {
+          min-height: 13rem;
+        }
+
+        .guest-info-container .guest-info {
+          min-height: 5em;
+
+          .guest-name {
+            display: block;
+            font-size: 11px;
+            line-height: 1em;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .cove-manila-row-1,
+    .cove-manila-row-2 {
+      .col-12 {
+        height: 0;
+      }
+    }
+
+    .cove-manila-row-2 {
+      padding: 0 !important;
+
+      .featured-dj-below-profile {
+        min-width: $cove-other-djs-below-480;
+      }
+    }
+
+    .featured-dj-1,
+    .featured-dj-2 {
+      padding: 0 1em !important;
+    }
+
+    .cove-manila-row-1-sub-1 {
+      padding: 0 !important;
+      top: 0 !important;
+      z-index: 2;
+    }
+
+    .cove-manila-row-2-sub-1 {
+      top: -16em !important;
+    }
+
+    .cove-manila-row-2-sub-2 {
+      position: relative;
+      top: 5em;
+    }
+
+    .dj-solaii-svg {
+      // height: 320px !important;
+      height: 50vw !important;
+    }
+
+    .dj-kaka-svg {
+      height: 400px !important;
+    }
+  }
+}

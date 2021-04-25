@@ -118,3 +118,20 @@ public/
 
 # End of https://www.gitignore.io/api/git,node,sass
 
+# Gulp
+gulpconfig.json
+
+# Ignore specific
+!**/**/.gitinclude
+build/
+dist/
+scripts/
+stylesheets/
+fonts/
+**/**/vendors/
+
+# Project-specific
+!stylesheets/ie.css
+!stylesheets/print.css
+!stylesheets/screen.css
+

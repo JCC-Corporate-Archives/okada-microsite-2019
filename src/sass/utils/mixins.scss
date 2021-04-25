@@ -1,0 +1,110 @@
+// font-face
+// Custom version
+// Reference: https://css-tricks.com/snippets/css/using-font-face/
+@mixin font-face($font-name, $font-path, $font-weight: 400, $font-style: normal) {
+  @font-face {
+    font-display: swap;
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('#{$font-path}.eot#iefix') format('embedded-opentype');
+    src: url('#{$font-path}.woff') format('woff'), url('#{$font-path}.woff2') format('woff2'),
+      url('#{$font-path}.ttf') format('truetype');
+  }
+}
+
+// Responsive way of displaying image (using div background)
+@mixin display-bg-image(
+  $image-name,
+  $background-position: center top,
+  $background-size: cover,
+  $breakpoint-override: none
+) {
+  @include media-breakpoint-up(lg) {
+    background-image: url('../images/#{$image-name}@3x.png') !important;
+    background-size: $background-size !important;
+  }
+  @include media-breakpoint-up(md) {
+    @if $breakpoint-override == 'md' {
+      background-image: url('../images/#{$image-name}@3x.png') !important;
+      background-size: $background-size !important;
+    } @else {
+      background-image: url('../images/#{$image-name}@2x.png');
+    }
+  }
+  @include media-breakpoint-down(md) {
+    @if $breakpoint-override == 'md' {
+      background-image: url('../images/#{$image-name}@3x.png') !important;
+      background-size: $background-size !important;
+    } @else {
+      background-image: url('../images/#{$image-name}@2x.png');
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    @if $breakpoint-override == 'sm' {
+      background-image: url('../images/#{$image-name}@2x.png') !important;
+      background-size: $background-size !important;
+    } @else {
+      background-image: url('../images/#{$image-name}.png');
+    }
+  }
+  background-position: $background-position;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+}
+
+// tentative
+@mixin night-show-container($grid-class-1, $grid-class-2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  .#{$grid-class-1} {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .#{$grid-class-2} {
+    grid-area: 2 / 1 / 3 / 2;
+    grid-column: 1 / span 2;
+  }
+}
+
+@mixin dazzling-background {
+  background: $dazzling-mask-color;
+  box-shadow: unset;
+  text-decoration: none;
+}
+
+@mixin dazzling-background-legacy {
+  background: $color-okada-light-1;
+  box-shadow: unset;
+  text-decoration: none;
+}
+
+@mixin dazzling-text {
+  -webkit-text-fill-color: transparent;
+  background: $dazzling-mask-color;
+  background-clip: text;
+}
+
+@mixin dazzling-text-disable {
+  -webkit-text-fill-color: unset;
+  background: unset;
+  background-clip: unset;
+}
+
+// Source: http://aslanbakan.com/en/blog/browser-and-device-specific-css-styles-with-sass-and-less-mixins/
+@mixin browser($browsers: Mozilla) {
+  @each $browser in $browsers {
+    html[data-browser*='#{$browser}'] & {
+      @content;
+    }
+  }
+}
+
+// Disable animations (absolute)
+@mixin disable-animations($transition: inherit) {
+  animation: none !important;
+  transition: $transition !important;
+  visibility: visible !important;
+}

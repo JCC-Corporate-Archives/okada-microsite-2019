@@ -1,0 +1,44 @@
+@import 'responsive/mobile';
+@import 'responsive/tablets';
+
+// CONTAINER WRAP
+.container-wrapper {
+  background: $black;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+// BASE GRID FOR MAIN CONTAINER
+.main-container {
+  // base margin
+  margin-bottom: 1em;
+  margin-top: -4em;
+
+  .hero-row {
+    height: $hero-row-height;
+    min-height: $hero-row-height-default;
+  }
+
+  .guests-row {
+    flex-wrap: wrap;
+    padding: 1.1875rem;
+  }
+
+  // Enable transitions for every column movement
+  // https://stackoverflow.com/a/42980961
+  .row > [class*='col-'] {
+    transition: 0.5s ease;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main-container {
+    margin-bottom: 28vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main-container {
+    margin-bottom: 30em;
+  }
+}

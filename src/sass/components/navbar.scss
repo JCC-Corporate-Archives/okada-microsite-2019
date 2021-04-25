@@ -1,0 +1,115 @@
+.navbar {
+  min-height: $navbar-default-height;
+  z-index: 999;
+
+  &.okada * {
+    color: $navbar-primary-color !important;
+
+    &.nav-link {
+      color: $okada-logo-color !important;
+    }
+  }
+
+  &.okada .navbar-toggler-icon {
+    background: $navbar-okada-icon-bg !important;
+  }
+
+  // &.navbar-trans {
+  //   background: transparent;
+  //   transition: 0.1s ease;
+  // }
+
+  &.justify-content-center {
+    .navbar-brand {
+      position: absolute;
+      top: 10px;
+      // transform: translateX(-50%);
+    }
+  }
+
+  .navbar-toggler {
+    border: 0;
+
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none !important;
+    }
+  }
+
+  .navbar-toggler-right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  &.collapse {
+    .navbar-nav {
+      align-items: flex-end;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &,
+      &.mx-auto,
+      &.ml-auto,
+      &.mr-auto {
+        font-size: 0.8em;
+        position: relative;
+        text-transform: uppercase;
+        top: 4rem; // top: -0.5rem;
+      }
+    }
+  }
+
+  &.collapse.show {
+    .navbar-nav {
+      align-items: unset;
+      display: inherit;
+      justify-content: unset;
+      width: unset;
+
+      &,
+      &.mx-auto,
+      &.ml-auto,
+      &.mr-auto {
+        font-size: 0.8em;
+        position: normal;
+        // text-transform: uppercase;
+        top: unset;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar {
+    min-height: $navbar-md-height;
+    position: relative;
+    top: 0;
+    width: 100%;
+
+    .navbar-toggler-right {
+      right: 3em;
+      // top: 40%;
+      top: 1.5em;
+    }
+
+    .navbar-brand {
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar {
+    .navbar-brand {
+      img {
+        width: 52.47px;
+      }
+    }
+  }
+}

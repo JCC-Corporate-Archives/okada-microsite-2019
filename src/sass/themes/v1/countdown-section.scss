@@ -1,0 +1,54 @@
+.countdown-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0 auto;
+
+  .number-of {
+    color: $countdown-color;
+    font-family: $font-family-gotham-light;
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    width: 40%;
+
+    .days-label {
+      font-size: 8px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .countdown-container {
+    max-width: 85%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .countdown-container {
+    .number-of {
+      font-size: 88px;
+    }
+  }
+}
+
+// FOR TABLETS & UP
+@include media-breakpoint-up(md) {
+  .countdown-container {
+    .number-of {
+      font-size: 88px;
+
+      .days-label {
+        font-size: 18px;
+        position: relative;
+        top: -1em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .countdown-container {
+    max-width: 55% !important;
+  }
+}

@@ -1,0 +1,91 @@
+.main-container {
+  .hero-row {
+    // background-color: $hero-section-right-color;
+    background: $hero-section-bg;
+
+    .grid {
+      display: grid;
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: 1fr;
+      height: 100%;
+    }
+
+    .image-2020,
+    .image-hero-model {
+      background-repeat: no-repeat;
+    }
+
+    .image-2020 {
+      background-image: url('../images/2020.png');
+      background-size: auto;
+      grid-area: 1 / 1 / 2 / 2;
+      grid-column: 1;
+      mix-blend-mode: screen;
+      z-index: 2;
+    }
+
+    .image-hero-model {
+      background-image: url('../images/2020-model.png');
+      background-position: 41vw bottom;
+      grid-area: 1 / 2 / 2 / 3;
+      grid-column: 1 / span 2;
+    }
+
+    // TABLETS AND UP
+    @include media-breakpoint-up(sm) {
+      height: 74vh;
+
+      .image-2020 {
+        background-image: url('../images/2020@3x.png');
+        background-position: 72% !important;
+        background-size: 40vh;
+      }
+
+      .image-hero-model {
+        background-image: url('../images/2020-model@2x.png');
+        background-position: 50vw bottom !important;
+        background-size: contain;
+        z-index: 2;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .image-2020 {
+        background-position: 3em center;
+      }
+
+      .image-hero-model {
+        background-position: right bottom;
+      }
+    }
+  }
+}
+
+// Mandated patch for smaller (so-so) screens
+@media screen and (max-width: 480px) {
+  .main-container {
+    .hero-row {
+      .image-2020 {
+        background-position: 1em center;
+        background-size: 75%;
+      }
+
+      .image-hero-model {
+        background-position: 150% bottom;
+        background-size: 76%;
+      }
+    }
+
+    .guests-row {
+      .guest-entry {
+        .guest-info-container .guest-image.mayonnaise {
+          // background-position: center bottom;
+          // background-repeat: no-repeat;
+          background-size: 115% !important;
+        }
+      }
+    }
+  }
+}
