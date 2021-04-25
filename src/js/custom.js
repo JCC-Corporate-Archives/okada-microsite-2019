@@ -91,8 +91,9 @@ $(document).ready(function() {
         .hide(); // this causes to display: none
       $("#navBrand").removeClass("collapsed");
       $("#openNav").removeClass("collapsed");
-    })
-    .smoothscroll({ duration: 500, easing: "swing" });
+    });
+
+    // .smoothscroll({ duration: 500, easing: "swing" });
 
   // Scroll to Top
   $(window).scroll(function() {
@@ -116,8 +117,9 @@ $(document).ready(function() {
 
       // simply unset to avoid bugs for mobile
       $("#myNav").css("display", "flex");
-    })
-    .smoothscroll({ duration: 500, easing: "swing" });
+    });
+
+    // .smoothscroll({ duration: 500, easing: "swing" });
 
   var $clock = $("#countdown");
   var interval = 1000;
