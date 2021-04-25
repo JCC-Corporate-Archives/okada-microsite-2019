@@ -1,10 +1,6 @@
 $(window).on("load", function() {
   $("body").css("overflow", "");
 
-  $("#preloader")
-    .delay(450)
-    .fadeOut(500);
-
   // init WOW.js after loading up assets
   // Anti Flickering
   new WOW({ offset: 0 }).init();
@@ -54,6 +50,11 @@ $(window).on("load", function() {
 });
 
 $(document).ready(function() {
+
+  // Move here for a while
+  $("#preloader")
+    .delay(2500)
+    .fadeOut(500);
 
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
