@@ -5,3 +5,6 @@
 @import 'v1/the-restaurants';
 @import 'v1/cove-manila';
 @import 'v1/others';
+
+// Include compatibility patches
+@import '../layout/patches/safari';

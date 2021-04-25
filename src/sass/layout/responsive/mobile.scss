@@ -12,9 +12,9 @@
     margin-bottom: 7vw;
 
     // hide all line breaks for mobile
-    br {
-      display: none;
-    }
+    // br {
+    //   display: none;
+    // }
 
     .countdown-row {
       padding: $row-default-padding;
@@ -38,8 +38,13 @@
         min-height: 46vh;
       }
 
+      .heading-col {
+        text-align: center;
+      }
+
       .the-company-logo {
-        width: 100%;
+        margin-bottom: 2em;
+        width: 90%;
       }
     }
 
@@ -79,7 +84,7 @@
     }
 
     .the-restaurants-col {
-      padding: 15px;
+      padding: 7vw 15px;
 
       .the-restaurants-content {
         padding: 0;
@@ -125,6 +130,11 @@
         background-position: center bottom !important;
         background-size: auto !important;
         min-height: 21em;
+      }
+
+      .the-company-logo {
+        margin-bottom: 2em;
+        width: 256px !important;
       }
     }
 
@@ -189,7 +199,7 @@
 
     .cove-manila-row-2-sub-2 {
       position: relative;
-      top: 5em;
+      top: 8em;
     }
 
     .dj-solaii-svg {
@@ -200,5 +210,69 @@
     .dj-kaka-svg {
       height: 400px !important;
     }
+  }
+}
+
+// landscape adjustments
+@include screen(0, 767.98px, landscape) {
+  .main-container {
+    margin-bottom: 0 !important;
+
+    .world-class-row {
+      .heading-col {
+        align-self: center;
+      }
+
+      .image-col {
+        background-position: right center;
+      }
+    }
+
+    .the-company-row {
+      .heading-col {
+        align-self: center !important;
+      }
+
+      .image-col {
+        background-position: right bottom !important;
+      }
+    }
+
+    .guests-row {
+      padding: 1em !important;
+
+      .guest-entry {
+        // max-width: unset;
+        // min-width: unset !important;
+        // padding-bottom: 1em !important;
+
+        // .guest-info-container {
+        //   width: 100% !important;
+        // }
+
+        // .guest-info-container .guest-image {
+        //   min-height: 13rem;
+        // }
+
+        .guest-info-container .guest-info {
+          min-height: 5em;
+
+          .guest-name {
+            display: block;
+            font-size: 12px;
+            line-height: 1em;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// another
+// Bootstrap 4 breakpoint overrides for landscape view
+@include screen(0, 480px, landscape) {
+  .col-sm-12 {
+    max-width: 78%;
   }
 }

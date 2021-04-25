@@ -12,7 +12,6 @@
 
 // 7-1 pattern
 @import 'variables';
-@import 'animations';
 @import 'utils/mixins';
 @import 'utils/google-font';
 @import 'base/colors';
@@ -21,6 +20,8 @@
 @import 'components/footer';
 @import 'components/navbar';
 @import 'components/nav-overlay';
+@import 'components/page-preloader';
+@import 'components/spinkit';
 @import 'components/swiper';
 @import 'components/return-to-top';
 @import 'layout/grid';

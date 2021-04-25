@@ -47,6 +47,20 @@
   }
 }
 
+@include min-screen-cust(1920px, landscape) {
+  .countdown-container {
+    .number-of {
+      font-size: 7em;
+
+      .days-label {
+        font-size: 24px;
+        position: relative;
+        top: -1em;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .countdown-container {
     max-width: 55% !important;

@@ -1,6 +1,6 @@
 .navbar {
   min-height: $navbar-default-height;
-  z-index: 999;
+  z-index: 9999;
 
   &.okada * {
     color: $navbar-primary-color !important;
@@ -24,11 +24,16 @@
       position: absolute;
       top: 10px;
       // transform: translateX(-50%);
+
+      &.collapsed {
+        position: fixed;
+      }
     }
   }
 
   .navbar-toggler {
     border: 0;
+    position: absolute;
 
     &,
     &:active,
@@ -36,10 +41,36 @@
     &:hover {
       outline: none !important;
     }
+
+    &.collapsed {
+      position: fixed;
+
+      .navbar-toggler-icon {
+        display: none;
+      }
+
+      .close,
+      .closebtn {
+        display: block;
+      }
+    }
+
+    .closebtn {
+      color: $color-okada-light-3;
+      display: none;
+      font-family: $font-family-open-sans;
+      font-size: 25px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none !important;
+        text-decoration: unset;
+      }
+    }
   }
 
   .navbar-toggler-right {
-    position: absolute;
     right: 10px;
     top: 10px;
   }

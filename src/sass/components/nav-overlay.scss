@@ -47,6 +47,12 @@
     width: 100%;
   }
 
+  @include landscape {
+    .overlay-content {
+      top: 0;
+    }
+  }
+
   .closebtn {
     color: $color-okada-light-3;
     font-size: 60px;

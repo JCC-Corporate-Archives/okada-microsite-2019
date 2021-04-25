@@ -55,3 +55,6 @@ $cove-dj-kaka-wrapper-height-x3: calc(#{$cove-dj-kaka-height-x3} - 20em);
 
 // OTHER DJs
 $cove-other-djs-below-480: calc(186.72px - 2vw);
+
+// z-indexes
+$z-index-absolute: 9999 !default;
