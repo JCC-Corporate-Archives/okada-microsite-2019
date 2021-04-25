@@ -8,46 +8,53 @@
     font-style: $font-style;
     font-weight: $font-weight;
     src: url('#{$font-path}.eot#iefix') format('embedded-opentype');
-    src: url('#{$font-path}.woff') format('woff'), url('#{$font-path}.woff2') format('woff2'),
-      url('#{$font-path}.ttf') format('truetype');
+    src: url('#{$font-path}.ttf') format('truetype');
   }
 }
 
 // Responsive way of displaying image (using div background)
-@mixin display-bg-image(
-  $image-name,
+@mixin display-bg-image($image-name,
   $background-position: center top,
   $background-size: cover,
-  $breakpoint-override: none
-) {
+  $breakpoint-override: none) {
   @include media-breakpoint-up(lg) {
     background-image: url('../images/#{$image-name}@3x.png') !important;
     background-size: $background-size !important;
   }
+
   @include media-breakpoint-up(md) {
-    @if $breakpoint-override == 'md' {
+    @if $breakpoint-override=='md' {
       background-image: url('../images/#{$image-name}@3x.png') !important;
       background-size: $background-size !important;
-    } @else {
+    }
+
+    @else {
       background-image: url('../images/#{$image-name}@2x.png');
     }
   }
+
   @include media-breakpoint-down(md) {
-    @if $breakpoint-override == 'md' {
+    @if $breakpoint-override=='md' {
       background-image: url('../images/#{$image-name}@3x.png') !important;
       background-size: $background-size !important;
-    } @else {
+    }
+
+    @else {
       background-image: url('../images/#{$image-name}@2x.png');
     }
   }
+
   @include media-breakpoint-down(sm) {
-    @if $breakpoint-override == 'sm' {
+    @if $breakpoint-override=='sm' {
       background-image: url('../images/#{$image-name}@2x.png') !important;
       background-size: $background-size !important;
-    } @else {
+    }
+
+    @else {
       background-image: url('../images/#{$image-name}.png');
     }
   }
+
   background-position: $background-position;
   background-repeat: no-repeat;
   background-size: $background-size;
@@ -118,6 +125,7 @@
     @content;
   }
 }
+
 @mixin min-screen-cust($min, $orientation: false) {
   @include mq($min-width: $min, $orientation: $orientation) {
     @content;
