@@ -14447,7 +14447,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/GothamBook.eot#iefix") format("embedded-opentype");
-  src: url("../fonts/GothamBook.woff") format("woff"), url("../fonts/GothamBook.woff2") format("woff2"), url("../fonts/GothamBook.ttf") format("truetype"); }
+  src: url("../fonts/GothamBook.ttf") format("truetype"); }
 
 @font-face {
   font-display: swap;
@@ -14455,7 +14455,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/GothamLight.eot#iefix") format("embedded-opentype");
-  src: url("../fonts/GothamLight.woff") format("woff"), url("../fonts/GothamLight.woff2") format("woff2"), url("../fonts/GothamLight.ttf") format("truetype"); }
+  src: url("../fonts/GothamLight.ttf") format("truetype"); }
 
 @font-face {
   font-display: swap;
@@ -14463,7 +14463,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
   font-weight: inherit;
   src: url("../fonts/GothamMedium.eot#iefix") format("embedded-opentype");
-  src: url("../fonts/GothamMedium.woff") format("woff"), url("../fonts/GothamMedium.woff2") format("woff2"), url("../fonts/GothamMedium.ttf") format("truetype"); }
+  src: url("../fonts/GothamMedium.ttf") format("truetype"); }
 
 @font-face {
   font-display: swap;
@@ -14471,7 +14471,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
   font-weight: bold;
   src: url("../fonts/GothamBold.eot#iefix") format("embedded-opentype");
-  src: url("../fonts/GothamBold.woff") format("woff"), url("../fonts/GothamBold.woff2") format("woff2"), url("../fonts/GothamBold.ttf") format("truetype"); }
+  src: url("../fonts/GothamBold.ttf") format("truetype"); }
 
 @font-face {
   font-display: swap;
@@ -14479,7 +14479,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: italic;
   font-weight: bold;
   src: url("../fonts/GothamBoldItalic.eot#iefix") format("embedded-opentype");
-  src: url("../fonts/GothamBoldItalic.woff") format("woff"), url("../fonts/GothamBoldItalic.woff2") format("woff2"), url("../fonts/GothamBoldItalic.ttf") format("truetype"); }
+  src: url("../fonts/GothamBoldItalic.ttf") format("truetype"); }
 
 @font-face {
   font-display: swap;
@@ -14487,7 +14487,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
   font-weight: bolder;
   src: url("../fonts/GothamBlack.eot#iefix") format("embedded-opentype");
-  src: url("../fonts/GothamBlack.woff") format("woff"), url("../fonts/GothamBlack.woff2") format("woff2"), url("../fonts/GothamBlack.ttf") format("truetype"); }
+  src: url("../fonts/GothamBlack.ttf") format("truetype"); }
 
 html,
 body {

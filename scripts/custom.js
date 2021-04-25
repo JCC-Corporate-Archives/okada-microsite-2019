@@ -14736,7 +14736,7 @@ $(document).ready(function() {
     var now = moment().local();
 
     // new Date(now + 60 * 1000);
-    var then = moment("01-01-2020 00:00:00", "DD-MM-YYYY HH:mm:ss");
+    var then = moment("01-01-2022 00:00:00", "DD-MM-YYYY HH:mm:ss");
 
     // using Countdown JS
     var countDownObj = countdown(
