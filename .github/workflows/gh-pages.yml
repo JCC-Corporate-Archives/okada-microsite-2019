@@ -25,6 +25,7 @@ jobs:
           npm install -g yarn
           npm install -g gulp
           yarn install
+          gulp copy-assets
           gulp setup
           gulp dist
       - name: Test ZIP Build 🔧
