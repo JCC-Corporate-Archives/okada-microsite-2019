@@ -14601,10 +14601,6 @@ function(module) {
 $(window).on("load", function() {
   $("body").css("overflow", "");
 
-  $("#preloader")
-    .delay(450)
-    .fadeOut(500);
-
   // init WOW.js after loading up assets
   // Anti Flickering
   new WOW({ offset: 0 }).init();
@@ -14655,6 +14651,11 @@ $(window).on("load", function() {
 
 $(document).ready(function() {
 
+  // Move here for a while
+  $("#preloader")
+    .delay(2500)
+    .fadeOut(500);
+
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
     if ($("#myNav").hasClass("collapsed")) {
@@ -14691,8 +14692,9 @@ $(document).ready(function() {
         .hide(); // this causes to display: none
       $("#navBrand").removeClass("collapsed");
       $("#openNav").removeClass("collapsed");
-    })
-    .smoothscroll({ duration: 500, easing: "swing" });
+    });
+
+    // .smoothscroll({ duration: 500, easing: "swing" });
 
   // Scroll to Top
   $(window).scroll(function() {
@@ -14716,8 +14718,9 @@ $(document).ready(function() {
 
       // simply unset to avoid bugs for mobile
       $("#myNav").css("display", "flex");
-    })
-    .smoothscroll({ duration: 500, easing: "swing" });
+    });
+
+    // .smoothscroll({ duration: 500, easing: "swing" });
 
   var $clock = $("#countdown");
   var interval = 1000;
