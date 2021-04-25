@@ -14599,7 +14599,6 @@ function(module) {
 //# sourceMappingURL=swiper.js.map
 
 $(window).on("load", function() {
-  $("body").css("overflow", "");
 
   // init WOW.js after loading up assets
   // Anti Flickering
@@ -14652,9 +14651,10 @@ $(window).on("load", function() {
 $(document).ready(function() {
 
   // eslint-disable-next-line max-len
-  alert("2021 COUNTDOWN!!/n This is a cancelled project. And probably the contract was already canned. This is just for shits and giggles on how unoptimized to load this page.");
+  alert("2021 COUNTDOWN!! This is a cancelled project. And probably the contract was already canned. This is just for shits and giggles on how unoptimized to load this page.");
 
   // Move here for a while
+  $("body").css("overflow", "");
   $("#preloader")
     .delay(2500)
     .fadeOut(500);
