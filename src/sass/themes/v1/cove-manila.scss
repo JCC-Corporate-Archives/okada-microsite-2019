@@ -31,9 +31,16 @@
     min-height: 437px;
   }
 
-  // OTHER DJs
+  // DJ KAKA & OTHER DJs
   .cove-manila-row-2 {
     @include display-bg-image('5EsOJA');
+    @include media-breakpoint-up(lg) {
+      .cove-manila-row-2-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
     min-height: 517px;
     padding-top: 9em;
 
@@ -255,6 +262,16 @@
     height: 50em;
   }
 
+  @include media-breakpoint-between(xl, lg) {
+    // FEATURED DJ BELOW
+    .cove-manila-row-2-sub-2 {
+      .featured-dj-below {
+        position: relative;
+        top: 0 !important;
+      }
+    }
+  }
+
   // DESKTOP UP
   @include media-breakpoint-up(lg) {
     // margin-bottom: 52em;
@@ -381,11 +398,14 @@
 
     // FEATURED DJ BELOW
     .cove-manila-row-2-sub-2 {
-      position: relative;
-      top: 15vw;
+      // position: relative;
+      // top: 15vw;
       width: 100%;
 
       .featured-dj-below {
+        position: relative;
+        top: -10em;
+
         .featured-dj-below-profile {
           border-width: 2px;
           padding: 6em 1em;
@@ -538,6 +558,16 @@
 
     // DJ KAKA
     .featured-dj-2 {
+    }
+
+    .cove-manila-row-2-sub-2 {
+      margin: 0 auto;
+      min-height: 480px;
+
+      .featured-dj-below {
+        position: relative;
+        top: -11em;
+      }
     }
   }
 
@@ -786,6 +816,31 @@
 
     .dj-kaka-svg {
       max-height: 330.73px;
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .main-container {
+    margin-bottom: 30vw;
+
+    .row.cove-manila-row-2 {
+      background-size: 100% !important;
+      height: 85em !important;
+    }
+
+    .cove-manila-row-2-sub-1 {
+      margin-bottom: 2em;
+    }
+
+    .cove-manila-row-2-sub-2 {
+      height: 42em;
+
+      .featured-dj-below {
+        height: 42em;
+        position: relative;
+        top: -10em !important;
+      }
     }
   }
 }

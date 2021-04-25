@@ -36,16 +36,17 @@
 
 <body id="top" class="container-wrapper" style="overflow: hidden">
   <nav id="navBar" class="navbar navbar-dark justify-content-center okada">
-    <a class="navbar-brand mx-auto" href="#">
+    <a id="navBrand" class="navbar-brand mx-auto" href="#">
       <img src="images/okada-logo-small.png" width="41" />
     </a>
-    <button id="openNav" class="navbar-toggler navbar-toggler-right" type="button" data-target="#myNav"
-      aria-controls="myNav" aria-expanded="true" aria-label="Toggle navigation">
+    <button id="openNav" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#myNav" aria-controls="myNav" aria-expanded="true" aria-label="Toggle navigation">
+      <!-- <span class="my-1 mx-2 close" id="closeNav">&times;</span> -->
+      <span class="my-1 mx-2 close closebtn" id="closeNav">X</span>
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
   <div id="myNav" class="nav-overlay">
-    <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
     <div class="overlay-content">
       <a class="nav-modal-link" href="#top">Home</a>
       <a class="nav-modal-link" href="#worldClass">World Class Entertainment</a>
@@ -78,7 +79,7 @@
   <a href="#top" id="return-to-top" class="return-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Main Container -->
   <div class="container-fluid main-container">
-    <div class="row hero-row justify-content-lg-center">
+    <div class="row hero-row justify-content-sm-center justify-content-lg-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-0">
         <div class="grid">
           <div class="image-2020 wow animated fadeIn delay-1s"></div>
@@ -89,48 +90,50 @@
     <div class="row countdown-row justify-content-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xs-9">
         <div id="countdown" class="countdown-container">
-          <div class="number-of days wow fadeInDown animated" data-wow-delay="0.2s">00</div>
-          <div class="number-of hours wow fadeInDown animated" data-wow-delay="0.4s">00</div>
-          <div class="number-of minutes wow fadeInDown animated" data-wow-delay="0.6s">00</div>
-          <div class="number-of seconds wow fadeInDown animated" data-wow-delay="0.8s">00</div>
+          <div class="number-of days wow fadeInDown animated" data-wow-delay="0.8s">00</div>
+          <div class="number-of hours wow fadeInDown animated" data-wow-delay="1.0s">00</div>
+          <div class="number-of minutes wow fadeInDown animated" data-wow-delay="1.2s">00</div>
+          <div class="number-of seconds wow fadeInDown animated" data-wow-delay="1.4s">00</div>
         </div>
 
-        <div class="okada-hero wow animated fadeIn" data-wow-delay="1s">
+        <div class="okada-hero wow animated fadeIn" data-wow-delay="0.8s">
           <h1 class=" okada-hero-heading">
-            Okada Manila is taking its New<br />
-            Year’s Eve celebrations to bigger,<br />
+            Okada Manila is taking its New<br class="d-none d-md-block" />
+            Year’s Eve celebrations to bigger,<br class="d-none d-md-block" />
             more extravagant levels.
           </h1>
           <p class="okada-hero-caption">
-            It’s a full explosion of spectacular performances and<br />
-            special treats that will make this night of partying the<br />
+            It’s a full explosion of spectacular performances and<br class="d-none d-md-block" />
+            special treats that will make this night of partying the<br class="d-none d-md-block" />
             metro’s most unforgettable one.
           </p>
         </div>
       </div>
     </div>
     <div id="worldClass" class="row world-class-row justify-content-center">
-      <div class="col-12 col-md-4 col-lg-5 col-xl-4 heading-col">
+      <div class="col-12 col-sm-5 col-md-4 col-lg-5 col-xl-4 heading-col">
         <h1 class="okada-hero-heading text-center text-md-left">
-          WORLD CLASS ENTERTAINMENT
+          WORLD CLASS<br class="d-none d-md-block" />
+          ENTERTAINMENT
         </h1>
         <p class="okada-hero-caption text-center text-md-left">
           At Okada Manila, Entertainment is paramount to the complete guest experience.
         </p>
       </div>
-      <div class="col-12 col-md-8 col-lg-7 col-xl-7 image-col"></div>
+      <div class="col-12 col-sm-8 col-md-8 col-lg-7 col-xl-6 image-col"></div>
     </div>
     <div id="guests" class="row the-company-row justify-content-center">
-      <div class="col-12 col-md-4 col-lg-5 col-xl-4 heading-col">
-        <img class="the-company-logo" src="images/the-company@2x.png" />
-        <br /><br />
+      <div class="col-12 col-sm-5 col-md-4 col-lg-5 col-xl-4 heading-col">
+        <img class="the-company-logo" src="images/the-company@3x.png" />
+        <br class="d-none d-md-block" />
+        <br class="d-none d-md-block" />
         <p class="okada-hero-caption">
           The Company. Asia’s premiere vocal harmony act was formed in July, 1985 by alumni of the Ateneo College Glee
           Club. Initially, they sang as back up vocalists for the country's reigning pop stars of the '80's before
           turning professional as the headlining concert and recording artists that they are today.
         </p>
       </div>
-      <div class="col-12 col-md-8 col-lg-7 col-xl-7 image-col"></div>
+      <div class="col-12 col-sm-6 col-md-8 col-lg-7 col-xl-6 image-col"></div>
     </div>
     <div id="guestsOther" class="row guests-row justify-content-between justify-content-md-center align-content-around">
       <div class="col-12 p-0">
@@ -192,15 +195,16 @@
         </div>
       </div>
     </div>
-    <div id="theFountain" class="row night-show-row">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12 night-show-col">
+    <div id="theFountain" class="row night-show-row justify-content-center">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 night-show-col">
         <div class="night-show-logo"></div>
         <div class="night-show-details">
           <h1 class="dazzling">
             A DAZZLING LIGHT SHOW AT THE FOUNTAIN
           </h1>
           <p class="dazzling-details">
-            The Fountain stands as Okada Manila’s bold take on<br />
+            The Fountain stands as Okada Manila’s bold take on
+            <br class="d-none d-md-block" />
             creating a global icon.
           </p>
           <button type="button" class="btn btn-default btn-dark btn-dazzling">
@@ -240,10 +244,11 @@
             holiday flavors
           </h1>
           <p class="okada-hero-caption text-left wow animated fadeInUp" data-wow-delay="0.3s">
-            Spread the holiday cheer<br />
-            with family and friends only at<br />
+            Spread the holiday cheer<br class="d-block" />
+            with family and friends only at<br class="d-block" />
             Okada Manila's signature restaurants.
-            <br /><br />
+            <br class="d-block" />
+            <br class="d-block" />
             <span class="wow animated fadeInUp" data-wow-delay="0.4s">November 4 — January 4</span>
           </p>
           <button type="button" class="btn btn-dark btn-dazzling dazzling-text dazzling-dark wow animated fadeInUp"
@@ -258,7 +263,7 @@
     <div id="coveManila" class="row cove-manila-row text-center">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         <div class="cove-manila-logo mx-auto"></div>
-        <p class="cove-manila-logo-caption wow animated zoomIn">
+        <p class="cove-manila-logo-caption wow animated zoomIn" data-wow-delay="0.3s" data-wow-offset="10">
           LITERALLY THE LAST PARTY OF THE YEAR
         </p>
       </div>
@@ -269,19 +274,19 @@
           data-wow-offset="250">
           <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-1">
             <div class="dj-solaii dj-solaii-container">
-              <iframe class="dj-solaii-svg" src="images/dj-solaii-frame-wtext.svg"></iframe>
+              <iframe id="djSolaiiSvg" class="dj-solaii-svg" src="images/dj-solaii-frame-wtext.svg"></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="row cove-manila-row-2">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 cove-manila-row-2-col">
         <div class="row cove-manila-row-2-sub-1 justify-content-md-center wow animated fadeInRight"
           data-wow-offset="250">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-2 p-0">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 featured-dj-2 p-0 p-md-5 p-lg-0 p-xl-0">
             <div class="dj-kaka dj-kaka-container">
-              <iframe class="dj-kaka-svg" src="images/dj-kaka-frame-wtext.svg"></iframe>
+              <iframe id="djKakaSvg" class="dj-kaka-svg" src="images/dj-kaka-frame-wtext.svg"></iframe>
             </div>
           </div>
         </div>
@@ -363,6 +368,9 @@
     </div>
   </footer>
   <!-- Optional JavaScript -->
+  <!-- SVG for everybody -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"
+    integrity="sha256-kTezPOsOi5ZsWUKr7/D/EWcONq/hdrc0gPwk5/IUYy0=" crossorigin="anonymous"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>

@@ -8,53 +8,104 @@ $(window).on("load", function() {
   // init WOW.js after loading up assets
   // Anti Flickering
   new WOW({ offset: 0 }).init();
+
+  // Clickable SVGs
+  // Get a reference to the iframe document
+  var iframeDJSolaii = document.getElementById("djSolaiiSvg").contentDocument;
+  var iframeDJKaka = document.getElementById("djKakaSvg").contentDocument;
+  var djSolaiiVisitLink = "https://youtube.com";
+  var djKakaVisitLink = "https://youtube.com";
+  iframeDJSolaii.getElementsByTagName("a")[ 0 ].addEventListener(
+    "click",
+    function(e) {
+      e.preventDefault();
+      var win = window.open(djSolaiiVisitLink, "_blank");
+      if (win) {
+
+        //Browser has allowed it to be opened
+        win.focus();
+      } else {
+
+        //Browser has blocked it
+        alert("Please allow popups for this website");
+      }
+    },
+    false
+  );
+  iframeDJKaka.getElementsByTagName("a")[ 0 ].addEventListener(
+    "click",
+    function(e) {
+      e.preventDefault();
+      var win = window.open(djKakaVisitLink, "_blank");
+      if (win) {
+
+        //Browser has allowed it to be opened
+        win.focus();
+      } else {
+
+        //Browser has blocked it
+        alert("Please allow popups for this website");
+      }
+    },
+    false
+  );
+
+  // end of clickable SVGs
 });
 
 $(document).ready(function() {
 
   // NAVBAR OVERLAY
   $("#openNav").on("click", function() {
-    $("#myNav").css("height", "100%");
+    if ($("#myNav").hasClass("collapsed")) {
 
-    // $("body").css("overflow", "hidden");
-    setTimeout(function() {
-      $("#myNav")
-        .addClass("collapsed")
-        .find(".overlay-content")
-        .fadeIn();
-    }, 250);
-  });
-  $("#closeNav").on("click", function() {
-    $("#myNav")
-      .css("height", "0%")
-      .removeClass("collapsed")
-      .find(".overlay-content")
-      .hide(); // this causes to display: none
-    // setTimeout(function() {
-    //   $("body").css("overflow", "");
-    // }, 100);
-  });
-  $("a.nav-modal-link[href*=\"#\"]")
-    .on("click", function() {
-
-      // $("body").css("overflow", "");
-
+      // CLOSE
       $("#myNav")
         .css("height", "0%")
         .removeClass("collapsed")
         .find(".overlay-content")
         .hide(); // this causes to display: none
+      $("#navBrand").removeClass("collapsed");
+      $("#openNav").removeClass("collapsed");
+    } else {
+
+      // OPEN
+      $("#navBrand").addClass("collapsed");
+      $("#openNav").addClass("collapsed");
+      $("#myNav").css("height", "100%");
+
+      setTimeout(function() {
+        $("#myNav")
+          .addClass("collapsed")
+          .find(".overlay-content")
+          .fadeIn();
+      }, 250);
+    }
+  });
+  $("a.nav-modal-link[href*=\"#\"]")
+    .on("click", function() {
+      $("#myNav")
+        .css("height", "0%")
+        .removeClass("collapsed")
+        .find(".overlay-content")
+        .hide(); // this causes to display: none
+      $("#navBrand").removeClass("collapsed");
+      $("#openNav").removeClass("collapsed");
     })
-    .smoothscroll({ duration: 400, easing: "swing" });
+    .smoothscroll({ duration: 500, easing: "swing" });
 
   // Scroll to Top
   $(window).scroll(function() {
 
-    // If page is scrolled more than 75px
-    if ($(this).scrollTop() >= 75) {
-      $("#return-to-top").fadeIn(200); // Fade in the arrow
+    // If page is scrolled more than 300px
+    if ($(this).scrollTop() >= 300) {
+
+      // Fade in the arrow
+      $("#return-to-top").fadeIn();
     } else {
-      $("#return-to-top").fadeOut(200); // Else fade out the arrow
+
+      // Else fade out the arrow
+      $("#return-to-top").hide();
     }
 
     // simply unset to avoid bugs for mobile
@@ -67,47 +118,6 @@ $(document).ready(function() {
       $("#myNav").css("display", "flex");
     })
     .smoothscroll({ duration: 500, easing: "swing" });
-
-  // Clickable SVGs
-  // Get a reference to the iframe document
-  var iframeDJSolaii = $("iframe.dj-solaii-svg")
-    .contents()
-    .get(0);
-  var iframeDJKaka = $("iframe.dj-kaka-svg")
-    .contents()
-    .get(0);
-  var djSolaiiVisitLink = "https://youtube.com";
-  var djKakaVisitLink = "https://youtube.com";
-  $(iframeDJSolaii).on("click taphold", "a.btn", function(event) {
-    event.preventDefault();
-
-    // alert("NOTICE: UNDER CONSTRUCTION");
-    var win = window.open(djSolaiiVisitLink, "_blank");
-    if (win) {
-
-      //Browser has allowed it to be opened
-      win.focus();
-    } else {
-
-      //Browser has blocked it
-      console.error("Please allow popups for this website");
-    }
-  });
-  $(iframeDJKaka).on("click taphold", "a.btn", function(event) {
-    event.preventDefault();
-
-    // alert("NOTICE: UNDER CONSTRUCTION");
-    var win = window.open(djKakaVisitLink, "_blank");
-    if (win) {
-
-      //Browser has allowed it to be opened
-      win.focus();
-    } else {
-
-      //Browser has blocked it
-      console.error("Please allow popups for this website");
-    }
-  });
 
   var $clock = $("#countdown");
   var interval = 1000;

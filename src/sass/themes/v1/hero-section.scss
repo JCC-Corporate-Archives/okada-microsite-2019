@@ -45,7 +45,7 @@
 
       .image-hero-model {
         background-image: url('../images/2020-model@2x.png');
-        background-position: 50vw bottom !important;
+        background-position: 50vw bottom;
         background-size: contain;
         z-index: 2;
       }
@@ -58,6 +58,34 @@
 
       .image-hero-model {
         background-position: right bottom;
+      }
+    }
+  }
+}
+
+// mandated patch for larger screens
+@media screen and (min-width: 1920px) {
+  .main-container {
+    .hero-row {
+      .image-2020 {
+        background-position: inherit;
+      }
+
+      .image-hero-model {
+        background-position: 65% bottom;
+      }
+    }
+  }
+}
+@media screen and (min-width: 2400px) {
+  .main-container {
+    .hero-row {
+      .image-2020 {
+        background-position: inherit;
+      }
+
+      .image-hero-model {
+        background-position: 75% bottom;
       }
     }
   }
