@@ -14651,6 +14651,9 @@ $(window).on("load", function() {
 
 $(document).ready(function() {
 
+  // eslint-disable-next-line max-len
+  alert("2021 COUNTDOWN!!/n This is a cancelled project. And probably the contract was already canned. This is just for shits and giggles on how unoptimized to load this page.");
+
   // Move here for a while
   $("#preloader")
     .delay(2500)
