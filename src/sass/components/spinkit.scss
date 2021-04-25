@@ -1,6 +1,7 @@
 // Source: https://codepen.io/ibanez182/pen/YyJKde
 $spinkit-size: 4em !default;
 $spinkit-spinner-color: $color-okada-light-1 !default;
+$cube-distance: ($spinkit-size / 2);
 
 // 1
 .sk-rotating-plane {
@@ -126,20 +127,20 @@ $cubeDistance: calc($spinkit-size / 2);
   }
 
   25% {
-    transform: translateX($cubeDistance) rotate(-90deg) scale(0.5);
+    transform: translateX($cube-distance) rotate(-90deg) scale(0.5);
   }
 
   50% {
     /* Hack to make FF rotate in the right direction */
-    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-179deg);
+    transform: translateX($cube-distance) translateY($cube-distance) rotate(-179deg);
   }
 
   50.1% {
-    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-180deg);
+    transform: translateX($cube-distance) translateY($cube-distance) rotate(-180deg);
   }
 
   75% {
-    transform: translateX(0) translateY($cubeDistance) rotate(-270deg) scale(0.5);
+    transform: translateX(0) translateY($cube-distance) rotate(-270deg) scale(0.5);
   }
 
   100% {
